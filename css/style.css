@@ -1307,3 +1307,37 @@ body[data-page-light] .nav-btn.is-open .nav-btn__line { background: var(--white)
   .work-overview__label { margin-bottom: 1.5rem; }
   .next-work            { padding: 3rem 5vw; }
 }
+
+/* ============================================================
+   MEDIA FILL — actual images replacing placeholders
+============================================================ */
+.media-fill {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.media-fill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s var(--ease-out);
+}
+
+/* Zoom on hover for grid cells */
+.marble-cell:hover .media-fill img,
+.fib-cell:hover    .media-fill img { transform: scale(1.04); }
+
+/* Section-specific height resets (mirrors placeholder rules) */
+.connection__media .media-fill  { min-height: unset; height: 100%; }
+.marble-cell .media-fill        { min-height: unset; height: 100%; }
+.fib-cell    .media-fill        { min-height: unset; height: 100%; }
+.frag-piece  .media-fill        { min-height: unset; height: 100%; }
+.about__portrait .media-fill    { height: 100%; }
+
+/* Standalone height variants */
+.media-fill--tall    { min-height: 340px; }
+.media-fill--portrait { min-height: 420px; aspect-ratio: 3 / 4; }
