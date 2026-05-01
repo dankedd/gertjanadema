@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Gertjan Adema</title>
+  <meta name="description" content="Get in touch with visual artist Gertjan Adema for commissions, collaborations, and exhibitions." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="loader" id="loader"><div class="loader__bar"></div></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
+    <span class="nav-btn__line"></span>
+    <span class="nav-btn__line"></span>
+    <span class="nav-btn__line"></span>
+  </button>
+
+  <nav class="nav" id="nav" aria-hidden="true">
+    <div class="nav__bg"></div>
+    <div class="nav__inner">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="index.html" class="nav__link" data-num="↩"><span class="nav__link-text">Home</span></a></li>
+        <li class="nav__item"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
+        <li class="nav__item"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
+        <li class="nav__item"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
+        <li class="nav__item"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link" data-num="05"><span class="nav__link-text">About</span></a></li>
+        <li class="nav__item"><a href="festivals.html" class="nav__link" data-num="06"><span class="nav__link-text">Festivals &amp; Exhibitions</span></a></li>
+        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="07"><span class="nav__link-text">Contact</span></a></li>
+        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="↗"><span class="nav__link-text">Exhibitions Map</span></a></li>
+        <li class="nav__item"><a href="cv.html" class="nav__link" data-num="↗"><span class="nav__link-text">CV</span></a></li>
+      </ul>
+      <div class="nav__footer">
+        <a href="mailto:hello@gertjan.com" class="nav__email">hello@gertjan.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <section class="section section--contact" id="contact">
+      <div class="section__inner">
+        <div class="contact__wrap">
+          <span class="section__num reveal">07</span>
+          <h1 class="contact__heading reveal" data-delay="50">
+            Let's<br>connect.
+          </h1>
+          <a href="mailto:hello@gertjan.com" class="contact__email reveal" data-delay="150">
+            hello@gertjan.com
+          </a>
+          <div class="contact__links reveal" data-delay="250">
+            <a href="#" class="contact__social" rel="noopener">Instagram</a>
+            <a href="#" class="contact__social" rel="noopener">Vimeo</a>
+            <a href="#" class="contact__social" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact__ghost" aria-hidden="true">Contact</div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

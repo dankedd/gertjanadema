@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gertjan — Visual Artist</title>
-  <meta name="description" content="Gertjan — Visual artist exploring the boundaries of form, light, and perception." />
+  <meta name="description" content="Gertjan Adema — visual artist exploring the boundaries of form, light, and perception." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,37 +39,42 @@
     <div class="nav__inner">
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="#connection" class="nav__link" data-num="01">
+          <a href="index.html" class="nav__link" data-num="↩">
+            <span class="nav__link-text">Home</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="connection.html" class="nav__link" data-num="01">
             <span class="nav__link-text">Connection</span>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#marbles" class="nav__link" data-num="02">
+          <a href="marbles.html" class="nav__link" data-num="02">
             <span class="nav__link-text">Marbles</span>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#fibonacci" class="nav__link" data-num="03">
+          <a href="fibonacci.html" class="nav__link" data-num="03">
             <span class="nav__link-text">Fibonacci Flow</span>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#fragmented" class="nav__link" data-num="04">
+          <a href="fragmented.html" class="nav__link" data-num="04">
             <span class="nav__link-text">Fragmented Appearances</span>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#about" class="nav__link" data-num="05">
+          <a href="about.html" class="nav__link" data-num="05">
             <span class="nav__link-text">About</span>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#festivals" class="nav__link" data-num="06">
+          <a href="festivals.html" class="nav__link" data-num="06">
             <span class="nav__link-text">Festivals &amp; Exhibitions</span>
           </a>
         </li>
         <li class="nav__item">
-          <a href="#contact" class="nav__link" data-num="07">
+          <a href="contact.html" class="nav__link" data-num="07">
             <span class="nav__link-text">Contact</span>
           </a>
         </li>
@@ -95,7 +100,6 @@
   ============================================================ -->
   <section class="hero" id="hero">
     <div class="hero__media">
-      <!-- Replace src with your actual video file -->
       <video
         class="hero__video"
         id="heroVideo"
@@ -107,7 +111,6 @@
       >
         <source src="assets/video/hero.mp4" type="video/mp4" />
       </video>
-      <!-- Animated fallback shown until / if video loads -->
       <div class="hero__fallback" id="heroFallback">
         <div class="hero__orb hero__orb--1"></div>
         <div class="hero__orb hero__orb--2"></div>
@@ -118,7 +121,6 @@
 
     <div class="hero__content">
       <h1 class="hero__name" data-text="Gertjan">Gertjan</h1>
-      <p class="hero__tagline">Visual art in the space between</p>
     </div>
 
     <div class="hero__scroll">
@@ -128,314 +130,63 @@
   </section>
 
   <!-- ============================================================
-       CONNECTION
+       WORK OVERVIEW
   ============================================================ -->
-  <section class="section section--connection" id="connection">
-    <canvas class="connection__canvas" id="connectionCanvas"></canvas>
+  <section class="work-overview" id="work">
+    <span class="work-overview__label">Selected Works</span>
+    <div class="work-panels">
 
-    <div class="section__inner">
-      <header class="section__head reveal">
-        <span class="section__num">01</span>
-        <h2 class="section__title">Connection</h2>
-      </header>
-
-      <div class="connection__body">
-        <div class="connection__text reveal" data-delay="100">
-          <p>
-            An exploration of invisible bonds, networks, and the subtle
-            relationships that shape our perception of space and identity.
-            Move through the field — feel the system respond.
-          </p>
+      <a href="connection.html" class="work-panel work-panel--connection reveal">
+        <div class="work-panel__bg"></div>
+        <div class="work-panel__content">
+          <span class="work-panel__num">01</span>
+          <h2 class="work-panel__title">Connection</h2>
+          <span class="work-panel__cta">View work →</span>
         </div>
+      </a>
 
-        <div class="connection__media reveal" data-delay="200">
-          <div class="media-grid media-grid--2col">
-            <div class="placeholder placeholder--tall">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-            <div class="placeholder placeholder--tall">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-          </div>
+      <a href="marbles.html" class="work-panel work-panel--marbles reveal" data-delay="80">
+        <div class="work-panel__bg"></div>
+        <div class="work-panel__content">
+          <span class="work-panel__num">02</span>
+          <h2 class="work-panel__title">Marbles</h2>
+          <span class="work-panel__cta">View work →</span>
         </div>
-      </div>
+      </a>
+
+      <a href="fibonacci.html" class="work-panel work-panel--fibonacci reveal" data-delay="160">
+        <div class="work-panel__bg"></div>
+        <div class="work-panel__content">
+          <span class="work-panel__num">03</span>
+          <h2 class="work-panel__title">Fibonacci Flow</h2>
+          <span class="work-panel__cta">View work →</span>
+        </div>
+      </a>
+
+      <a href="fragmented.html" class="work-panel work-panel--fragmented reveal" data-delay="240">
+        <div class="work-panel__bg"></div>
+        <div class="work-panel__content">
+          <span class="work-panel__num">04</span>
+          <h2 class="work-panel__title">Fragmented Appearances</h2>
+          <span class="work-panel__cta">View work →</span>
+        </div>
+      </a>
+
     </div>
   </section>
 
   <!-- ============================================================
-       MARBLES
+       FOOTER
   ============================================================ -->
-  <section class="section section--marbles" id="marbles">
-    <div class="section__inner">
-      <header class="section__head reveal">
-        <span class="section__num">02</span>
-        <h2 class="section__title">Marbles</h2>
-      </header>
-
-      <div class="marbles__grid">
-        <div class="marble-cell marble-cell--hero reveal" data-delay="0">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="marble-cell marble-cell--sm reveal" data-delay="80">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="marble-cell marble-cell--sm reveal" data-delay="160">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="marble-cell marble-cell--md reveal" data-delay="100">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="marble-cell marble-cell--md reveal" data-delay="180">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="marble-cell marble-cell--wide reveal" data-delay="60">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FIBONACCI FLOW
-  ============================================================ -->
-  <section class="section section--fibonacci" id="fibonacci">
-    <div class="section__inner">
-      <header class="section__head reveal">
-        <span class="section__num">03</span>
-        <h2 class="section__title">Fibonacci<br>Flow</h2>
-      </header>
-
-      <div class="fibonacci__wrap">
-        <div class="fibonacci__quote reveal" data-delay="150">
-          <p>
-            Nature's mathematical poetry — spiraling ratios
-            that reveal hidden order inside organic chaos.
-          </p>
-        </div>
-
-        <div class="fibonacci__grid">
-          <!-- Sizes follow 8:5:3:2:1 Fibonacci proportions -->
-          <div class="fib-cell fib-cell--8 reveal" data-delay="0">
-            <div class="placeholder">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-          </div>
-          <div class="fib-cell fib-cell--5 reveal" data-delay="80">
-            <div class="placeholder">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-          </div>
-          <div class="fib-cell fib-cell--3 reveal" data-delay="120">
-            <div class="placeholder">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-          </div>
-          <div class="fib-cell fib-cell--2 reveal" data-delay="160">
-            <div class="placeholder">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-          </div>
-          <div class="fib-cell fib-cell--1 reveal" data-delay="200">
-            <div class="placeholder">
-              <span class="placeholder__label">Image / Video</span>
-              <div class="placeholder__icon">+</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FRAGMENTED APPEARANCES
-  ============================================================ -->
-  <section class="section section--fragmented" id="fragmented">
-    <div class="section__inner">
-      <header class="section__head reveal">
-        <span class="section__num">04</span>
-        <h2 class="section__title">Fragmented<br>Appearances</h2>
-      </header>
-
-      <div class="fragmented__stage">
-        <div class="frag-piece frag-piece--a">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="frag-piece frag-piece--b">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="frag-piece frag-piece--c">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="frag-piece frag-piece--d">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-        <div class="frag-piece frag-piece--e">
-          <div class="placeholder">
-            <span class="placeholder__label">Image / Video</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       ABOUT
-  ============================================================ -->
-  <section class="section section--about" id="about">
-    <div class="section__inner">
-      <div class="about__grid">
-        <div class="about__portrait reveal">
-          <div class="placeholder placeholder--portrait">
-            <span class="placeholder__label">Portrait</span>
-            <div class="placeholder__icon">+</div>
-          </div>
-        </div>
-
-        <div class="about__text">
-          <header class="section__head reveal">
-            <span class="section__num">05</span>
-            <h2 class="section__title">About</h2>
-          </header>
-
-          <p class="about__bio reveal" data-delay="100">
-            Gertjan is a visual artist working at the intersection of
-            material, light, and perception — exploring how form and color
-            create meaning in physical and digital space.
-          </p>
-          <p class="about__bio reveal" data-delay="200">
-            Based in [Location], the practice spans installation,
-            photography, and moving image. Each project is a meditation
-            on presence, absence, and transformation.
-          </p>
-          <p class="about__bio reveal" data-delay="300">
-            Work has been shown at galleries, art fairs, and festivals
-            internationally. Available for commissions, residencies,
-            and collaborative projects.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FESTIVALS & EXHIBITIONS
-  ============================================================ -->
-  <section class="section section--festivals" id="festivals">
-    <div class="section__inner">
-      <header class="section__head reveal">
-        <span class="section__num">06</span>
-        <h2 class="section__title">Festivals &amp;<br>Exhibitions</h2>
-      </header>
-
-      <div class="timeline">
-        <div class="timeline__line" aria-hidden="true"></div>
-
-        <article class="timeline__item reveal" data-delay="0">
-          <time class="timeline__year">2026</time>
-          <div class="timeline__body">
-            <h3 class="timeline__title">Kronach Leuchtet <span class="timeline__badge timeline__badge--current">Now showing</span></h3>
-            <p class="timeline__venue">Connection — Kronach, Germany</p>
-          </div>
-        </article>
-
-        <article class="timeline__item reveal" data-delay="60">
-          <time class="timeline__year">2025</time>
-          <div class="timeline__body">
-            <h3 class="timeline__title">Lichtbeeldenroute Zwolle</h3>
-            <p class="timeline__venue">Connection — Zwolle, Netherlands</p>
-          </div>
-        </article>
-
-        <article class="timeline__item reveal" data-delay="120">
-          <time class="timeline__year">2025</time>
-          <div class="timeline__body">
-            <h3 class="timeline__title">Light Up Wakefield</h3>
-            <p class="timeline__venue">Marbles — Wakefield, United Kingdom</p>
-          </div>
-        </article>
-
-        <article class="timeline__item reveal" data-delay="180">
-          <time class="timeline__year">2025</time>
-          <div class="timeline__body">
-            <h3 class="timeline__title">Vonk Festival Utrecht</h3>
-            <p class="timeline__venue">Melting — Utrecht, Netherlands</p>
-          </div>
-        </article>
-
-        <article class="timeline__item reveal" data-delay="240">
-          <time class="timeline__year">2025</time>
-          <div class="timeline__body">
-            <h3 class="timeline__title">Visualia Pula</h3>
-            <p class="timeline__venue">Connection — Pula, Croatia</p>
-          </div>
-        </article>
-
-        <div class="timeline__more reveal" data-delay="320">
-          <a href="exhibitions.html" class="timeline__more-link">All 43 exhibitions →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CONTACT
-  ============================================================ -->
-  <section class="section section--contact" id="contact">
-    <div class="section__inner">
-      <div class="contact__wrap">
-        <span class="section__num reveal">07</span>
-        <h2 class="contact__heading reveal" data-delay="50">
-          Let's<br>connect.
-        </h2>
-        <a href="mailto:hello@gertjan.com" class="contact__email reveal" data-delay="150">
-          hello@gertjan.com
-        </a>
-        <div class="contact__links reveal" data-delay="250">
-          <a href="#" class="contact__social" rel="noopener">Instagram</a>
-          <a href="#" class="contact__social" rel="noopener">Vimeo</a>
-          <a href="#" class="contact__social" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-    <div class="contact__ghost" aria-hidden="true">Contact</div>
-  </section>
+  <footer class="index-footer">
+    <a href="mailto:hello@gertjan.com" class="index-footer__email">hello@gertjan.com</a>
+    <nav class="index-footer__links" aria-label="Footer navigation">
+      <a href="about.html" class="index-footer__link">About</a>
+      <a href="festivals.html" class="index-footer__link">Exhibitions</a>
+      <a href="contact.html" class="index-footer__link">Contact</a>
+      <a href="cv.html" class="index-footer__link">CV</a>
+    </nav>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

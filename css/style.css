@@ -1095,3 +1095,215 @@ body.nav-open  .cursor            { background: var(--white); }
 
   .nav__inner { padding: 5rem 7vw; }
 }
+
+/* ============================================================
+   NAV — 10th item stagger
+============================================================ */
+.nav__item:nth-child(10) .nav__link-text { transition-delay: 0.50s; }
+
+/* Fix: hamburger X stays white when nav is open over a light page */
+.nav-btn.is-dark.is-open .nav-btn__line { background: var(--white); }
+
+/* ============================================================
+   WORK PANELS  (index.html landing page)
+============================================================ */
+.work-overview {
+  padding: 7rem 0 0;
+}
+
+.work-overview__label {
+  display: block;
+  padding: 0 6vw;
+  margin-bottom: 3rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.28);
+}
+
+.work-panels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--black);
+}
+
+.work-panel {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--mid);
+  --wp-color: var(--yellow);
+}
+
+.work-panel__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 35% 65%, var(--wp-color) 0%, transparent 68%);
+  opacity: 0.15;
+  transition: opacity 0.7s var(--ease-out), transform 0.9s var(--ease-out);
+}
+
+.work-panel:hover .work-panel__bg {
+  opacity: 0.42;
+  transform: scale(1.06);
+}
+
+.work-panel__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 2.5rem 2.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.76) 0%, transparent 100%);
+}
+
+.work-panel__num {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--wp-color);
+  margin-bottom: 0.45rem;
+}
+
+.work-panel__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.work-panel__cta {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wp-color);
+  opacity: 0;
+  transform: translateY(7px);
+  transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+}
+
+.work-panel:hover .work-panel__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-panel--connection { --wp-color: #6BE8E8; }
+.work-panel--marbles    { --wp-color: #FFBC42; }
+.work-panel--fibonacci  { --wp-color: #A78BFA; }
+.work-panel--fragmented { --wp-color: #E83070; }
+
+/* ============================================================
+   INDEX FOOTER
+============================================================ */
+.index-footer {
+  padding: 3.5rem 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(245,245,240,0.05);
+}
+
+.index-footer__email {
+  font-size: 0.8rem;
+  letter-spacing: 0.10em;
+  color: rgba(245,245,240,0.32);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.index-footer__email:hover { color: var(--yellow); }
+
+.index-footer__links {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.index-footer__link {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.26);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.index-footer__link:hover { color: var(--white); }
+
+/* ============================================================
+   PAGE — standalone section pages
+   Extra top padding so content clears the fixed nav button
+============================================================ */
+.page-main > .section:first-child {
+  padding-top: 9rem;
+}
+
+/* Light-background pages (about.html) */
+body[data-page-light] .nav-btn__line                  { background: var(--black); }
+body[data-page-light] .nav-btn.is-open .nav-btn__line { background: var(--white); }
+
+/* ============================================================
+   NEXT WORK LINK
+============================================================ */
+.next-work {
+  padding: 4rem 6vw;
+  border-top: 1px solid rgba(245,245,240,0.07);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--black);
+  text-decoration: none;
+  transition: background var(--t-fast);
+}
+
+.next-work:hover { background: #0c0c0c; }
+
+.next-work__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.next-work__label {
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.28);
+}
+
+.next-work__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  transition: color var(--t-fast);
+}
+
+.next-work:hover .next-work__name { color: var(--yellow); }
+
+/* ============================================================
+   RESPONSIVE — work panels
+============================================================ */
+@media (max-width: 900px) {
+  .work-panels { grid-template-columns: 1fr; }
+  .work-panel  { aspect-ratio: 4 / 3; }
+  .page-main > .section:first-child { padding-top: 7rem; }
+}
+
+@media (max-width: 540px) {
+  .work-overview        { padding-top: 5rem; }
+  .work-overview__label { margin-bottom: 1.5rem; }
+  .next-work            { padding: 3rem 5vw; }
+}
