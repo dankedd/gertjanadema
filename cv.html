@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Gertjan Adema</title>
+  <meta name="description" content="Curriculum Vitae van Gertjan Adema — visueel kunstenaar, kinetische lichtinstallaties." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cv.css" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__bar"></div>
+  </div>
+
+  <!-- Grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Nav trigger -->
+  <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
+    <span class="nav-btn__line"></span>
+    <span class="nav-btn__line"></span>
+    <span class="nav-btn__line"></span>
+  </button>
+
+  <!-- Navigation overlay -->
+  <nav class="nav" id="nav" aria-hidden="true">
+    <div class="nav__bg"></div>
+    <div class="nav__inner">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link" data-num="←">
+            <span class="nav__link-text">Portfolio</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#statement" class="nav__link" data-num="01">
+            <span class="nav__link-text">Statement</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#timeline" class="nav__link" data-num="02">
+            <span class="nav__link-text">Timeline</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#projects" class="nav__link" data-num="03">
+            <span class="nav__link-text">Projects</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#performances" class="nav__link" data-num="04">
+            <span class="nav__link-text">Performances</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#highlights" class="nav__link" data-num="05">
+            <span class="nav__link-text">Highlights</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#contact" class="nav__link" data-num="06">
+            <span class="nav__link-text">Contact</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="exhibitions.html" class="nav__link" data-num="↗">
+            <span class="nav__link-text">Exhibitions Map</span>
+          </a>
+        </li>
+      </ul>
+      <div class="nav__footer">
+        <a href="mailto:hello@gertjan.com" class="nav__email">hello@gertjan.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="cvh">
+    <div class="cvh__bg" aria-hidden="true">
+      <div class="cvh__orb cvh__orb--1"></div>
+      <div class="cvh__orb cvh__orb--2"></div>
+      <div class="cvh__orb cvh__orb--3"></div>
+    </div>
+    <div class="cvh__content">
+      <p class="cvh__eyebrow">Curriculum Vitae &amp; References</p>
+      <h1 class="cvh__name">Gertjan<br>Adema</h1>
+      <p class="cvh__meta">Bolsward, 1971 — Visueel kunstenaar</p>
+    </div>
+    <a href="index.html" class="cvh__back">← Portfolio</a>
+    <div class="hero__scroll">
+      <div class="hero__scroll-label">Scroll</div>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO QUOTE
+  ============================================================ -->
+  <section class="cv-quote">
+    <div class="cv-quote__inner">
+      <blockquote class="cv-quote__block reveal">
+        <p class="cv-quote__text">
+          "Ik vind het heerlijk als mensen naar mijn installaties kijken
+          en zich afvragen hoe het werkt, en dat ze het dan ook echt
+          proberen te doorgronden."
+        </p>
+        <cite class="cv-quote__cite">— Gertjan Adema</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ARTISTIC STATEMENT
+  ============================================================ -->
+  <section class="cv-section cv-section--statement" id="statement">
+    <div class="cv-section__inner">
+      <header class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title">Artistic<br>Statement</h2>
+      </header>
+
+      <div class="cv-statement">
+        <p class="cv-statement__para reveal" data-delay="60">
+          Gertjan Adema maakt kinetische lichtinstallaties waarbij beweging en licht
+          de centrale elementen vormen. In zijn werk combineert en manipuleert hij
+          materialen, licht en beweging om de verbeelding van de toeschouwer te
+          prikkelen en een bewuste waarneming te stimuleren.
+        </p>
+        <p class="cv-statement__para reveal" data-delay="140">
+          Wat is echt, wat is illusie? Door ritme, herhaling en verandering ontstaat
+          een dynamisch samenspel dat de grens opzoekt tussen het mechanische en het
+          organische. De installaties zijn systemen die ademen — precies genoeg
+          structuur om van vrijheid te kunnen genieten.
+        </p>
+        <p class="cv-statement__para reveal" data-delay="220">
+          Zijn werk reflecteert op de verhouding tussen het individu en de wereld om
+          hem heen: op schaal, op structuur, op verbinding. De toeschouwer wordt
+          uitgenodigd om niet alleen te kijken, maar om te voelen, te begrijpen —
+          en uiteindelijk zichzelf in het werk te herkennen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TIMELINE
+  ============================================================ -->
+  <section class="cv-section cv-section--timeline" id="timeline">
+    <div class="cv-section__inner">
+      <header class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Experience &amp;<br>Background</h2>
+      </header>
+
+      <!-- Education -->
+      <div class="cv-tl-group">
+        <h3 class="cv-tl-group__label reveal">Education</h3>
+        <div class="cv-tl">
+          <div class="cv-tl__track" aria-hidden="true"></div>
+
+          <div class="cv-tl__item reveal" data-delay="0">
+            <div class="cv-tl__year">1989–1995</div>
+            <div class="cv-tl__dot" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Universiteit Twente</h4>
+              <p class="cv-tl__role">Werktuigbouwkunde — Mechanical Engineering</p>
+            </div>
+          </div>
+
+          <div class="cv-tl__item reveal" data-delay="70">
+            <div class="cv-tl__year">1996–1998</div>
+            <div class="cv-tl__dot" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Universiteit Eindhoven</h4>
+              <p class="cv-tl__role">Research — Rugwervelprosthesen / Spinal disc prostheses</p>
+            </div>
+          </div>
+
+          <div class="cv-tl__item reveal" data-delay="140">
+            <div class="cv-tl__year">1999–2001</div>
+            <div class="cv-tl__dot" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Conservatorium Zwolle</h4>
+              <p class="cv-tl__role">Klassieke gitaar — Classical Guitar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional -->
+      <div class="cv-tl-group">
+        <h3 class="cv-tl-group__label reveal">Professional &amp; Artistic Work</h3>
+        <div class="cv-tl">
+          <div class="cv-tl__track" aria-hidden="true"></div>
+
+          <div class="cv-tl__item reveal" data-delay="0">
+            <div class="cv-tl__year">2001–2004</div>
+            <div class="cv-tl__dot" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Aerodynamisch ontwerper</h4>
+              <p class="cv-tl__role">Windturbinebladen — Wind turbine blade design</p>
+            </div>
+          </div>
+
+          <div class="cv-tl__item reveal" data-delay="70">
+            <div class="cv-tl__year">2005–2019</div>
+            <div class="cv-tl__dot" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Muzikant &amp; Performer</h4>
+              <p class="cv-tl__role">Muziekoptredens in verhalende theaterproducties</p>
+              <ul class="cv-tl__subs">
+                <li>Hoe klinkt een inktvis</li>
+                <li>De schatkamer van Babylonië</li>
+                <li>De verre reis van Beer</li>
+                <li>Het geheim van de vliegende vis</li>
+                <li>Cirque du Légume</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-tl__item reveal" data-delay="140">
+            <div class="cv-tl__year">2015 —</div>
+            <div class="cv-tl__dot" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Bestuurslid — Humanistisch Verbond</h4>
+              <p class="cv-tl__role">Board member, maatschappelijke betrokkenheid</p>
+            </div>
+          </div>
+
+          <div class="cv-tl__item reveal" data-delay="200">
+            <div class="cv-tl__year">2018 —</div>
+            <div class="cv-tl__dot cv-tl__dot--now" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Beeldend Kunstenaar</h4>
+              <p class="cv-tl__role">Kinetische lichtinstallaties — Kinetic light installations</p>
+            </div>
+          </div>
+
+          <div class="cv-tl__item reveal" data-delay="260">
+            <div class="cv-tl__year">2021 —</div>
+            <div class="cv-tl__dot cv-tl__dot--now" aria-hidden="true"></div>
+            <div class="cv-tl__body">
+              <h4 class="cv-tl__title">Klimaatcoach</h4>
+              <p class="cv-tl__role">Begeleiding van individuen en organisaties naar duurzame transities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS & INSTALLATIONS
+  ============================================================ -->
+  <section class="cv-section cv-section--projects" id="projects">
+    <div class="cv-section__inner">
+      <header class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Projects &amp;<br>Installations</h2>
+      </header>
+
+      <!-- Fragmented Appearances -->
+      <article class="cv-proj reveal">
+        <div class="cv-proj__text">
+          <div class="cv-proj__header">
+            <span class="cv-proj__year">2018 —</span>
+            <h3 class="cv-proj__title">Fragmented Appearances</h3>
+          </div>
+          <p class="cv-proj__desc">
+            Een kinetische lichtinstallatie opgebouwd uit honderden spiegelende
+            schijven die langzaam ronddraaien in de ruimte. Het licht breekt en
+            kaatst terug in steeds veranderende patronen — als een levend, ademend
+            oppervlak van reflectie en vervorming.
+          </p>
+          <dl class="cv-proj__meta">
+            <div>
+              <dt>Diameter</dt>
+              <dd>2,5 m</dd>
+            </div>
+            <div>
+              <dt>Materiaal</dt>
+              <dd>Spiegels, motor, licht</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="cv-proj__media">
+          <!-- Replace href with actual YouTube embed URL -->
+          <div class="yt-embed" data-src="https://www.youtube.com/embed/VIDEO_ID_HERE">
+            <div class="yt-embed__inner">
+              <div class="yt-embed__play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <p class="yt-embed__label">YouTube Video</p>
+              <code class="yt-embed__hint">data-src="youtube.com/embed/…"</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Marbles -->
+      <article class="cv-proj cv-proj--flip reveal" data-delay="60">
+        <div class="cv-proj__text">
+          <div class="cv-proj__header">
+            <span class="cv-proj__year">2020 —</span>
+            <h3 class="cv-proj__title">Marbles</h3>
+          </div>
+          <p class="cv-proj__desc">
+            Glazen bollen bewegen in synchronisatie — een meditatie op evenwicht,
+            zwaartekracht en het moment net vóór de chaos. Elke bol draagt een eigen
+            lichtwereld in zich, en toch zijn ze onlosmakelijk met elkaar verbonden.
+          </p>
+          <dl class="cv-proj__meta">
+            <div>
+              <dt>Hoogte</dt>
+              <dd>1,8 m</dd>
+            </div>
+            <div>
+              <dt>Financiering</dt>
+              <dd>Fonds voor Cultuurparticipatie</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="cv-proj__media">
+          <div class="placeholder placeholder--proj">
+            <span class="placeholder__label">Image / Video</span>
+            <div class="placeholder__icon">+</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Melting -->
+      <article class="cv-proj reveal" data-delay="60">
+        <div class="cv-proj__text">
+          <div class="cv-proj__header">
+            <span class="cv-proj__year">2022 —</span>
+            <h3 class="cv-proj__title">Melting</h3>
+          </div>
+          <p class="cv-proj__desc">
+            Gebaseerd op het principe van de zoetroop: een roterende schijf met
+            beelden die door stroboscopisch licht tot leven komen. <em>Melting</em>
+            onderzoekt de grens tussen stilstand en beweging, tussen vorming en verval
+            — bevroren tijd die toch stroomt.
+          </p>
+          <dl class="cv-proj__meta">
+            <div>
+              <dt>Concept</dt>
+              <dd>Zoetroop, stroboscoop</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="cv-proj__media">
+          <div class="yt-embed" data-src="https://www.youtube.com/embed/VIDEO_ID_HERE">
+            <div class="yt-embed__inner">
+              <div class="yt-embed__play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <p class="yt-embed__label">YouTube Video</p>
+              <code class="yt-embed__hint">data-src="youtube.com/embed/…"</code>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Connection -->
+      <article class="cv-proj cv-proj--flip reveal" data-delay="60">
+        <div class="cv-proj__text">
+          <div class="cv-proj__header">
+            <span class="cv-proj__year">2024 —</span>
+            <h3 class="cv-proj__title">Connection</h3>
+          </div>
+          <p class="cv-proj__desc">
+            Een grootschalige installatie die balans en beweging combineert in een
+            subtiel systeem van krachten. De aanwezigheid van de toeschouwer
+            activeert het werk — verbinding als zowel fysiek als filosofisch principe.
+          </p>
+          <dl class="cv-proj__meta">
+            <div>
+              <dt>Schaal</dt>
+              <dd>Site-specific</dd>
+            </div>
+            <div>
+              <dt>Concept</dt>
+              <dd>Balans, beweging, aanwezigheid</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="cv-proj__media">
+          <div class="placeholder placeholder--proj">
+            <span class="placeholder__label">Image / Video</span>
+            <div class="placeholder__icon">+</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PERFORMANCES & COLLABORATIONS
+  ============================================================ -->
+  <section class="cv-section cv-section--perf" id="performances">
+    <div class="cv-section__inner">
+      <header class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Performances &amp;<br>Collaborations</h2>
+      </header>
+
+      <div class="cv-perf-grid">
+        <article class="cv-perf reveal">
+          <h3 class="cv-perf__title">Humming around and around</h3>
+          <p class="cv-perf__desc">
+            Een muzikale en visuele performance die circulaire patronen onderzoekt.
+            Klank als architectuur, herhaling als ritueel — het publiek bevindt zich
+            in het hart van de compositie.
+          </p>
+          <div class="placeholder placeholder--perf">
+            <span class="placeholder__label">Image / Video</span>
+            <div class="placeholder__icon">+</div>
+          </div>
+        </article>
+
+        <article class="cv-perf reveal" data-delay="120">
+          <h3 class="cv-perf__title">Wie is er doorgedraaid?</h3>
+          <p class="cv-perf__desc">
+            Een collaboratieve productie aan de grens van muziek, installatie en
+            theater. Bewegen en stilstaan als filosofische tegenstelling — wie
+            controleert het systeem, en wie wordt erdoor gecontroleerd?
+          </p>
+          <div class="placeholder placeholder--perf">
+            <span class="placeholder__label">Image / Video</span>
+            <div class="placeholder__icon">+</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HIGHLIGHTS
+  ============================================================ -->
+  <section class="cv-section cv-section--highlights" id="highlights">
+    <div class="cv-section__inner">
+      <header class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Highlights</h2>
+      </header>
+
+      <div class="cv-hl-grid">
+        <div class="cv-hl reveal">
+          <span class="cv-hl__year">2014</span>
+          <h3 class="cv-hl__title">Voordekunst</h3>
+          <p class="cv-hl__body">
+            Succesvolle crowdfundingcampagne via Voordekunst voor de realisatie van
+            een nieuwe kinetische installatie. Volledig gefinancierd door het publiek.
+          </p>
+        </div>
+
+        <div class="cv-hl reveal" data-delay="100">
+          <span class="cv-hl__year">2024</span>
+          <h3 class="cv-hl__title">Rijksmuseum Amsterdam</h3>
+          <p class="cv-hl__body">
+            Donatie van werk aan de collectie van het Rijksmuseum Amsterdam —
+            een erkenning van de artistieke en culturele waarde van het oeuvre.
+          </p>
+        </div>
+
+        <div class="cv-hl cv-hl--featured reveal" data-delay="200">
+          <span class="cv-hl__year">2025</span>
+          <h3 class="cv-hl__title">Glow Eindhoven</h3>
+          <p class="cv-hl__body">
+            Geselecteerd voor het internationale lichtfestival Glow Eindhoven.
+            Project gerealiseerd in samenwerking met ASML, met een productiebudget
+            van €250.000.
+          </p>
+          <div class="cv-hl__tags">
+            <span>ASML</span>
+            <span>Glow Eindhoven</span>
+            <span>€250.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="cv-footer">
+    <div class="cv-footer__inner">
+      <a href="index.html" class="cv-footer__back">← Portfolio</a>
+      <div class="cv-footer__center">
+        <span>Gertjan Adema</span>
+        <span class="cv-footer__dot" aria-hidden="true"></span>
+        <span>Visueel Kunstenaar</span>
+      </div>
+      <a href="mailto:hello@gertjan.com" class="cv-footer__email">hello@gertjan.com</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
