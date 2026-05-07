@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connection — Gertjan Adema</title>
-  <meta name="description" content="Connection — an exploration of invisible bonds, networks, and spatial perception by visual artist Gertjan Adema." />
+  <meta name="description" content="Connection — a kinetic light installation exploring invisible bonds and spatial perception by Gertjan Adema." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +19,8 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
+  <a href="index.html" class="home-btn" aria-label="Home">← Home</a>
+
   <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
     <span class="nav-btn__line"></span>
     <span class="nav-btn__line"></span>
@@ -30,61 +32,58 @@
     <div class="nav__inner">
       <ul class="nav__list">
         <li class="nav__item"><a href="index.html" class="nav__link" data-num="↩"><span class="nav__link-text">Home</span></a></li>
-        <li class="nav__item"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
-        <li class="nav__item"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
-        <li class="nav__item"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
-        <li class="nav__item"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
-        <li class="nav__item"><a href="about.html" class="nav__link" data-num="05"><span class="nav__link-text">About</span></a></li>
-        <li class="nav__item"><a href="festivals.html" class="nav__link" data-num="06"><span class="nav__link-text">Festivals &amp; Exhibitions</span></a></li>
-        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="07"><span class="nav__link-text">Contact</span></a></li>
-        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="↗"><span class="nav__link-text">Exhibitions Map</span></a></li>
-        <li class="nav__item"><a href="cv.html" class="nav__link" data-num="↗"><span class="nav__link-text">CV</span></a></li>
+        <li class="nav__item nav__item--install"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
+        <li class="nav__item nav__item--install"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
+        <li class="nav__item nav__item--install"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
+        <li class="nav__item nav__item--install"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
+        <li class="nav__item nav__item--install"><a href="reflections.html" class="nav__link" data-num="05"><span class="nav__link-text">Reflections of Hope</span></a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text">About the Artist</span></a></li>
+        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text">Festivals &amp; Exhibitions</span></a></li>
+        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="08"><span class="nav__link-text">Contact</span></a></li>
       </ul>
       <div class="nav__footer">
-        <a href="mailto:hello@gertjan.com" class="nav__email">hello@gertjan.com</a>
+        <a href="mailto:info@gertjanadema.nl" class="nav__email">info@gertjanadema.nl</a>
       </div>
     </div>
   </nav>
 
+  <nav class="install-nav" aria-label="Installations">
+    <a href="connection.html" class="install-nav__link is-active">Connection</a>
+    <a href="marbles.html" class="install-nav__link">Marbles</a>
+    <a href="fibonacci.html" class="install-nav__link">Fibonacci Flow</a>
+    <a href="fragmented.html" class="install-nav__link">Fragmented Appearances</a>
+    <a href="reflections.html" class="install-nav__link">Reflections of Hope</a>
+  </nav>
+
   <main class="page-main">
-    <section class="section section--connection" id="connection">
-      <canvas class="connection__canvas" id="connectionCanvas"></canvas>
 
-      <div class="section__inner">
-        <header class="section__head reveal">
-          <span class="section__num">01</span>
-          <h1 class="section__title">Connection</h1>
-        </header>
-
-        <div class="connection__body">
-          <div class="connection__text reveal" data-delay="100">
-            <p>
-              An exploration of invisible bonds, networks, and the subtle
-              relationships that shape our perception of space and identity.
-              Move through the field — feel the system respond.
-            </p>
-          </div>
-
-          <div class="connection__media reveal" data-delay="200">
-            <div class="media-grid media-grid--2col">
-              <div class="media-fill media-fill--tall">
-                <img src="assets/images/connection/connection-daylight.jpeg" alt="Connection installation in daylight" loading="lazy" />
-              </div>
-              <div class="media-fill media-fill--tall">
-                <img src="assets/images/connection/connection-evening.jpeg" alt="Connection installation at night" loading="lazy" />
-              </div>
-            </div>
-          </div>
+    <!-- Carousel -->
+    <div class="carousel" id="carousel-connection" data-carousel>
+      <div class="carousel__track">
+        <div class="carousel__slide">
+          <img src="assets/images/connection/connection-daylight.jpeg" alt="Connection — daylight" loading="eager" />
+        </div>
+        <div class="carousel__slide">
+          <img src="assets/images/connection/connection-evening.jpeg" alt="Connection — evening" loading="lazy" />
         </div>
       </div>
-    </section>
+      <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
+      <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#8250;</button>
+      <div class="carousel__dots"></div>
+    </div>
 
-    <a href="marbles.html" class="next-work">
-      <div class="next-work__inner">
-        <span class="next-work__label">Next work</span>
-        <span class="next-work__name">Marbles →</span>
-      </div>
-    </a>
+    <!-- Content -->
+    <div class="install-content reveal">
+      <span class="install-content__num">01</span>
+      <h1 class="install-content__title">Connection</h1>
+      <p class="install-content__text">
+        An exploration of invisible bonds — the networks, systems, and subtle
+        relationships that shape our perception of space and each other.
+        Hundreds of light points suspended in space form constellations that
+        shift with the presence of the viewer, making the invisible tangible.
+      </p>
+    </div>
+
   </main>
 
   <script src="js/main.js"></script>

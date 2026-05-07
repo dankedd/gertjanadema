@@ -398,3 +398,153 @@ document.querySelectorAll('.marble-cell').forEach(cell => {
     el.appendChild(iframe);
   });
 })();
+
+/* ============================================================
+   YOUTUBE BACKGROUND VIDEO (index.html hero)
+
+   To change the video:
+     1. Get the YouTube URL, e.g. https://youtu.be/Y0l7m2XTkIw
+     2. Copy the 11-character ID that follows youtu.be/
+     3. Paste it as the value of YT_VIDEO_ID below
+============================================================ */
+(function initYTBackground() {
+  const YT_VIDEO_ID = 'Y0l7m2XTkIw'; // ← paste YouTube video ID here
+
+  const playerEl = document.getElementById('ytBgPlayer');
+  const fallback  = document.getElementById('heroFallback');
+  if (!playerEl) return; // not on index.html
+
+  let playing = false;
+
+  // Give up waiting after 6 seconds — keep animated orbs visible
+  const giveUpTimer = setTimeout(() => {
+    if (!playing && fallback) fallback.style.opacity = '1';
+  }, 6000);
+
+  function showVideo() {
+    if (playing) return;
+    playing = true;
+    clearTimeout(giveUpTimer);
+    // The YT API replaced #ytBgPlayer div with an iframe; fade it in
+    const iframe = document.getElementById('ytBgPlayer');
+    if (iframe) iframe.classList.add('is-ready');
+    if (fallback) {
+      fallback.style.transition = 'opacity 1.4s ease';
+      fallback.style.opacity    = '0';
+    }
+  }
+
+  function showFallback() {
+    if (fallback) fallback.style.opacity = '1';
+    clearTimeout(giveUpTimer);
+  }
+
+  // Defined before the script tag is injected so the API can call it
+  window.onYouTubeIframeAPIReady = function () {
+    /* eslint-disable no-undef */
+    new YT.Player('ytBgPlayer', {
+      videoId: YT_VIDEO_ID,
+      playerVars: {
+        autoplay:        1,
+        mute:            1,
+        loop:            1,
+        playlist:        YT_VIDEO_ID, // required for loop
+        controls:        0,
+        rel:             0,
+        iv_load_policy:  3, // no annotations
+        modestbranding:  1,
+        disablekb:       1,
+        fs:              0,
+        playsinline:     1,
+        enablejsapi:     1,
+        vq:              'hd1080',
+      },
+      events: {
+        onReady(e) {
+          // Belt-and-suspenders: mute + play in case autoplay was delayed
+          e.target.mute();
+          e.target.setVolume(0);
+          e.target.playVideo();
+        },
+        onStateChange(e) {
+          if (e.data === YT.PlayerState.PLAYING) showVideo();
+        },
+        onError: showFallback,
+      },
+    });
+    /* eslint-enable no-undef */
+  };
+
+  // Inject the YouTube IFrame API — fires onYouTubeIframeAPIReady when ready
+  const script  = document.createElement('script');
+  script.src    = 'https://www.youtube.com/iframe_api';
+  script.async  = true;
+  document.head.appendChild(script);
+})();
+
+/* ============================================================
+   CAROUSEL
+   Initialises every [data-carousel] element on the page.
+   Features: arrow buttons, dot indicators, touch/swipe, auto-advance.
+============================================================ */
+(function initCarousels() {
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track  = carousel.querySelector('.carousel__track');
+    const slides = carousel.querySelectorAll('.carousel__slide');
+    const dotsEl = carousel.querySelector('.carousel__dots');
+    const btnPrev = carousel.querySelector('.carousel__btn--prev');
+    const btnNext = carousel.querySelector('.carousel__btn--next');
+
+    if (!track || slides.length < 2) {
+      // Single slide — hide controls
+      if (btnPrev) btnPrev.style.display = 'none';
+      if (btnNext) btnNext.style.display = 'none';
+      return;
+    }
+
+    let current   = 0;
+    let autoTimer = null;
+    const total   = slides.length;
+
+    // Build dots
+    const dots = Array.from({ length: total }, (_, i) => {
+      const d = document.createElement('button');
+      d.className  = 'carousel__dot' + (i === 0 ? ' is-active' : '');
+      d.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      d.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(d);
+      return d;
+    });
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+      resetAuto();
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current + 1), 5000);
+    }
+
+    btnPrev.addEventListener('click', () => goTo(current - 1));
+    btnNext.addEventListener('click', () => goTo(current + 1));
+
+    // Touch / swipe support
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+      const delta = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(delta) > 40) goTo(delta > 0 ? current + 1 : current - 1);
+    }, { passive: true });
+
+    // Pause auto on hover
+    carousel.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    carousel.addEventListener('mouseleave', resetAuto);
+
+    resetAuto();
+  });
+})();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fibonacci Flow — Gertjan Adema</title>
-  <meta name="description" content="Fibonacci Flow — nature's mathematical poetry in light by visual artist Gertjan Adema." />
+  <meta name="description" content="Fibonacci Flow — nature's mathematical poetry in light by Gertjan Adema." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +19,8 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
+  <a href="index.html" class="home-btn" aria-label="Home">← Home</a>
+
   <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
     <span class="nav-btn__line"></span>
     <span class="nav-btn__line"></span>
@@ -30,75 +32,66 @@
     <div class="nav__inner">
       <ul class="nav__list">
         <li class="nav__item"><a href="index.html" class="nav__link" data-num="↩"><span class="nav__link-text">Home</span></a></li>
-        <li class="nav__item"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
-        <li class="nav__item"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
-        <li class="nav__item"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
-        <li class="nav__item"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
-        <li class="nav__item"><a href="about.html" class="nav__link" data-num="05"><span class="nav__link-text">About</span></a></li>
-        <li class="nav__item"><a href="festivals.html" class="nav__link" data-num="06"><span class="nav__link-text">Festivals &amp; Exhibitions</span></a></li>
-        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="07"><span class="nav__link-text">Contact</span></a></li>
-        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="↗"><span class="nav__link-text">Exhibitions Map</span></a></li>
-        <li class="nav__item"><a href="cv.html" class="nav__link" data-num="↗"><span class="nav__link-text">CV</span></a></li>
+        <li class="nav__item nav__item--install"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
+        <li class="nav__item nav__item--install"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
+        <li class="nav__item nav__item--install"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
+        <li class="nav__item nav__item--install"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
+        <li class="nav__item nav__item--install"><a href="reflections.html" class="nav__link" data-num="05"><span class="nav__link-text">Reflections of Hope</span></a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text">About the Artist</span></a></li>
+        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text">Festivals &amp; Exhibitions</span></a></li>
+        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="08"><span class="nav__link-text">Contact</span></a></li>
       </ul>
       <div class="nav__footer">
-        <a href="mailto:hello@gertjan.com" class="nav__email">hello@gertjan.com</a>
+        <a href="mailto:info@gertjanadema.nl" class="nav__email">info@gertjanadema.nl</a>
       </div>
     </div>
   </nav>
 
+  <nav class="install-nav" aria-label="Installations">
+    <a href="connection.html" class="install-nav__link">Connection</a>
+    <a href="marbles.html" class="install-nav__link">Marbles</a>
+    <a href="fibonacci.html" class="install-nav__link is-active">Fibonacci Flow</a>
+    <a href="fragmented.html" class="install-nav__link">Fragmented Appearances</a>
+    <a href="reflections.html" class="install-nav__link">Reflections of Hope</a>
+  </nav>
+
   <main class="page-main">
-    <section class="section section--fibonacci" id="fibonacci">
-      <div class="section__inner">
-        <header class="section__head reveal">
-          <span class="section__num">03</span>
-          <h1 class="section__title">Fibonacci<br>Flow</h1>
-        </header>
 
-        <div class="fibonacci__wrap">
-          <div class="fibonacci__quote reveal" data-delay="150">
-            <p>
-              Nature's mathematical poetry — spiraling ratios
-              that reveal hidden order inside organic chaos.
-            </p>
-          </div>
-
-          <div class="fibonacci__grid">
-            <div class="fib-cell fib-cell--8 reveal" data-delay="0">
-              <div class="media-fill">
-                <img src="assets/images/fibonacci/fibonacci-1.jpeg" alt="Fibonacci Flow" loading="lazy" />
-              </div>
-            </div>
-            <div class="fib-cell fib-cell--5 reveal" data-delay="80">
-              <div class="media-fill">
-                <img src="assets/images/fibonacci/fibonacci-2.jpg" alt="Fibonacci Flow" loading="lazy" />
-              </div>
-            </div>
-            <div class="fib-cell fib-cell--3 reveal" data-delay="120">
-              <div class="media-fill">
-                <img src="assets/images/fibonacci/fibonacci-3.jpg" alt="Fibonacci Flow" loading="lazy" />
-              </div>
-            </div>
-            <div class="fib-cell fib-cell--2 reveal" data-delay="160">
-              <div class="media-fill">
-                <img src="assets/images/fibonacci/fibonacci-4.jpeg" alt="Fibonacci Flow" loading="lazy" />
-              </div>
-            </div>
-            <div class="fib-cell fib-cell--1 reveal" data-delay="200">
-              <div class="media-fill">
-                <img src="assets/images/fibonacci/fibonacci-5.jpg" alt="Fibonacci Flow" loading="lazy" />
-              </div>
-            </div>
-          </div>
+    <div class="carousel" id="carousel-fibonacci" data-carousel>
+      <div class="carousel__track">
+        <div class="carousel__slide">
+          <img src="assets/images/fibonacci/fibonacci-1.jpeg" alt="Fibonacci Flow" loading="eager" />
+        </div>
+        <div class="carousel__slide">
+          <img src="assets/images/fibonacci/fibonacci-2.jpg" alt="Fibonacci Flow" loading="lazy" />
+        </div>
+        <div class="carousel__slide">
+          <img src="assets/images/fibonacci/fibonacci-3.jpg" alt="Fibonacci Flow" loading="lazy" />
+        </div>
+        <div class="carousel__slide">
+          <img src="assets/images/fibonacci/fibonacci-4.jpeg" alt="Fibonacci Flow" loading="lazy" />
+        </div>
+        <div class="carousel__slide">
+          <img src="assets/images/fibonacci/fibonacci-5.jpg" alt="Fibonacci Flow" loading="lazy" />
         </div>
       </div>
-    </section>
+      <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
+      <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#8250;</button>
+      <div class="carousel__dots"></div>
+    </div>
 
-    <a href="fragmented.html" class="next-work">
-      <div class="next-work__inner">
-        <span class="next-work__label">Next work</span>
-        <span class="next-work__name">Fragmented Appearances →</span>
-      </div>
-    </a>
+    <div class="install-content reveal">
+      <span class="install-content__num">03</span>
+      <h1 class="install-content__title">Fibonacci Flow</h1>
+      <p class="install-content__text">
+        Nature's mathematical poetry — spiraling ratios that reveal hidden order
+        inside organic chaos. Light elements arranged according to the Fibonacci
+        sequence create a structure that feels simultaneously inevitable and
+        surprising, echoing the same proportions found in shells, galaxies,
+        and the growth patterns of living things.
+      </p>
+    </div>
+
   </main>
 
   <script src="js/main.js"></script>

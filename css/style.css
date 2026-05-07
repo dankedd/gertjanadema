@@ -1195,10 +1195,17 @@ body.nav-open  .cursor            { background: var(--white); }
   transform: translateY(0);
 }
 
-.work-panel--connection { --wp-color: #6BE8E8; }
-.work-panel--marbles    { --wp-color: #FFBC42; }
-.work-panel--fibonacci  { --wp-color: #A78BFA; }
-.work-panel--fragmented { --wp-color: #E83070; }
+.work-panel--connection   { --wp-color: #6BE8E8; }
+.work-panel--marbles      { --wp-color: #FFBC42; }
+.work-panel--fibonacci    { --wp-color: #A78BFA; }
+.work-panel--fragmented   { --wp-color: #E83070; }
+.work-panel--reflections  { --wp-color: #4DD9AC; }
+
+/* 5th panel fills the remaining column on 2-col grid */
+.work-panels .work-panel:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  aspect-ratio: 32 / 10;
+}
 
 /* ============================================================
    INDEX FOOTER
@@ -1251,6 +1258,9 @@ body.nav-open  .cursor            { background: var(--white); }
 /* Light-background pages (about.html) */
 body[data-page-light] .nav-btn__line                  { background: var(--black); }
 body[data-page-light] .nav-btn.is-open .nav-btn__line { background: var(--white); }
+
+/* Carousel at top of page — no extra padding needed (it's full-bleed) */
+.page-main > .carousel:first-child { padding-top: 0; }
 
 /* ============================================================
    NEXT WORK LINK
@@ -1341,3 +1351,275 @@ body[data-page-light] .nav-btn.is-open .nav-btn__line { background: var(--white)
 /* Standalone height variants */
 .media-fill--tall    { min-height: 340px; }
 .media-fill--portrait { min-height: 420px; aspect-ratio: 3 / 4; }
+
+/* ============================================================
+   YOUTUBE BACKGROUND VIDEO
+   Sits inside .hero__media, behind overlay + content layers.
+   Simulates object-fit:cover via min-width/min-height trick.
+============================================================ */
+.hero__yt-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+/* The YT IFrame API replaces #ytBgPlayer div with an <iframe>
+   that keeps the same id — styles below target that iframe. */
+#ytBgPlayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 16:9 at full viewport width */
+  width: 100vw;
+  height: 56.25vw;
+
+  /* Portrait / tall viewports: ensure full height coverage */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 100vh ÷ (9/16) */
+
+  pointer-events: none;  /* Block all interaction with the iframe */
+  border: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+#ytBgPlayer.is-ready {
+  opacity: 1;
+}
+
+/* ============================================================
+   NAV — curator-focused reduced size
+============================================================ */
+.nav__link-text {
+  font-size: clamp(1.6rem, 3.5vw, 3.2rem);
+}
+
+.nav__item--install { display: none; }
+@media (max-width: 900px) {
+  .nav__item--install { display: block; }
+}
+
+/* ============================================================
+   HOME BUTTON
+============================================================ */
+.home-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: var(--nav-btn-z);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.45);
+  text-decoration: none;
+  transition: color var(--t-fast), opacity var(--t-fast);
+}
+.home-btn:hover { color: var(--yellow); }
+body[data-page-light] .home-btn { color: rgba(0,0,0,0.45); }
+body[data-page-light] .home-btn:hover { color: var(--red); }
+
+/* ============================================================
+   INSTALLATION SIDEBAR (desktop left rail)
+============================================================ */
+.install-nav {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.install-nav__link {
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.28);
+  text-decoration: none;
+  transition: color var(--t-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.install-nav__link::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(245,245,240,0.2);
+  flex-shrink: 0;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+
+.install-nav__link:hover        { color: var(--yellow); }
+.install-nav__link:hover::before { background: var(--yellow); transform: scale(1.5); }
+.install-nav__link.is-active    { color: var(--white); }
+.install-nav__link.is-active::before { background: var(--yellow); }
+
+@media (max-width: 900px) {
+  .install-nav { display: none; }
+}
+
+/* ============================================================
+   CAROUSEL
+============================================================ */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--dark);
+  user-select: none;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.65s var(--ease-in-out);
+  will-change: transform;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__slide img,
+.carousel__slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.38);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--white);
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+  border-radius: 1px;
+  line-height: 1;
+}
+
+.carousel__btn:hover {
+  background: rgba(255,188,66,0.15);
+  border-color: rgba(255,188,66,0.4);
+  color: var(--yellow);
+}
+
+.carousel__btn--prev { left: 1.5rem; }
+.carousel__btn--next { right: 1.5rem; }
+
+.carousel__dots {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.55rem;
+  z-index: 10;
+}
+
+.carousel__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(245,245,240,0.3);
+  border: none;
+  cursor: none;
+  padding: 0;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+
+.carousel__dot.is-active {
+  background: var(--yellow);
+  transform: scale(1.3);
+}
+
+@media (max-width: 540px) {
+  .carousel__slide { height: 60vh; min-height: 320px; }
+  .carousel__btn   { width: 40px; height: 40px; font-size: 1.2rem; }
+}
+
+/* ============================================================
+   INSTALLATION CONTENT (below carousel)
+============================================================ */
+.install-content {
+  padding: 5.5rem 6vw 7rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.install-content__num {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--yellow);
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.install-content__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.install-content__text {
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  line-height: 1.85;
+  color: rgba(245,245,240,0.52);
+  max-width: 620px;
+}
+
+/* ============================================================
+   HERO — curator override
+============================================================ */
+.hero__name {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
+}
+
+.hero__subtitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: clamp(0.6rem, 0.9vw, 0.75rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.4);
+  margin-top: 0.9rem;
+}
+
+/* ============================================================
+   CONTACT — reduced heading size
+============================================================ */
+.contact__heading {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+}
