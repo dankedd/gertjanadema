@@ -386,9 +386,10 @@ body.nav-open  .cursor            { background: var(--white); }
 .hero__name {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 8.5vw, 8rem);
-  font-weight: 800;
-  line-height: 0.88;
-  letter-spacing: -0.03em;
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   color: var(--white);
 }
 
@@ -429,9 +430,10 @@ body.nav-open  .cursor            { background: var(--white); }
 .section__title {
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
 }
 
 /* ============================================================
@@ -807,8 +809,9 @@ body.nav-open  .cursor            { background: var(--white); }
 .timeline__title {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 1.8vw, 1.6rem);
-  font-weight: 700;
-  letter-spacing: -0.015em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   color: var(--white);
   margin-bottom: 0.3rem;
   transition: color var(--t-fast);
@@ -920,9 +923,10 @@ body.nav-open  .cursor            { background: var(--white); }
 .contact__heading {
   font-family: var(--font-display);
   font-size: clamp(4.5rem, 11vw, 10rem);
-  font-weight: 800;
-  line-height: 0.88;
-  letter-spacing: -0.035em;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   color: var(--white);
   margin-bottom: 3.5rem;
 }
@@ -981,8 +985,9 @@ body.nav-open  .cursor            { background: var(--white); }
   right: -0.04em;
   font-family: var(--font-display);
   font-size: 20vw;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   color: rgba(255,255,255,0.018);
   line-height: 1;
   pointer-events: none;
@@ -1044,7 +1049,7 @@ body.nav-open  .cursor            { background: var(--white); }
   .section { padding: 5rem 5vw; }
   .section__head { margin-bottom: 3.5rem; }
 
-  .hero__name { letter-spacing: -0.01em; }
+  .hero__name { letter-spacing: 0.01em; }
 
   .media-grid--2col { grid-template-columns: 1fr; }
   .connection__media .media-grid { height: auto; }
@@ -1158,9 +1163,10 @@ body[data-page-light] .nav-btn.is-open .nav-btn__line { background: var(--white)
 .next-work__name {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 3.2vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--white);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   transition: color var(--t-fast);
 }
 
@@ -1442,9 +1448,10 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
 .install-content__title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   color: var(--white);
   margin-bottom: 2rem;
 }
@@ -1482,5 +1489,5 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
 ============================================================ */
 .contact__heading {
   font-size: clamp(3.5rem, 8vw, 7rem);
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
 }
