@@ -1,0 +1,504 @@
+/* ============================================================
+   INSTALL.CSS — Two-column exhibition layout
+   Loaded in addition to style.css on all installation pages.
+============================================================ */
+
+/* ============================================================
+   FONT OVERRIDE
+   These pages load Cormorant Garamond, not Syne.
+   Redirect --font-display accordingly.
+============================================================ */
+body.install-page {
+  --font-display: 'Cormorant Garamond', serif;
+  overflow: hidden;          /* no body scroll on desktop — panel scrolls internally */
+}
+
+/* Restore body scroll on mobile (layout stacks vertically) */
+@media (max-width: 768px) {
+  body.install-page { overflow-y: auto; }
+}
+
+/* ============================================================
+   HIDE CHROME THAT THE NEW LAYOUT REPLACES
+============================================================ */
+.install-page .home-btn    { display: none; }
+.install-page .install-nav { display: none; }
+
+/* ============================================================
+   ACCENT COLOURS — one per installation
+============================================================ */
+body.page--connection  { --accent: #6BE8E8; --accent-rgb: 107,232,232; }
+body.page--marbles     { --accent: #FFBC42; --accent-rgb: 255,188,66;  }
+body.page--fibonacci   { --accent: #A78BFA; --accent-rgb: 167,139,250; }
+body.page--fragmented  { --accent: #E83070; --accent-rgb: 232,48,112;  }
+body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
+
+/* ============================================================
+   EXHIBITION LAYOUT — 30 / 70 SPLIT
+============================================================ */
+.exh-layout {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+/* ============================================================
+   LEFT PANEL
+============================================================ */
+.exh-panel {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(245,245,240,0.05);
+  scrollbar-width: none;
+}
+.exh-panel::-webkit-scrollbar { display: none; }
+
+.exh-panel__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 4.5rem 2.5rem 3rem;
+  min-height: 100%;
+}
+
+/* Back link */
+.exh-panel__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.25);
+  text-decoration: none;
+  margin-bottom: 3rem;
+  transition: color var(--t-fast);
+  cursor: none;
+}
+.exh-panel__back:hover { color: rgba(245,245,240,0.7); }
+
+/* Number tag */
+.exh-panel__num {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent, var(--yellow));
+  margin-bottom: 0.75rem;
+}
+
+/* Title */
+.exh-panel__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 2.4vw, 3rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.8rem;
+}
+
+/* Subtitle */
+.exh-panel__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  line-height: 1.65;
+  color: rgba(245,245,240,0.35);
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+
+/* Divider */
+.exh-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(245,245,240,0.06);
+  margin: 2rem 0;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   TECHNICAL SPECS
+============================================================ */
+.exh-specs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem 1.4rem;
+  margin: 0;
+}
+
+.exh-specs dt {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.25);
+  padding-top: 0.1em;
+  white-space: nowrap;
+}
+
+.exh-specs dd {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: rgba(245,245,240,0.58);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================================
+   ACTION BUTTONS
+============================================================ */
+.exh-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 2.5rem;
+}
+
+.exh-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.6);
+  background: transparent;
+  border: 1px solid rgba(245,245,240,0.1);
+  cursor: none;
+  text-align: left;
+  text-decoration: none;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+}
+
+.exh-btn__arrow {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity var(--t-fast), transform var(--t-fast);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.exh-btn:hover {
+  background: rgba(var(--accent-rgb, 255,188,66), 0.06);
+  border-color: rgba(var(--accent-rgb, 255,188,66), 0.5);
+  color: var(--white);
+}
+
+.exh-btn:hover .exh-btn__arrow {
+  opacity: 0.7;
+  transform: translateX(0);
+}
+
+/* Next button — more prominent */
+.exh-btn--next {
+  background: rgba(245,245,240,0.03);
+  border-color: rgba(245,245,240,0.14);
+  margin-top: 0.25rem;
+}
+
+.exh-btn--next:hover {
+  background: var(--accent, var(--yellow));
+  border-color: var(--accent, var(--yellow));
+  color: #000;
+}
+
+.exh-btn--next:hover .exh-btn__arrow {
+  opacity: 1;
+}
+
+/* ============================================================
+   RIGHT GALLERY
+============================================================ */
+.exh-gallery {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Carousel fills the full right column */
+.exh-gallery .carousel {
+  height: 100%;
+  background: #000;
+}
+
+.exh-gallery .carousel__track {
+  height: 100%;
+}
+
+.exh-gallery .carousel__slide {
+  height: 100vh;
+  min-height: 0;
+}
+
+/* Zoom-on-hover */
+.exh-gallery .carousel__slide img {
+  transition: transform 1.2s var(--ease-out), opacity 0.4s ease;
+}
+
+.exh-gallery .carousel__slide:hover img {
+  transform: scale(1.04);
+}
+
+/* Image counter — top right of gallery */
+.carousel__counter {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.56rem;
+  letter-spacing: 0.26em;
+  color: rgba(245,245,240,0.35);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Align dots to the left inside the gallery */
+.exh-gallery .carousel__dots {
+  bottom: 2rem;
+  left: 2rem;
+  right: auto;
+  transform: none;
+  justify-content: flex-start;
+}
+
+/* Pull nav arrows in a bit */
+.exh-gallery .carousel__btn--prev { left: 2rem; }
+.exh-gallery .carousel__btn--next { right: 2rem; }
+
+/* ============================================================
+   MODALS — SHARED BASE
+============================================================ */
+.exh-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s var(--ease-out);
+}
+
+.exh-modal.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.exh-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.exh-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 90vw);
+  max-height: 84vh;
+  overflow-y: auto;
+  background: var(--mid);
+  border: 1px solid rgba(245,245,240,0.07);
+  padding: 4.5rem 5rem 5rem;
+  transform: translateY(20px);
+  transition: transform 0.45s var(--ease-out);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245,245,240,0.12) transparent;
+}
+
+.exh-modal.is-open .exh-modal__panel {
+  transform: translateY(0);
+}
+
+/* Close button */
+.exh-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: rgba(245,245,240,0.3);
+  font-size: 0.95rem;
+  cursor: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  transition: color var(--t-fast);
+  border: 1px solid rgba(245,245,240,0.08);
+}
+.exh-modal__close:hover { color: var(--white); border-color: rgba(245,245,240,0.25); }
+
+/* Info modal typography */
+.exh-modal__num {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.56rem;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--accent, var(--yellow));
+  margin-bottom: 1.2rem;
+}
+
+.exh-modal__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.exh-modal__body {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.95;
+  color: rgba(245,245,240,0.55);
+}
+
+.exh-modal__body p + p {
+  margin-top: 1.3em;
+}
+
+/* ============================================================
+   VIDEO MODAL VARIANT
+============================================================ */
+.exh-modal--video .exh-modal__panel {
+  width: min(1000px, 94vw);
+  max-height: none;
+  overflow: hidden;
+  padding: 0;
+  background: #000;
+  border-color: rgba(245,245,240,0.06);
+  aspect-ratio: 16 / 9;
+}
+
+.exh-modal--video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Placeholder — shown when no video is configured */
+.exh-modal__video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  color: rgba(245,245,240,0.22);
+  background: #0a0a0a;
+}
+
+.exh-modal__video-placeholder svg { flex-shrink: 0; }
+
+.exh-modal__video-placeholder span {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (1024 and below)
+============================================================ */
+@media (max-width: 1024px) {
+  .exh-layout { grid-template-columns: 36% 64%; }
+
+  .exh-panel__inner { padding: 4.5rem 2rem 2.5rem; }
+
+  .exh-panel__title { font-size: clamp(1.7rem, 3vw, 2.6rem); }
+
+  .exh-modal__panel { padding: 3.5rem 3.5rem 4rem; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (768 and below)
+============================================================ */
+@media (max-width: 768px) {
+  .exh-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+
+  .exh-panel {
+    height: auto;
+    overflow: visible;
+    border-right: none;
+    border-bottom: 1px solid rgba(245,245,240,0.06);
+  }
+
+  .exh-panel__inner {
+    padding: 6rem 5vw 3.5rem;
+    min-height: auto;
+  }
+
+  .exh-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+  }
+
+  .exh-btn                     { flex: 1 1 calc(50% - 0.25rem); }
+  .exh-btn--next               { flex-basis: 100%; margin-top: 0; }
+
+  .exh-gallery {
+    height: 72vw;
+    min-height: 320px;
+  }
+
+  .exh-gallery .carousel__slide {
+    height: 72vw;
+    min-height: 320px;
+  }
+
+  .exh-modal__panel {
+    padding: 3rem 2.5rem 3.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (540 and below)
+============================================================ */
+@media (max-width: 540px) {
+  .exh-panel__inner { padding: 5.5rem 5vw 3rem; }
+
+  .exh-panel__title { font-size: clamp(2rem, 9vw, 3rem); }
+
+  .exh-actions { flex-direction: column; }
+  .exh-btn     { flex: none; width: 100%; }
+
+  .exh-gallery          { height: 85vw; min-height: 280px; }
+  .exh-gallery .carousel__slide { height: 85vw; min-height: 280px; }
+
+  .exh-modal__panel     { padding: 2.5rem 1.75rem 3rem; }
+  .exh-modal__title     { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+
+  .exh-modal--video .exh-modal__panel {
+    width: 98vw;
+    aspect-ratio: auto;
+    height: 56vw;
+  }
+}

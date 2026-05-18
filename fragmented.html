@@ -8,18 +8,17 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/install.css" />
 </head>
-<body>
+<body class="install-page page--fragmented">
 
   <div class="loader" id="loader"><div class="loader__bar"></div></div>
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
-  <a href="index.html" class="home-btn" aria-label="Home">← Home</a>
 
   <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
     <span class="nav-btn__line"></span>
@@ -47,53 +46,116 @@
     </div>
   </nav>
 
-  <nav class="install-nav" aria-label="Installations">
-    <a href="connection.html" class="install-nav__link">Connection</a>
-    <a href="marbles.html" class="install-nav__link">Marbles</a>
-    <a href="fibonacci.html" class="install-nav__link">Fibonacci Flow</a>
-    <a href="fragmented.html" class="install-nav__link is-active">Fragmented Appearances</a>
-    <a href="reflections.html" class="install-nav__link">Reflections of Hope</a>
-  </nav>
+  <!-- ============================================================
+       EXHIBITION LAYOUT
+  ============================================================ -->
+  <div class="exh-layout">
 
-  <main class="page-main">
+    <!-- LEFT: INFO PANEL -->
+    <aside class="exh-panel">
+      <div class="exh-panel__inner">
 
-    <div class="carousel" id="carousel-fragmented" data-carousel>
-      <div class="carousel__track">
-        <div class="carousel__slide">
-          <img src="assets/images/fragmented/fragmented-1.jpg" alt="Fragmented Appearances — Binnenhof" loading="eager" />
+        <a href="index.html" class="exh-panel__back">← Gertjan Adema</a>
+
+        <span class="exh-panel__num">04 / 05</span>
+        <h1 class="exh-panel__title">Fragmented<br>Appearances</h1>
+        <p class="exh-panel__subtitle">Identity seen through a broken mirror</p>
+
+        <div class="exh-divider"></div>
+
+        <dl class="exh-specs">
+          <dt>Year</dt>       <dd>2022 — ongoing</dd>
+          <dt>Materials</dt>  <dd>Mirror panels, steel, directional LED</dd>
+          <dt>Dimensions</dt> <dd>Variable / site-specific</dd>
+          <dt>Format</dt>     <dd>Indoor installation</dd>
+          <dt>Venues</dt>     <dd>Binnenhof · Hämeenlinna · Jyväskylä</dd>
+        </dl>
+
+        <div class="exh-divider"></div>
+
+        <div class="exh-actions">
+          <button class="exh-btn" data-modal="info" aria-label="Open full description">
+            More Info <span class="exh-btn__arrow">→</span>
+          </button>
+          <button class="exh-btn" data-modal="demo" aria-label="Watch demo reel">
+            Demo <span class="exh-btn__arrow">→</span>
+          </button>
+          <a href="reflections.html" class="exh-btn exh-btn--next">
+            Next — Reflections of Hope <span class="exh-btn__arrow">→</span>
+          </a>
         </div>
-        <div class="carousel__slide">
-          <img src="assets/images/fragmented/fragmented-2.jpg" alt="Fragmented Appearances — Hämeenlinna" loading="lazy" />
+
+      </div>
+    </aside>
+
+    <!-- RIGHT: GALLERY -->
+    <main class="exh-gallery">
+      <div class="carousel" id="carousel-fragmented" data-carousel>
+        <div class="carousel__track">
+          <div class="carousel__slide">
+            <img src="assets/images/fragmented/fragmented-1.jpg" alt="Fragmented Appearances — Binnenhof" loading="eager" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/fragmented/fragmented-2.jpg" alt="Fragmented Appearances — Hämeenlinna" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/fragmented/fragmented-3.jpg" alt="Fragmented Appearances — Jyväskylä" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/fragmented/fragmented-4.jpg" alt="Fragmented Appearances" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/fragmented/fragmented-5.jpg" alt="Fragmented Appearances" loading="lazy" />
+          </div>
         </div>
-        <div class="carousel__slide">
-          <img src="assets/images/fragmented/fragmented-3.jpg" alt="Fragmented Appearances — Jyväskylä" loading="lazy" />
-        </div>
-        <div class="carousel__slide">
-          <img src="assets/images/fragmented/fragmented-4.jpg" alt="Fragmented Appearances" loading="lazy" />
-        </div>
-        <div class="carousel__slide">
-          <img src="assets/images/fragmented/fragmented-5.jpg" alt="Fragmented Appearances" loading="lazy" />
+        <div class="carousel__counter" aria-live="polite"></div>
+        <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#8250;</button>
+        <div class="carousel__dots"></div>
+      </div>
+    </main>
+
+  </div><!-- /.exh-layout -->
+
+  <!-- ============================================================
+       INFO MODAL
+  ============================================================ -->
+  <div class="exh-modal" id="modal-info" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-info-title">
+    <div class="exh-modal__backdrop"></div>
+    <div class="exh-modal__panel">
+      <button class="exh-modal__close" aria-label="Close">✕</button>
+      <span class="exh-modal__num">04 — Fragmented Appearances</span>
+      <h2 class="exh-modal__title" id="modal-info-title">Which Fragment<br>Do You Trust?</h2>
+      <div class="exh-modal__body">
+        <p>Fragmented Appearances begins with a simple question: when you see your own reflection, which fragment do you trust?</p>
+        <p>Mirrored panels — some flat, some angled, some curved — are suspended at varying heights throughout the installation space. Visitors find themselves surrounded by their own image, but each reflection shows a slightly different version: higher or lower, closer or further, slightly rotated, reversed.</p>
+        <p>The self, multiplied and displaced, becomes unfamiliar. The installation explores how identity is constructed from fragments — how we assemble a coherent sense of self from the incomplete, imprecise, and often contradictory images we hold of ourselves.</p>
+        <p>Fragmented Appearances has been shown at the Binnenhof in The Hague, at Hämeenlinna Light Festival in Finland, and at Jyväskylä — each time adapting its configuration to the available architecture while preserving its central question.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       DEMO MODAL
+       To enable video: add data-yt="YOUTUBE_ID" to the div below.
+  ============================================================ -->
+  <div class="exh-modal exh-modal--video" id="modal-demo" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Fragmented Appearances demo reel">
+    <div class="exh-modal__backdrop"></div>
+    <div class="exh-modal__panel">
+      <button class="exh-modal__close" aria-label="Close">✕</button>
+      <div class="exh-modal__video-wrap">
+        <div class="exh-modal__video-placeholder">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8"/>
+            <polygon points="10,8 17,12 10,16" fill="currentColor"/>
+          </svg>
+          <span>Demo reel coming soon</span>
         </div>
       </div>
-      <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
-      <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#8250;</button>
-      <div class="carousel__dots"></div>
     </div>
-
-    <div class="install-content reveal">
-      <span class="install-content__num">04</span>
-      <h1 class="install-content__title">Fragmented<br>Appearances</h1>
-      <p class="install-content__text">
-        Identity seen through a broken mirror — the self refracted into
-        fragments that never quite reassemble. Mirrored panels suspended
-        at different angles scatter and multiply the viewer's image,
-        questioning what it means to be seen whole. Shown at the Binnenhof,
-        in Hämeenlinna, and Jyväskylä.
-      </p>
-    </div>
-
-  </main>
+  </div>
 
   <script src="js/main.js"></script>
+  <script src="js/install.js"></script>
 </body>
 </html>

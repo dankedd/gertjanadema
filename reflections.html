@@ -4,22 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reflections of Hope — Gertjan Adema</title>
-  <meta name="description" content="Reflections of Hope — a new kinetic light installation by Gertjan Adema." />
+  <meta name="description" content="Reflections of Hope — a kinetic light installation by Gertjan Adema." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/install.css" />
 </head>
-<body>
+<body class="install-page page--reflections">
 
   <div class="loader" id="loader"><div class="loader__bar"></div></div>
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
-  <a href="index.html" class="home-btn" aria-label="Home">← Home</a>
 
   <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
     <span class="nav-btn__line"></span>
@@ -47,52 +46,116 @@
     </div>
   </nav>
 
-  <nav class="install-nav" aria-label="Installations">
-    <a href="connection.html" class="install-nav__link">Connection</a>
-    <a href="marbles.html" class="install-nav__link">Marbles</a>
-    <a href="fibonacci.html" class="install-nav__link">Fibonacci Flow</a>
-    <a href="fragmented.html" class="install-nav__link">Fragmented Appearances</a>
-    <a href="reflections.html" class="install-nav__link is-active">Reflections of Hope</a>
-  </nav>
+  <!-- ============================================================
+       EXHIBITION LAYOUT
+  ============================================================ -->
+  <div class="exh-layout">
 
-  <main class="page-main">
+    <!-- LEFT: INFO PANEL -->
+    <aside class="exh-panel">
+      <div class="exh-panel__inner">
 
-    <div class="carousel" id="carousel-reflections" data-carousel>
-      <div class="carousel__track">
-        <div class="carousel__slide">
-          <div class="placeholder placeholder--tall" style="height:80vh;min-height:500px;background:rgba(33,131,128,0.06);border-color:rgba(33,131,128,0.15);">
-            <span class="placeholder__label">Reflections of Hope — Image 1</span>
+        <a href="index.html" class="exh-panel__back">← Gertjan Adema</a>
+
+        <span class="exh-panel__num">05 / 05</span>
+        <h1 class="exh-panel__title">Reflections<br>of Hope</h1>
+        <p class="exh-panel__subtitle">Light as memory, light as promise</p>
+
+        <div class="exh-divider"></div>
+
+        <dl class="exh-specs">
+          <dt>Year</dt>       <dd>2023 — present</dd>
+          <dt>Materials</dt>  <dd>High-lumen projectors, water surfaces</dd>
+          <dt>Lighting</dt>   <dd>Custom projection software, real-time render</dd>
+          <dt>Dimensions</dt> <dd>Architectural scale / site-specific</dd>
+          <dt>Format</dt>     <dd>Outdoor projection installation</dd>
+        </dl>
+
+        <div class="exh-divider"></div>
+
+        <div class="exh-actions">
+          <button class="exh-btn" data-modal="info" aria-label="Open full description">
+            More Info <span class="exh-btn__arrow">→</span>
+          </button>
+          <button class="exh-btn" data-modal="demo" aria-label="Watch demo reel">
+            Demo <span class="exh-btn__arrow">→</span>
+          </button>
+          <a href="connection.html" class="exh-btn exh-btn--next">
+            Back to Start — Connection <span class="exh-btn__arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- RIGHT: GALLERY — placeholder images until photography is ready -->
+    <main class="exh-gallery">
+      <div class="carousel" id="carousel-reflections" data-carousel>
+        <div class="carousel__track">
+          <div class="carousel__slide">
+            <div class="placeholder placeholder--tall" style="height:100%;min-height:0;background:rgba(77,217,172,0.05);border-color:rgba(77,217,172,0.12);">
+              <span class="placeholder__label">Reflections of Hope — Image 1</span>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="placeholder placeholder--tall" style="height:100%;min-height:0;background:rgba(77,217,172,0.05);border-color:rgba(77,217,172,0.12);">
+              <span class="placeholder__label">Reflections of Hope — Image 2</span>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="placeholder placeholder--tall" style="height:100%;min-height:0;background:rgba(77,217,172,0.05);border-color:rgba(77,217,172,0.12);">
+              <span class="placeholder__label">Reflections of Hope — Image 3</span>
+            </div>
           </div>
         </div>
-        <div class="carousel__slide">
-          <div class="placeholder placeholder--tall" style="height:80vh;min-height:500px;background:rgba(33,131,128,0.06);border-color:rgba(33,131,128,0.15);">
-            <span class="placeholder__label">Reflections of Hope — Image 2</span>
-          </div>
-        </div>
-        <div class="carousel__slide">
-          <div class="placeholder placeholder--tall" style="height:80vh;min-height:500px;background:rgba(33,131,128,0.06);border-color:rgba(33,131,128,0.15);">
-            <span class="placeholder__label">Reflections of Hope — Image 3</span>
-          </div>
+        <div class="carousel__counter" aria-live="polite"></div>
+        <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#8250;</button>
+        <div class="carousel__dots"></div>
+      </div>
+    </main>
+
+  </div><!-- /.exh-layout -->
+
+  <!-- ============================================================
+       INFO MODAL
+  ============================================================ -->
+  <div class="exh-modal" id="modal-info" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-info-title">
+    <div class="exh-modal__backdrop"></div>
+    <div class="exh-modal__panel">
+      <button class="exh-modal__close" aria-label="Close">✕</button>
+      <span class="exh-modal__num">05 — Reflections of Hope</span>
+      <h2 class="exh-modal__title" id="modal-info-title">Light Arrives<br>Before It Is Understood</h2>
+      <div class="exh-modal__body">
+        <p>Reflections of Hope is a meditation on light as memory and as promise.</p>
+        <p>Rippled water projections — generated in real time from algorithmic simulations of surface movement — are cast across architectural facades and open surfaces. The light shifts and breathes, forming patterns that recall both the past (the way light moves on a harbour at dusk, on a fountain in a square) and something not yet defined.</p>
+        <p>Hope, the work suggests, is a quality of light: it arrives before it is understood. It illuminates without explaining. It transforms familiar surfaces into something that feels, briefly, like a different world.</p>
+        <p>Reflections of Hope is Gertjan Adema's most recent major work, currently available for outdoor and large-scale indoor presentations. Photography for this work is forthcoming.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       DEMO MODAL
+       To enable video: add data-yt="YOUTUBE_ID" to the div below.
+  ============================================================ -->
+  <div class="exh-modal exh-modal--video" id="modal-demo" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Reflections of Hope demo reel">
+    <div class="exh-modal__backdrop"></div>
+    <div class="exh-modal__panel">
+      <button class="exh-modal__close" aria-label="Close">✕</button>
+      <div class="exh-modal__video-wrap">
+        <div class="exh-modal__video-placeholder">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8"/>
+            <polygon points="10,8 17,12 10,16" fill="currentColor"/>
+          </svg>
+          <span>Demo reel coming soon</span>
         </div>
       </div>
-      <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
-      <button class="carousel__btn carousel__btn--next" aria-label="Next slide">&#8250;</button>
-      <div class="carousel__dots"></div>
     </div>
-
-    <div class="install-content reveal">
-      <span class="install-content__num">05</span>
-      <h1 class="install-content__title">Reflections<br>of Hope</h1>
-      <p class="install-content__text">
-        A new work exploring the interplay between water, light, and memory.
-        Rippled reflections projected across architectural surfaces transform
-        familiar spaces into places of contemplation — where the boundaries
-        between past and future dissolve into shimmering light.
-      </p>
-    </div>
-
-  </main>
+  </div>
 
   <script src="js/main.js"></script>
+  <script src="js/install.js"></script>
 </body>
 </html>
