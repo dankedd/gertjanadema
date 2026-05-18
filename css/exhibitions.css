@@ -62,9 +62,9 @@
 .ex-header__title {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 6vw, 5.5rem);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
   color: var(--white);
 }
 
@@ -462,8 +462,8 @@
 .ex-map-tip__name {
   font-family: var(--font-display);
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   color: var(--white);
   margin-bottom: 0.2rem;
 }
@@ -584,9 +584,9 @@
 .ex-tl-title {
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
   color: var(--white);
 }
 
@@ -621,9 +621,9 @@
 .ex-tl-year__label {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 6vw, 5.5rem);
-  font-weight: 700;
+  font-weight: 800;
   color: rgba(255,255,255,0.04);
-  letter-spacing: 0.03em;
+  letter-spacing: -0.03em;
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -746,11 +746,11 @@
 .ex-tl-event__name {
   font-family: var(--font-display);
   font-size: clamp(1.05rem, 1.8vw, 1.4rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   color: var(--white);
   margin-bottom: 0.3rem;
-  line-height: 1.15;
+  line-height: 1.1;
   transition: color var(--t-fast);
 }
 
@@ -917,10 +917,10 @@
 .ex-card__title {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--white);
-  line-height: 1.05;
-  letter-spacing: 0.02em;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
   margin-bottom: 0.6rem;
 }
 

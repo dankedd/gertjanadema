@@ -74,9 +74,9 @@
 .cvh__name {
   font-family: var(--font-display);
   font-size: clamp(4.5rem, 12vw, 11rem);
-  font-weight: 700;
-  line-height: 0.92;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
   color: var(--white);
 }
 
@@ -143,9 +143,8 @@
   transform: translateX(-50%);
   font-family: var(--font-display);
   font-size: 8rem;
-  font-weight: 400;
-  font-style: italic;
-  color: rgba(33,131,128,0.14);
+  font-weight: 800;
+  color: rgba(33,131,128,0.12);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -154,11 +153,10 @@
 .cv-quote__text {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3.2vw, 2.8rem);
-  font-weight: 400;
-  line-height: 1.4;
+  font-weight: 500;
+  line-height: 1.35;
   color: var(--white);
-  font-style: italic;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
   position: relative;
 }
 
@@ -311,8 +309,8 @@
 .cv-tl__title {
   font-family: var(--font-display);
   font-size: clamp(1.05rem, 1.6vw, 1.4rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   color: var(--white);
   margin-bottom: 0.3rem;
   transition: color var(--t-fast);
@@ -381,10 +379,10 @@
 .cv-proj__title {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--white);
-  line-height: 1.0;
-  letter-spacing: 0.02em;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 
 .cv-proj__desc {
@@ -520,8 +518,8 @@
 .cv-perf__title {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 2vw, 1.8rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   color: var(--white);
   margin-bottom: 1rem;
 }
@@ -595,10 +593,10 @@
 .cv-hl__title {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--white);
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .cv-hl__body {
