@@ -1044,7 +1044,7 @@ body.nav-open  .cursor            { background: var(--white); }
   .section { padding: 5rem 5vw; }
   .section__head { margin-bottom: 3.5rem; }
 
-  .hero__name { letter-spacing: 0.05em; }
+  .hero__name { letter-spacing: -0.01em; }
 
   .media-grid--2col { grid-template-columns: 1fr; }
   .connection__media .media-grid { height: auto; }
@@ -1457,13 +1457,14 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
 }
 
 /* ============================================================
-   HERO — curator override
+   HERO — curator override  (Syne preserved — original hero aesthetic)
 ============================================================ */
 .hero__name {
-  font-size: clamp(2rem, 3.2vw, 3.4rem);
-  font-weight: 300;
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 400;
   text-transform: lowercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
 }
 
 .hero__subtitle {
