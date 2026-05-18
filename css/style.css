@@ -243,6 +243,7 @@ body.nav-open  .cursor            { background: var(--white); }
   color: var(--white);
   letter-spacing: 0.01em;
   line-height: 1.05;
+  text-transform: lowercase;
   transform: translateY(100%);
   transition: transform var(--t-slow), color var(--t-fast);
 }

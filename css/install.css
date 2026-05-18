@@ -99,10 +99,11 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
 .exh-panel__title {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 2.4vw, 3rem);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--white);
   line-height: 1.0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   margin-bottom: 0.8rem;
 }
 
@@ -360,10 +361,11 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
 .exh-modal__title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--white);
   line-height: 1.0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
   margin-bottom: 2.5rem;
 }
 
