@@ -1333,6 +1333,85 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
   .install-nav { display: none; }
 }
 
+/* Hide sidebar on homepage — works-index section takes over */
+body[data-page="home"] .install-nav { display: none; }
+
+/* ============================================================
+   WORKS INDEX  (homepage installation list)
+============================================================ */
+.works-index {
+  background: var(--black);
+  border-top: 1px solid rgba(245,245,240,0.05);
+}
+
+.works-index__item {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.2rem 6vw;
+  border-bottom: 1px solid rgba(245,245,240,0.05);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--t-fast);
+}
+
+/* Left accent line on hover */
+.works-index__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--yellow);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--t-mid);
+}
+
+.works-index__item:hover { background: rgba(255,255,255,0.018); }
+.works-index__item:hover::before { transform: scaleY(1); }
+
+.works-index__num {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  color: rgba(245,245,240,0.22);
+  flex-shrink: 0;
+  width: 2rem;
+}
+
+.works-index__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: rgba(245,245,240,0.70);
+  flex: 1;
+  line-height: 1;
+  transition: color var(--t-fast);
+}
+
+.works-index__item:hover .works-index__title { color: var(--white); }
+
+.works-index__arrow {
+  font-size: 1.2rem;
+  color: rgba(245,245,240,0.14);
+  flex-shrink: 0;
+  transition: color var(--t-fast), transform var(--t-mid);
+}
+
+.works-index__item:hover .works-index__arrow {
+  color: var(--yellow);
+  transform: translateX(8px);
+}
+
+@media (max-width: 540px) {
+  .works-index__item { padding: 1.6rem 5vw; gap: 1.5rem; }
+  .works-index__title { font-size: clamp(1.3rem, 7vw, 2rem); }
+}
+
 /* ============================================================
    CAROUSEL
 ============================================================ */
