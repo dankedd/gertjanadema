@@ -144,7 +144,6 @@ if (heroVideo) {
 ============================================================ */
 const heroContent = document.querySelector('.hero__content');
 const heroMedia   = document.querySelector('.hero__media');
-const heroScroll  = document.querySelector('.hero__scroll');
 
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
@@ -152,7 +151,6 @@ window.addEventListener('scroll', () => {
   heroContent.style.transform = `translateY(${y * 0.28}px)`;
   heroContent.style.opacity   = String(Math.max(0, 1 - y / 550));
   if (heroMedia) heroMedia.style.transform = `translateY(${y * 0.14}px)`;
-  if (heroScroll) heroScroll.style.opacity = String(Math.max(0, 1 - y / 200));
 }, { passive: true });
 
 /* ============================================================

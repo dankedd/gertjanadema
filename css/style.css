@@ -11,7 +11,7 @@
   --dark:    #0a0a0a;
   --mid:     #111111;
 
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
   --font-body:    'Space Grotesk', sans-serif;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -239,10 +239,10 @@ body.nav-open  .cursor            { background: var(--white); }
   display: block;
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5.5vw, 5rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--white);
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
   transform: translateY(100%);
   transition: transform var(--t-slow), color var(--t-fast);
 }
@@ -386,49 +386,14 @@ body.nav-open  .cursor            { background: var(--white); }
 .hero__name {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 8.5vw, 8rem);
-  font-weight: 800;
-  line-height: 0.88;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
   color: var(--white);
 }
 
 .hero__tagline {
   display: none;
-}
-
-/* — scroll cue — */
-.hero__scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  opacity: 0;
-  animation: heroPop 1s ease 1.8s forwards;
-}
-
-.hero__scroll-label {
-  font-size: 0.6rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.35);
-}
-
-.hero__scroll-line {
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, var(--yellow), transparent);
-  animation: scrollPulse 2.4s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-  0%, 100% { transform: scaleY(1); opacity: 0.4; }
-  50%       { transform: scaleY(1.3); opacity: 1; }
 }
 
 /* ============================================================
@@ -464,9 +429,9 @@ body.nav-open  .cursor            { background: var(--white); }
 .section__title {
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
 }
 
 /* ============================================================
@@ -842,7 +807,8 @@ body.nav-open  .cursor            { background: var(--white); }
 .timeline__title {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 1.8vw, 1.6rem);
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--white);
   margin-bottom: 0.3rem;
   transition: color var(--t-fast);
@@ -954,9 +920,9 @@ body.nav-open  .cursor            { background: var(--white); }
 .contact__heading {
   font-family: var(--font-display);
   font-size: clamp(4.5rem, 11vw, 10rem);
-  font-weight: 800;
-  line-height: 0.88;
-  letter-spacing: -0.035em;
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
   color: var(--white);
   margin-bottom: 3.5rem;
 }
@@ -1015,8 +981,8 @@ body.nav-open  .cursor            { background: var(--white); }
   right: -0.04em;
   font-family: var(--font-display);
   font-size: 20vw;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   color: rgba(255,255,255,0.018);
   line-height: 1;
   pointer-events: none;
@@ -1078,7 +1044,7 @@ body.nav-open  .cursor            { background: var(--white); }
   .section { padding: 5rem 5vw; }
   .section__head { margin-bottom: 3.5rem; }
 
-  .hero__name { letter-spacing: -0.04em; }
+  .hero__name { letter-spacing: 0.05em; }
 
   .media-grid--2col { grid-template-columns: 1fr; }
   .connection__media .media-grid { height: auto; }
@@ -1103,109 +1069,6 @@ body.nav-open  .cursor            { background: var(--white); }
 
 /* Fix: hamburger X stays white when nav is open over a light page */
 .nav-btn.is-dark.is-open .nav-btn__line { background: var(--white); }
-
-/* ============================================================
-   WORK PANELS  (index.html landing page)
-============================================================ */
-.work-overview {
-  padding: 7rem 0 0;
-}
-
-.work-overview__label {
-  display: block;
-  padding: 0 6vw;
-  margin-bottom: 3rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.30em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.28);
-}
-
-.work-panels {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background: var(--black);
-}
-
-.work-panel {
-  position: relative;
-  display: block;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  text-decoration: none;
-  background: var(--mid);
-  --wp-color: var(--yellow);
-}
-
-.work-panel__bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 35% 65%, var(--wp-color) 0%, transparent 68%);
-  opacity: 0.15;
-  transition: opacity 0.7s var(--ease-out), transform 0.9s var(--ease-out);
-}
-
-.work-panel:hover .work-panel__bg {
-  opacity: 0.42;
-  transform: scale(1.06);
-}
-
-.work-panel__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem 2.5rem 2.5rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.76) 0%, transparent 100%);
-}
-
-.work-panel__num {
-  display: block;
-  font-size: 0.62rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--wp-color);
-  margin-bottom: 0.45rem;
-}
-
-.work-panel__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
-  font-weight: 800;
-  color: var(--white);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-.work-panel__cta {
-  display: inline-block;
-  margin-top: 0.7rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--wp-color);
-  opacity: 0;
-  transform: translateY(7px);
-  transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
-}
-
-.work-panel:hover .work-panel__cta {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.work-panel--connection   { --wp-color: #6BE8E8; }
-.work-panel--marbles      { --wp-color: #FFBC42; }
-.work-panel--fibonacci    { --wp-color: #A78BFA; }
-.work-panel--fragmented   { --wp-color: #E83070; }
-.work-panel--reflections  { --wp-color: #4DD9AC; }
-
-/* 5th panel fills the remaining column on 2-col grid */
-.work-panels .work-panel:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  aspect-ratio: 32 / 10;
-}
 
 /* ============================================================
    INDEX FOOTER
@@ -1295,27 +1158,23 @@ body[data-page-light] .nav-btn.is-open .nav-btn__line { background: var(--white)
 .next-work__name {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 3.2vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--white);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   transition: color var(--t-fast);
 }
 
 .next-work:hover .next-work__name { color: var(--yellow); }
 
 /* ============================================================
-   RESPONSIVE — work panels
+   RESPONSIVE
 ============================================================ */
 @media (max-width: 900px) {
-  .work-panels { grid-template-columns: 1fr; }
-  .work-panel  { aspect-ratio: 4 / 3; }
   .page-main > .section:first-child { padding-top: 7rem; }
 }
 
 @media (max-width: 540px) {
-  .work-overview        { padding-top: 5rem; }
-  .work-overview__label { margin-bottom: 1.5rem; }
-  .next-work            { padding: 3rem 5vw; }
+  .next-work { padding: 3rem 5vw; }
 }
 
 /* ============================================================
@@ -1583,9 +1442,9 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
 .install-content__title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
   color: var(--white);
   margin-bottom: 2rem;
 }
@@ -1601,10 +1460,10 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
    HERO — curator override
 ============================================================ */
 .hero__name {
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  font-weight: 300;
   text-transform: lowercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
 }
 
 .hero__subtitle {
@@ -1622,4 +1481,5 @@ body[data-page-light] .home-btn:hover { color: var(--red); }
 ============================================================ */
 .contact__heading {
   font-size: clamp(3.5rem, 8vw, 7rem);
+  letter-spacing: 0.05em;
 }
