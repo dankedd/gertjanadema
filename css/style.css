@@ -1571,3 +1571,70 @@ body[data-page="home"] .install-nav { display: none; }
   font-size: clamp(3.5rem, 8vw, 7rem);
   letter-spacing: 0.01em;
 }
+
+/* ============================================================
+   I18N — bilingual visibility (NL / EN)
+   The active language is set via data-lang on <html>.
+   Each translatable block is duplicated as .lng--en / .lng--nl.
+============================================================ */
+html[data-lang="en"] .lng--nl { display: none !important; }
+html[data-lang="nl"] .lng--en { display: none !important; }
+
+/* ============================================================
+   LANGUAGE TOGGLE
+============================================================ */
+.lang-toggle {
+  position: fixed;
+  top: 2.15rem;
+  right: 6rem;
+  z-index: var(--nav-btn-z);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lang-toggle button {
+  background: none;
+  border: none;
+  padding: 0.2rem 0.1rem;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.4);
+  cursor: none;
+  transition: color var(--t-fast);
+}
+
+.lang-toggle button.is-active { color: var(--yellow); }
+.lang-toggle button:hover     { color: var(--white); }
+
+.lang-toggle__sep {
+  font-size: 0.6rem;
+  color: rgba(245,245,240,0.2);
+  line-height: 1;
+}
+
+/* Dark variant on light pages */
+body[data-page-light] .lang-toggle button            { color: rgba(0,0,0,0.4); }
+body[data-page-light] .lang-toggle button.is-active  { color: var(--red); }
+body[data-page-light] .lang-toggle button:hover      { color: var(--black); }
+body[data-page-light] .lang-toggle__sep              { color: rgba(0,0,0,0.2); }
+
+@media (max-width: 540px) {
+  .lang-toggle { top: 2.25rem; right: 5rem; }
+}
+
+/* ============================================================
+   HERO MOTTO  (tagline under the subtitle, homepage)
+============================================================ */
+.hero__motto {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  color: rgba(245,245,240,0.78);
+  margin-top: 1.4rem;
+}

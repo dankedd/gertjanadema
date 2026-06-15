@@ -3,6 +3,29 @@
 ============================================================ */
 
 /* ============================================================
+   LANGUAGE TOGGLE  (NL / EN)
+   The <head> inline script sets data-lang on <html> before paint
+   to avoid a flash. This wires the toggle buttons and persists choice.
+============================================================ */
+(function initLang() {
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll('.lang-toggle [data-lang-set]');
+
+  function setLang(l) {
+    if (l !== 'nl' && l !== 'en') l = 'en';
+    root.setAttribute('data-lang', l);
+    root.lang = l;
+    try { localStorage.setItem('siteLang', l); } catch (e) {}
+    buttons.forEach(b => b.classList.toggle('is-active', b.dataset.langSet === l));
+  }
+
+  buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langSet)));
+
+  // Sync active state with whatever the head script already applied
+  setLang(root.getAttribute('data-lang') || 'en');
+})();
+
+/* ============================================================
    LOADER
 ============================================================ */
 const loader    = document.getElementById('loader');

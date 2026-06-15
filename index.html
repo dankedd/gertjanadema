@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
   <title>Gertjan Adema — Kinetic Light Installations</title>
   <meta name="description" content="Gertjan Adema — visual artist creating kinetic light installations shown at festivals and exhibitions across Europe." />
 
@@ -18,6 +19,12 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="lang-toggle" role="group" aria-label="Language / Taal">
+    <button data-lang-set="nl" type="button" aria-label="Nederlands">NL</button>
+    <span class="lang-toggle__sep" aria-hidden="true">/</span>
+    <button data-lang-set="en" type="button" aria-label="English">EN</button>
+  </div>
 
   <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
     <span class="nav-btn__line"></span>
@@ -35,8 +42,8 @@
         <li class="nav__item nav__item--install"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
         <li class="nav__item nav__item--install"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
         <li class="nav__item nav__item--install"><a href="reflections.html" class="nav__link" data-num="05"><span class="nav__link-text">Reflections of Hope</span></a></li>
-        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text">About the Artist</span></a></li>
-        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text">Festivals &amp; Exhibitions</span></a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text"><span class="lng lng--en">About the Artist</span><span class="lng lng--nl">Over de kunstenaar</span></span></a></li>
+        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text"><span class="lng lng--en">Festivals &amp; Exhibitions</span><span class="lng lng--nl">Festivals &amp; exposities</span></span></a></li>
         <li class="nav__item"><a href="contact.html" class="nav__link" data-num="08"><span class="nav__link-text">Contact</span></a></li>
       </ul>
       <div class="nav__footer">
@@ -80,7 +87,14 @@
 
     <div class="hero__content">
       <h1 class="hero__name" data-text="gertjan adema">gertjan adema</h1>
-      <span class="hero__subtitle">kinetic lightart installations</span>
+      <span class="hero__subtitle">
+        <span class="lng lng--en">Kinetic light-art installations</span>
+        <span class="lng lng--nl">Kinetische lichtkunstinstallaties</span>
+      </span>
+      <span class="hero__motto">
+        <span class="lng lng--en">Experience the magic of light and movement.</span>
+        <span class="lng lng--nl">Ervaar de magie van licht en beweging.</span>
+      </span>
     </div>
 
   </section>
