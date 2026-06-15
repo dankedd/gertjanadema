@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
   <title>Connection — Gertjan Adema</title>
   <meta name="description" content="Connection — a kinetic light installation exploring invisible bonds and spatial perception by Gertjan Adema." />
 
@@ -19,6 +20,12 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="lang-toggle" role="group" aria-label="Language / Taal">
+    <button data-lang-set="nl" type="button" aria-label="Nederlands">NL</button>
+    <span class="lang-toggle__sep" aria-hidden="true">/</span>
+    <button data-lang-set="en" type="button" aria-label="English">EN</button>
+  </div>
 
   <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
     <span class="nav-btn__line"></span>
@@ -59,29 +66,37 @@
 
         <span class="exh-panel__num">01 / 05</span>
         <h1 class="exh-panel__title">Connection</h1>
-        <p class="exh-panel__subtitle">Networks of invisible light</p>
+        <p class="exh-panel__subtitle">
+          <span class="lng lng--en">An infinite connection between movement and balance.</span>
+          <span class="lng lng--nl">Een oneindige verbinding tussen beweging en balans.</span>
+        </p>
 
         <div class="exh-divider"></div>
 
-        <dl class="exh-specs">
-          <dt>Year</dt>       <dd>2019 — ongoing</dd>
-          <dt>Materials</dt>  <dd>LED nodes, steel cable, custom electronics</dd>
-          <dt>Lighting</dt>   <dd>400+ addressable RGB nodes</dd>
-          <dt>Dimensions</dt> <dd>Variable / site-specific</dd>
-          <dt>Format</dt>     <dd>Indoor &amp; outdoor installation</dd>
+        <dl class="exh-specs lng lng--en">
+          <dt>Type</dt>       <dd>Kinetic marble run</dd>
+          <dt>Dimensions</dt> <dd>650 &times; 350 &times; 300 cm</dd>
+          <dt>Marble</dt>     <dd>Sphere, Ø 30 cm</dd>
+          <dt>Support</dt>    <dd>Subsidieregeling Cultuur — Kunstactiviteit Zwolle</dd>
+        </dl>
+        <dl class="exh-specs lng lng--nl">
+          <dt>Type</dt>       <dd>Kinetische knikkerbaan</dd>
+          <dt>Afmetingen</dt> <dd>650 &times; 350 &times; 300 cm</dd>
+          <dt>Knikker</dt>    <dd>Bol, Ø 30 cm</dd>
+          <dt>Mogelijk door</dt> <dd>Subsidieregeling Cultuur — Kunstactiviteit Zwolle</dd>
         </dl>
 
         <div class="exh-divider"></div>
 
         <div class="exh-actions">
-          <button class="exh-btn" data-modal="info" aria-label="Open full description">
-            More Info <span class="exh-btn__arrow">→</span>
+          <button class="exh-btn" data-modal="info" aria-label="More info / Meer info">
+            <span><span class="lng lng--en">More Info</span><span class="lng lng--nl">Meer info</span></span> <span class="exh-btn__arrow">→</span>
           </button>
-          <button class="exh-btn" data-modal="demo" aria-label="Watch demo reel">
+          <button class="exh-btn" data-modal="demo" aria-label="Watch demo / Bekijk demo">
             Demo <span class="exh-btn__arrow">→</span>
           </button>
           <a href="marbles.html" class="exh-btn exh-btn--next">
-            Next — Marbles <span class="exh-btn__arrow">→</span>
+            <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> Marbles <span class="exh-btn__arrow">→</span>
           </a>
         </div>
 
@@ -93,10 +108,34 @@
       <div class="carousel" id="carousel-connection" data-carousel>
         <div class="carousel__track">
           <div class="carousel__slide">
-            <img src="assets/images/connection/connection-daylight.jpeg" alt="Connection — daylight view" loading="eager" />
+            <img src="assets/images/connection/connection-01.jpeg" alt="Connection — magenta light trails with glowing blue node" loading="eager" />
           </div>
           <div class="carousel__slide">
-            <img src="assets/images/connection/connection-evening.jpeg" alt="Connection — evening view" loading="lazy" />
+            <img src="assets/images/connection/connection-02.jpeg" alt="Connection — blue neon track at dusk in a park" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-03.jpeg" alt="Connection — red neon track in a town square at night with crowd" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-04.jpeg" alt="Connection — daylight view of the steel frame during assembly" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-05.jpeg" alt="Connection — the artist building the installation frame" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-06.jpeg" alt="Connection — red and green light trails with glowing orange node" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-07.jpeg" alt="Connection — the artist beside the installation with a glowing pink node" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-08.jpeg" alt="Connection — blue and purple light trails with glowing green node" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-09.jpeg" alt="Connection — light trails mirrored in water with glowing green node" loading="lazy" />
+          </div>
+          <div class="carousel__slide">
+            <img src="assets/images/connection/connection-10.jpeg" alt="Connection — close-up of purple neon track at night with glowing orange node" loading="lazy" />
           </div>
         </div>
         <div class="carousel__counter" aria-live="polite"></div>
@@ -116,12 +155,21 @@
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>
       <span class="exh-modal__num">01 — Connection</span>
-      <h2 class="exh-modal__title" id="modal-info-title">Networks of<br>Invisible Light</h2>
+      <h2 class="exh-modal__title" id="modal-info-title">
+        <span class="lng lng--en">Infinite<br>Connection</span>
+        <span class="lng lng--nl">Oneindige<br>Verbinding</span>
+      </h2>
       <div class="exh-modal__body">
-        <p>Connection investigates the invisible networks that bind us — the unseen forces of attraction, communication, and mutual recognition that define human presence in space.</p>
-        <p>Hundreds of light points are suspended in a three-dimensional grid, each one connected to its neighbours by lengths of translucent cable. As visitors move through the work, proximity sensors respond to their presence: clusters of light pulse and shift, connections brighten and dim, the constellation reforming itself around each new encounter.</p>
-        <p>The result is a living diagram of social physics — a space that becomes a portrait of whoever inhabits it. No two moments in the installation are identical. The work is different when experienced alone and when shared with strangers.</p>
-        <p>Connection has been shown across Europe at indoor and outdoor venues, scaling from intimate gallery environments to large architectural presentations. Each iteration adapts its density and configuration to the specific proportions of the host space.</p>
+        <div class="lng lng--en">
+          <p>This marble run plays with balance and shows how opposites are connected. It is a never-ending play of a marble in a track shaped like a lemniscate with the twist of a Möbius band. The surface of a Möbius band is rotated one turn, creating a connection between top and bottom. Because top and bottom can no longer be distinguished, it becomes a symbol of connection and non-duality, showing that opposites are connected. A lemniscate is known as a sign of infinity.</p>
+          <p>The installation has to make a seemingly impossible turning and swinging movement to keep the marble in the track. This creates a dynamic interplay of geometry, balance and movement.</p>
+          <p>The endless repetition and the passage of both sides of the Möbius band by the sphere represent the importance of connection and the acceptance of contradictions. In this way the installation makes a call to seek connection and to counter social and political polarisation.</p>
+        </div>
+        <div class="lng lng--nl">
+          <p>Deze knikkerbaan speelt met balans en laat zien hoe tegenstellingen met elkaar verbonden zijn. Het geeft een eindeloos spel van een knikker in een baan met de vorm van de lemniscaat en de wrong van een Möbiusband. Het oppervlak van een Möbiusband wordt één slag gedraaid, waardoor er een verbinding tussen boven- en onderkant ontstaat. Omdat er geen sprake meer kan zijn van boven- of onderkant, is het een symbool voor verbinding en non-dualiteit en beeldt het uit dat tegenstellingen met elkaar verbonden zijn. Een lemniscaat staat bekend als een teken van oneindigheid.</p>
+          <p>De installatie moet een schijnbaar onmogelijke draai- en schommelbeweging maken om de knikker in de baan te houden. Hierdoor ontstaat een dynamisch samenspel van geometrie, balans en beweging.</p>
+          <p>De eindeloze herhaling en de passage van beide kanten van de Möbiusband door de bol vertegenwoordigen het belang van verbinding en acceptatie van tegenstrijdigheden. Zo doet de installatie een oproep om verbindingen te zoeken en maatschappelijke en politieke polarisatie tegen te gaan.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -130,7 +178,7 @@
        DEMO MODAL
        To enable video: add data-yt="YOUTUBE_ID" to the div below.
   ============================================================ -->
-  <div class="exh-modal exh-modal--video" id="modal-demo" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Connection demo reel">
+  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="AUUAZeIIocs" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Connection demo reel">
     <div class="exh-modal__backdrop"></div>
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>
