@@ -90,13 +90,36 @@ ul { list-style: none; }
   opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation: grainShift 0.4s steps(1) infinite;
+  /* Promote to an isolated compositing layer and confine its paint,
+     so the noise can never bleed bright subpixels onto sibling layers. */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  contain: paint;
 }
 
 @keyframes grainShift {
-  0%  { transform: translate(0, 0); }
-  25% { transform: translate(-2%, -1%); }
-  50% { transform: translate(1%, 2%); }
-  75% { transform: translate(2%, -2%); }
+  0%  { transform: translateZ(0) translate(0, 0); }
+  25% { transform: translateZ(0) translate(-2%, -1%); }
+  50% { transform: translateZ(0) translate(1%, 2%); }
+  75% { transform: translateZ(0) translate(2%, -2%); }
+}
+
+/* ------------------------------------------------------------
+   MOBILE / TOUCH: remove the grain overlay entirely.
+
+   On phones & tablets the SVG feTurbulence noise is rasterised at
+   the device-pixel-ratio (2–3×). At that resolution the noise no
+   longer averages out to a faint film grain — individual bright
+   pixels survive and read as the random white specks, streaks and
+   flicker reported across the UI. iOS Safari, Android Chrome and
+   mobile Firefox each rasterise SVG filter noise differently, so
+   there is no overlay setting that is artefact-free everywhere.
+   The grain is purely decorative, so removing it on coarse-pointer
+   devices eliminates the cause without changing the layout.
+------------------------------------------------------------ */
+@media (hover: none), (pointer: coarse) {
+  .grain { display: none; }
 }
 
 /* ============================================================

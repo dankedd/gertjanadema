@@ -3,6 +3,23 @@
 ============================================================ */
 
 /* ============================================================
+   RENDERING DEBUG  (opt-in — add ?debug to the URL)
+   Diagnoses high-DPI / GPU-compositing artefacts on devices.
+   Kept behind a flag so the production console stays clean.
+============================================================ */
+(function renderDebug() {
+  if (!/[?&]debug\b/.test(window.location.search)) return;
+
+  console.log('Device Pixel Ratio:', window.devicePixelRatio);
+
+  // Log the composited overlay layers most likely to misrender on mobile.
+  ['.grain', '.hero__media', '.carousel__track'].forEach(sel => {
+    const element = document.querySelector(sel);
+    if (element) console.log('Rendering layer:', element);
+  });
+})();
+
+/* ============================================================
    LANGUAGE TOGGLE  (NL / EN)
    The <head> inline script sets data-lang on <html> before paint
    to avoid a flash. This wires the toggle buttons and persists choice.
