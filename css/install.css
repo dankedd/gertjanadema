@@ -10,12 +10,6 @@
 ============================================================ */
 body.install-page {
   --font-display: 'Cormorant Garamond', serif;
-  overflow: hidden;          /* no body scroll on desktop — panel scrolls internally */
-}
-
-/* Restore body scroll on mobile (layout stacks vertically) */
-@media (max-width: 768px) {
-  body.install-page { overflow-y: auto; }
 }
 
 /* ============================================================
@@ -35,12 +29,15 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
 
 /* ============================================================
    EXHIBITION LAYOUT — 30 / 70 SPLIT
+   The page scrolls as a normal document (wheel, keys, touch work
+   anywhere); the gallery stays pinned on the right via sticky.
 ============================================================ */
 .exh-layout {
   display: grid;
   grid-template-columns: 30% 70%;
-  height: 100vh;
-  overflow: hidden;
+  align-items: start;
+  min-height: 100vh;
+  min-height: 100svh;
   background: var(--dark);
 }
 
@@ -49,15 +46,12 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
 ============================================================ */
 .exh-panel {
   position: relative;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(245,245,240,0.05);
-  scrollbar-width: none;
 }
-.exh-panel::-webkit-scrollbar { display: none; }
 
 .exh-panel__inner {
   display: flex;
@@ -224,8 +218,10 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
    RIGHT GALLERY
 ============================================================ */
 .exh-gallery {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 100vh;
+  height: 100svh;
   overflow: hidden;
 }
 
@@ -241,7 +237,15 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
 
 .exh-gallery .carousel__slide {
   height: 100vh;
+  height: 100svh;
   min-height: 0;
+}
+
+/* <picture> wrapper (WebP + JPG fallback) must fill the slide too */
+.exh-gallery .carousel__slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* Zoom-on-hover */
@@ -380,6 +384,46 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
   margin-top: 1.3em;
 }
 
+.exh-modal__body h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  margin: 2.2rem 0 0.6rem;
+}
+
+.exh-modal__body ul {
+  list-style: none;
+  border-top: 1px solid rgba(245,245,240,0.06);
+}
+
+.exh-modal__body li {
+  padding: 0.9rem 0 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(245,245,240,0.06);
+  position: relative;
+}
+
+.exh-modal__body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.85em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent, var(--yellow));
+}
+
+.exh-modal__body a {
+  color: var(--accent, var(--yellow));
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+  cursor: none;
+}
+.exh-modal__body a:hover { color: var(--white); }
+
 /* ============================================================
    VIDEO MODAL VARIANT
 ============================================================ */
@@ -401,6 +445,14 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
   width: 100%;
   height: 100%;
   min-height: 0;
+}
+
+.exh-modal--video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #000;
 }
 
 .exh-modal--video iframe {
@@ -451,13 +503,11 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
 @media (max-width: 768px) {
   .exh-layout {
     grid-template-columns: 1fr;
-    height: auto;
-    overflow: visible;
+    min-height: 0;
   }
 
   .exh-panel {
-    height: auto;
-    overflow: visible;
+    min-height: 0;
     border-right: none;
     border-bottom: 1px solid rgba(245,245,240,0.06);
   }
@@ -477,6 +527,7 @@ body.page--reflections { --accent: #4DD9AC; --accent-rgb: 77,217,172;  }
   .exh-btn--next               { flex-basis: 100%; margin-top: 0; }
 
   .exh-gallery {
+    position: relative;
     height: 72vw;
     min-height: 320px;
   }

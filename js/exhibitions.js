@@ -18,6 +18,17 @@ const INSTALLATION = {
 const EVENTS = [
   // ── 2026 ──────────────────────────────────────────────────
   {
+    id: 'e44',
+    installation: 'marbles',
+    event_name: 'Lightpool',
+    city: 'Blackpool',
+    country: 'United Kingdom',
+    coordinates: [53.8175, -3.0357],
+    date_start: '2026-10-21',
+    date_end: '2026-10-31',
+    description: null,
+  },
+  {
     id: 'e01',
     installation: 'connection',
     event_name: 'Kronach Leuchtet 2026',

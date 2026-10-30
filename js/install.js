@@ -49,6 +49,8 @@
       const wrap   = modal.querySelector('.exh-modal__video-wrap');
       const iframe = wrap && wrap.querySelector('iframe');
       if (iframe) iframe.remove();
+      // Native <video>: just pause, keep the element for next open
+      modal.querySelectorAll('video').forEach(v => v.pause());
     }
 
     // Only restore body scroll if no other modal is open

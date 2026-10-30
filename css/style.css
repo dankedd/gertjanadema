@@ -235,6 +235,15 @@ body.nav-open  .cursor            { background: var(--white); }
   justify-content: center;
   padding: 6rem 8vw;
   width: 100%;
+  /* Hidden while closed: tall display-font glyphs otherwise peek out of
+     the overflow-clipped items. Delay lets the close animation finish. */
+  visibility: hidden;
+  transition: visibility 0s linear 0.8s;
+}
+
+.nav.is-open .nav__inner {
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .nav__list {
