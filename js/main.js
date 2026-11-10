@@ -34,6 +34,10 @@
     root.lang = l;
     try { localStorage.setItem('siteLang', l); } catch (e) {}
     buttons.forEach(b => b.classList.toggle('is-active', b.dataset.langSet === l));
+    // Bilingual alt text: <img data-alt-en="…" data-alt-nl="…">
+    document.querySelectorAll('img[data-alt-' + l + ']').forEach(img => {
+      img.alt = img.getAttribute('data-alt-' + l);
+    });
   }
 
   buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langSet)));

@@ -103,8 +103,16 @@
         <div class="carousel__track">
           <div class="carousel__slide">
             <picture>
-              <source srcset="assets/reflections-of-hope/reflections-of-hope-1.webp" type="image/webp" />
-              <img src="assets/reflections-of-hope/reflections-of-hope-1.jpg" width="1600" height="2133" alt="Reflections of Hope — hands gluing mirror shards onto a spinning top during the co-creation" loading="eager" />
+              <source type="image/webp"
+                      srcset="assets/reflections-of-hope/reflections-of-hope-1-1000.webp 1000w, assets/reflections-of-hope/reflections-of-hope-1-2000.webp 2000w"
+                      sizes="(max-width: 768px) 100vw, 70vw" />
+              <img src="assets/reflections-of-hope/reflections-of-hope-1-1000.jpg"
+                   srcset="assets/reflections-of-hope/reflections-of-hope-1-1000.jpg 1000w, assets/reflections-of-hope/reflections-of-hope-1-2000.jpg 2000w"
+                   sizes="(max-width: 768px) 100vw, 70vw"
+                   width="2000" height="2667" loading="eager" fetchpriority="high"
+                   alt="Hands gluing mirror shards onto a spinning top of Reflections of Hope during the co-creation"
+                   data-alt-en="Hands gluing mirror shards onto a spinning top of Reflections of Hope during the co-creation"
+                   data-alt-nl="Handen plakken spiegelscherven op een bromtol van Reflections of Hope tijdens de co-creatie" />
             </picture>
           </div>
         </div>
@@ -138,9 +146,7 @@
           <p>The mirror shards for the mosaic simply need to be carefully glued into place. The gluing is done section by section, covering either the top or the bottom of the spinning top, and each section takes approximately one to two hours. It does not need to be completed in one go, and the gluing can also be done together. During or before the mosaic work, the concept of Active Hope and its connection to the artwork will be discussed. This co-creation fosters a sense of connection and is an immediate contribution to Active Hope. The co-creation is part of the creation process itself and is separate from the exhibition of the artwork.</p>
           <h3>You can join the co-creation:</h3>
           <ul>
-            <li>Vredesweek Zwolle (Week of Peace Zwolle): September 19th, 11:00 AM – 5:00 PM, Burg. Drijbersingel 25, walk-in at Saeed</li>
-            <li>Humanist Association – return day Active Hope: October 25th, November 15th and November 22nd, 9:00 AM – 1:00 PM, including lunch. Register and more information: <a href="https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/" target="_blank" rel="noopener noreferrer">https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/</a></li>
-            <li>Climate Week: November 8th, 1:00 PM – 4:00 PM, Focus, Zerboltstraat 63, Zwolle. Walk-in, participation is free.</li>
+            <li>Humanist Association – return day Active Hope: November 15th and November 22nd, 9:00 AM – 1:00 PM, including lunch. Register and more information: <a href="https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/" target="_blank" rel="noopener noreferrer">https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/</a></li>
           </ul>
         </div>
         <div class="lng lng--nl">
@@ -151,9 +157,7 @@
           <p>De spiegelscherven voor het mozaïek hoeven alleen netjes geplakt te worden. Het plakken gaat per boven- of onderkant van de bromtol en per kant duurt dit ongeveer één tot twee uur. Het hoeft niet af, en er kan ook samen geplakt worden. Tijdens of voorafgaand aan het mozaïeken wordt de betekenis van Actieve Hoop en de relatie met het kunstwerk besproken. De co-creatie geeft een gevoel van verbinding en levert direct al een bijdrage aan Actieve Hoop. De co-creatie is een deel van het maakproces en staat los van de expositie van het kunstwerk.</p>
           <h3>Je kunt meedoen met de co-creatie:</h3>
           <ul>
-            <li>Vredesweek Zwolle: 19 september, 11:00 – 17:00 uur, Burg. Drijbersingel 25, vrije inloop bij Saeed</li>
-            <li>Humanistisch Verbond – terugkomdag Actieve Hoop: 25 oktober, 15 november en 22 november, 09:00 – 13:00 uur, inclusief lunch. Aanmelden en meer informatie: <a href="https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/" target="_blank" rel="noopener noreferrer">https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/</a></li>
-            <li>Klimaatweek: 8 november, 13:00 – 16:00 uur, Focus, Zerboltstraat 63, Zwolle. Vrije inloop, deelname is gratis.</li>
+            <li>Humanistisch Verbond – terugkomdag Actieve Hoop: 15 en 22 november, 09:00 – 13:00 uur, inclusief lunch. Aanmelden en meer informatie: <a href="https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/" target="_blank" rel="noopener noreferrer">https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/</a></li>
           </ul>
         </div>
       </div>
@@ -161,25 +165,17 @@
   </div>
 
   <!-- ============================================================
-       CREATION PROCESS MODAL — native video
-       To enable: put the file in assets/reflections-of-hope/ and
-       replace the placeholder div below with:
-         <video controls playsinline preload="metadata">
-           <source src="assets/reflections-of-hope/FILENAME.mp4" type="video/mp4">
-         </video>
+       CREATION PROCESS MODAL — native video (no autoplay)
   ============================================================ -->
   <div class="exh-modal exh-modal--video" id="modal-process" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Reflections of Hope — creation process">
     <div class="exh-modal__backdrop"></div>
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>
       <div class="exh-modal__video-wrap">
-        <div class="exh-modal__video-placeholder">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8"/>
-            <polygon points="10,8 17,12 10,16" fill="currentColor"/>
-          </svg>
-          <span>Video coming soon</span>
-        </div>
+        <video controls playsinline preload="metadata" width="1280" height="720"
+               poster="assets/reflections-of-hope/reflections-making-poster.webp">
+          <source src="assets/reflections-of-hope/reflections-making.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>

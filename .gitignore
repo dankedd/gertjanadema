@@ -9,3 +9,6 @@ Thumbs.db
 
 # Local dev
 *.log
+
+# Original (uncompressed) media — keep out of the repo
+assets/**/*-original.*
