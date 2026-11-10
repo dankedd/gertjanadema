@@ -38,6 +38,10 @@
     document.querySelectorAll('img[data-alt-' + l + ']').forEach(img => {
       img.alt = img.getAttribute('data-alt-' + l);
     });
+    // Bilingual aria-label: <a data-aria-label-en="…" data-aria-label-nl="…">
+    document.querySelectorAll('[data-aria-label-' + l + ']').forEach(el => {
+      el.setAttribute('aria-label', el.getAttribute('data-aria-label-' + l));
+    });
   }
 
   buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langSet)));

@@ -2,6 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Consent Mode v2 + Google Tag Manager (keep before any other script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try { var c = localStorage.getItem('cookieConsent');
+      if (c === 'granted' || c === 'denied') gtag('consent', 'update', { analytics_storage: c });
+    } catch (e) {}
+    dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K6KDLB95"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
   <title>Fibonacci Flow — Gertjan Adema</title>
@@ -49,6 +71,7 @@
       </ul>
       <div class="nav__footer">
         <a href="mailto:info@gertjanadema.nl" class="nav__email">info@gertjanadema.nl</a>
+        <button type="button" class="cookie-settings-link" data-cookie-settings><span class="lng lng--en">Cookie settings</span><span class="lng lng--nl">Cookie-instellingen</span></button>
       </div>
     </div>
   </nav>
@@ -183,6 +206,7 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/consent.js"></script>
   <script src="js/install.js"></script>
 </body>
 </html>

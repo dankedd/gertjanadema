@@ -1148,6 +1148,37 @@ body.nav-open  .cursor            { background: var(--white); }
 
 .index-footer__link:hover { color: var(--white); }
 
+.index-footer__social {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   SOCIAL LINKS — icon + name (contact page, index footer)
+   Icons use currentColor, so they follow each context's colours.
+============================================================ */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.social-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+@media (max-width: 540px) {
+  .contact__links,
+  .index-footer__social { gap: 1.4rem; }
+}
+
+@media (max-width: 380px) {
+  .contact__links       { gap: 0.9rem; }
+  .index-footer__social { gap: 0.6rem; }
+}
+
 /* ============================================================
    PAGE — standalone section pages
    Extra top padding so content clears the fixed nav button
@@ -1670,3 +1701,104 @@ body[data-page-light] .lang-toggle__sep              { color: rgba(0,0,0,0.2); }
   color: rgba(245,245,240,0.78);
   margin-top: 1.4rem;
 }
+
+/* ============================================================
+   COOKIE CONSENT BANNER  (js/consent.js)
+   Non-modal: no scroll lock, page stays usable behind it.
+============================================================ */
+.consent {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 8500; /* above grain (8000) & nav, below cursor (9000) */
+  max-width: 34rem;
+  background: rgba(10,10,10,0.94);
+  border: 1px solid rgba(245,245,240,0.14);
+  color: var(--white);
+  font-family: var(--font-body);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+}
+
+.consent.is-visible { opacity: 1; transform: translateY(0); }
+.consent[hidden] { display: none; }
+
+.consent__inner {
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.consent__text {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(245,245,240,0.72);
+}
+
+.consent__title {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.consent__actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.consent__btn {
+  flex: 1 1 0;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(245,245,240,0.4);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: border-color var(--t-fast), color var(--t-fast);
+}
+
+.consent__btn:hover,
+.consent__btn:focus-visible { border-color: var(--yellow); color: var(--yellow); outline: none; }
+
+@media (hover: none) {
+  .consent__btn { cursor: pointer; }
+}
+
+@media (min-width: 640px) {
+  .consent { left: 2rem; right: auto; bottom: 2rem; }
+}
+
+/* "Cookie settings" link — a button styled like the surrounding links */
+:where(.cookie-settings-link) {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+.nav__footer .cookie-settings-link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  transform: translateY(100%);
+  transition: transform var(--t-slow) 0.45s, color var(--t-fast);
+}
+.nav.is-open .nav__footer .cookie-settings-link { transform: translateY(0); }
+:where(.cookie-settings-link):hover { color: var(--yellow); }
