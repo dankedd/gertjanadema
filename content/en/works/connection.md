@@ -13,7 +13,8 @@ specs:
 info_title: |-
   Infinite
   Connection
-google_description: Connection — a kinetic light installation exploring invisible bonds and spatial perception by Gertjan Adema.
+google_description: Connection — a kinetic light installation exploring
+  invisible bonds and spatial perception by Gertjan Adema.
 ---
 This enormous, moving marble run, shaped like a lemniscate and a Möbius strip, plays with balance and demonstrates how opposites are interconnected.
 
