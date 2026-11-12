@@ -65,7 +65,6 @@ De website heeft een Nederlandse en een Engelse versie. Die pas je **apart** aan
 | **Land (in het Engels)** | Bijvoorbeeld *Netherlands*, *Germany*, *Belgium* of *United Kingdom*. Op de Nederlandse site wordt dit vanzelf vertaald. |
 | **Datum van** | Kies de begindatum in de kalender |
 | **Datum tot en met** | De laatste dag. Duurt het één dag? Kies dan dezelfde datum. |
-| **Breedtegraad / Lengtegraad** | De plek op de kaart. Zie hieronder. Dit mag je ook leeg laten. |
 | **Beschrijving (NL)** en **Description (EN)** | Optioneel: een korte tekst die verschijnt als bezoekers op het item klikken |
 | **Foto** | Optioneel. Gebruik een **liggende** foto, dus breder dan hoog, en liefst **kleiner dan 1 MB**. |
 
@@ -74,17 +73,6 @@ De website heeft een Nederlandse en een Engelse versie. Die pas je **apart** aan
 De volgorde in de lijst maakt niet uit. De website zet alles zelf op datum.
 
 Een item **verwijderen**: klap het item open en klik op het prullenbakje. Klik daarna op **Save**.
-
-### Coördinaten opzoeken in Google Maps
-
-1. Ga naar **https://maps.google.com** en zoek de plek op.
-2. Klik met de **rechtermuisknop** op de precieze plek. Op een telefoon of tablet: houd je vinger erop.
-3. Bovenaan het menuutje staan twee getallen, bijvoorbeeld **52.51680, 6.08300**. Klik daarop; ze worden dan gekopieerd.
-4. Plak ze in een leeg tekstvak, bijvoorbeeld een notitie, en verdeel ze:
-   - het **eerste** getal (52.51680) komt bij **Breedtegraad**
-   - het **tweede** getal (6.08300) komt bij **Lengtegraad**
-
-Gebruik een **punt** en geen komma in de getallen.
 
 ---
 

@@ -146,8 +146,10 @@ function loadExhibitions() {
     const lat = normCoord(item.latitude, -90, 90);
     const lng = normCoord(item.longitude, -180, 180);
     let coordinates = null;
+    // Coordinates are optional and not editable in the CMS (the map is not on
+    // the site); existing values are kept for a possible future map.
     if (lat === null && lng === null) {
-      warn(`"${label}": geen coördinaten — het item staat in de tijdlijn maar krijgt geen punt op de kaart.`);
+      // no coordinates: fine, no warning
     } else if (lat === null || lng === null || Number.isNaN(lat) || Number.isNaN(lng)) {
       warn(`"${label}": coördinaten zijn leeg of ongeldig (breedtegraad ${item.latitude ?? '—'}, lengtegraad ${item.longitude ?? '—'}) — geen punt op de kaart.`);
     } else {

@@ -18,6 +18,6 @@ npm start        # local preview at http://localhost:8080 (rebuilds on change)
 npm run build    # output in _site/
 ```
 
-Content problems never break the build. They are printed as `⚠ content:` warnings, for example agenda items without valid coordinates (still shown in the timeline) or agenda photos larger than 1 MB.
+Content problems never break the build. They are printed as `⚠ content:` warnings, for example agenda photos larger than 1 MB or invalid dates. Agenda coordinates are kept in `content/exhibitions.yml` for a possible future map but are hidden in the CMS (the map is not on the site).
 
 Deployment: Vercel uses `vercel.json` (`npm run build`, output `_site`, 301 redirect `/cv.html` → `/about.html`). URLs are unchanged (`connection.html`, `about.html`, …).

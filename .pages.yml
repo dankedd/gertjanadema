@@ -169,22 +169,15 @@ content:
             required: true
             options:
               format: yyyy-MM-dd
+          # Coordinates are kept for a possible future map, but hidden from the
+          # editor (the map is not on the site). They must stay in the schema:
+          # otherwise saving the list would drop the existing values.
           - name: latitude
-            label: Breedtegraad (eerste getal)
-            description: "Zoek de plek op in Google Maps, klik er met de rechtermuisknop op en klik op de twee getallen bovenaan (die worden dan gekopieerd). Het eerste getal komt hier, bijv. 52.5168. Mag leeg blijven."
             type: number
-            options:
-              min: -90
-              max: 90
-              step: any
+            hidden: true
           - name: longitude
-            label: Lengtegraad (tweede getal)
-            description: "Het tweede getal uit Google Maps, bijv. 6.0830. Mag leeg blijven."
             type: number
-            options:
-              min: -180
-              max: 180
-              step: any
+            hidden: true
           - name: description_nl
             label: Beschrijving (NL)
             description: "Optioneel. Korte tekst in het detailvenster. Leeg? Dan wordt de Engelse tekst getoond."
