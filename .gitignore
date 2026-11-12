@@ -1,3 +1,7 @@
+# Dependencies & build output (Vercel builds the site itself)
+node_modules/
+_site/
+
 # OS
 .DS_Store
 Thumbs.db
@@ -9,6 +13,8 @@ Thumbs.db
 
 # Local dev
 *.log
+.env
+.env.*
 
 # Original (uncompressed) media — keep out of the repo
 assets/**/*-original.*

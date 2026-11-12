@@ -1,3 +1,7 @@
+---
+permalink: marbles.html
+---
+{% set w = site.works.marbles %}{% set nxt = site.works.fibonacci %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +30,8 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
-  <title>Marbles — Gertjan Adema</title>
-  <meta name="description" content="Marbles — a luminous kinetic light installation by Gertjan Adema." />
+  <title>{{ w.title | esc | safe }} — Gertjan Adema</title>
+  <meta name="description" content="{{ site.works.marbles.google_description | esc | safe }}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,26 +59,7 @@
     <span class="nav-btn__line"></span>
   </button>
 
-  <nav class="nav" id="nav" aria-hidden="true">
-    <div class="nav__bg"></div>
-    <div class="nav__inner">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="index.html" class="nav__link" data-num="↩"><span class="nav__link-text">Home</span></a></li>
-        <li class="nav__item nav__item--install"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
-        <li class="nav__item nav__item--install"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
-        <li class="nav__item nav__item--install"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
-        <li class="nav__item nav__item--install"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
-        <li class="nav__item nav__item--install"><a href="reflections.html" class="nav__link" data-num="05"><span class="nav__link-text">Reflections of Hope</span></a></li>
-        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text"><span class="lng lng--en">About the Artist</span><span class="lng lng--nl">Over de kunstenaar</span></span></a></li>
-        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text"><span class="lng lng--en">Festivals &amp; Exhibitions</span><span class="lng lng--nl">Festivals &amp; exposities</span></span></a></li>
-        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="08"><span class="nav__link-text">Contact</span></a></li>
-      </ul>
-      <div class="nav__footer">
-        <a href="mailto:info@gertjanadema.nl" class="nav__email">info@gertjanadema.nl</a>
-        <button type="button" class="cookie-settings-link" data-cookie-settings><span class="lng lng--en">Cookie settings</span><span class="lng lng--nl">Cookie-instellingen</span></button>
-      </div>
-    </div>
-  </nav>
+{% include "nav.njk" %}
 
   <!-- ============================================================
        EXHIBITION LAYOUT
@@ -87,26 +72,24 @@
 
         <a href="index.html" class="exh-panel__back">← Gertjan Adema</a>
 
-        <span class="exh-panel__num">02 / 05</span>
-        <h1 class="exh-panel__title">Marbles</h1>
+        <span class="exh-panel__num">{{ w.num }} / 05</span>
+        <h1 class="exh-panel__title">{% if w.en.title == w.nl.title %}{{ w.en.title | titleBreak | safe }}{% else %}<span class="lng lng--en">{{ w.en.title | titleBreak | safe }}</span><span class="lng lng--nl">{{ w.nl.title | titleBreak | safe }}</span>{% endif %}</h1>
         <p class="exh-panel__subtitle">
-          <span class="lng lng--en">This giant rotating marble run plays with inner growth and outer expression.</span>
-          <span class="lng lng--nl">Deze gigantische knikkerbaan speelt met innerlijke groei en uiterlijke expressie.</span>
+          <span class="lng lng--en">{{ w.en.subtitle | esc | safe }}</span>
+          <span class="lng lng--nl">{{ w.nl.subtitle | esc | safe }}</span>
         </p>
 
         <div class="exh-divider"></div>
 
         <dl class="exh-specs lng lng--en">
-          <dt>Type</dt>       <dd>Rotating kinetic marble run</dd>
-          <dt>Height</dt>     <dd>3.8 m</dd>
-          <dt>Base</dt>       <dd>2.4 &times; 2.4 m</dd>
-          <dt>Support</dt>    <dd>Subsidieregeling Cultuur — Kunstactiviteit Zwolle</dd>
+{%- for s in w.en.specs %}
+          <dt>{{ s.label | esc | safe }}</dt> <dd>{{ s.value | esc | safe }}</dd>
+{%- endfor %}
         </dl>
         <dl class="exh-specs lng lng--nl">
-          <dt>Type</dt>       <dd>Roterende kinetische knikkerbaan</dd>
-          <dt>Hoogte</dt>     <dd>3,8 m</dd>
-          <dt>Voet</dt>       <dd>2,4 &times; 2,4 m</dd>
-          <dt>Mogelijk door</dt> <dd>Subsidieregeling Cultuur — Kunstactiviteit Zwolle</dd>
+{%- for s in w.nl.specs %}
+          <dt>{{ s.label | esc | safe }}</dt> <dd>{{ s.value | esc | safe }}</dd>
+{%- endfor %}
         </dl>
 
         <div class="exh-divider"></div>
@@ -118,8 +101,8 @@
           <button class="exh-btn" data-modal="demo" aria-label="Watch demo / Bekijk demo">
             Demo <span class="exh-btn__arrow">→</span>
           </button>
-          <a href="fibonacci.html" class="exh-btn exh-btn--next">
-            <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> Fibonacci Flow <span class="exh-btn__arrow">→</span>
+          <a href="{{ nxt.url }}" class="exh-btn exh-btn--next">
+            <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> {{ nxt.en.title | bi(nxt.nl.title) | safe }} <span class="exh-btn__arrow">→</span>
           </a>
         </div>
 
@@ -180,19 +163,17 @@
     <div class="exh-modal__backdrop"></div>
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>
-      <span class="exh-modal__num">02 — Marbles</span>
+      <span class="exh-modal__num">{{ w.num }} — {{ w.en.title | bi(w.nl.title) | safe }}</span>
       <h2 class="exh-modal__title" id="modal-info-title">
-        <span class="lng lng--en">Growth &amp;<br>Expression</span>
-        <span class="lng lng--nl">Groei &amp;<br>Expressie</span>
+        <span class="lng lng--en">{{ w.en.info_title | nl2br | safe }}</span>
+        <span class="lng lng--nl">{{ w.nl.info_title | nl2br | safe }}</span>
       </h2>
       <div class="exh-modal__body">
         <div class="lng lng--en">
-          <p>This gigantic, rotating marble run, shaped like a large sphere, plays with the interplay and connection between inner growth and outer expression. The glowing marble moves between these worlds through two distinct motions: a slow, inward, and upward movement, and an expressive movement along the exterior. The rotating frame pushes the marble back up, thereby forging a connection between these realms. The varying light patterns of the LED strips represent the different processes of growth and expression, creating an enchanting interplay of geometry, movement, light, and sound.</p>
-          <p>The marble run has the shape of a sphere, like the marble itself. The luminous marble follows a spiral-shaped track along the surface of the rotating sphere. In this way the shape of the marble is repeated in the installation and the marble runs in a moving marble run: a movement within a movement and a shape within a shape is created.</p>
+          {{ w.en.body | md | safe }}
         </div>
         <div class="lng lng--nl">
-          <p>Deze gigantische roterende knikkerbaan in de vorm van een grote bol speelt met de uitwisseling en verbinding tussen innerlijke groei en uiterlijke expressie. De lichtgevende knikker rolt met zijn twee bewegingen tussen deze werelden: de langzame binnen- en opwaartse beweging, en de expressieve beweging aan de buitenkant. Het roterende frame van de knikkerbaan duwt de knikker weer omhoog, waardoor de verbinding tussen deze werelden ontstaat. De verschillende lichtpatronen van de LED-strips vertegenwoordigen de verschillende processen van groei en expressie. Dit geeft een betoverend samenspel van geometrie, beweging, licht en geluid.</p>
-          <p>De knikkerbaan heeft de vorm van een bol, net als de knikker zelf. De lichtgevende knikker volgt een spiraalvormige baan langs het oppervlak van de roterende bol. Op deze manier wordt de vorm van de knikker herhaald in de installatie en loopt de knikker in een bewegende knikkerbaan, en ontstaat er een beweging in een beweging en een vorm in een vorm.</p>
+          {{ w.nl.body | md | safe }}
         </div>
       </div>
     </div>
@@ -202,7 +183,7 @@
        DEMO MODAL
        To enable video: add data-yt="YOUTUBE_ID" to the div below.
   ============================================================ -->
-  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="3luTGOu7c6U" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Marbles demo reel">
+  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="3luTGOu7c6U" role="dialog" aria-modal="true" aria-hidden="true" aria-label="{{ w.title | esc | safe }} demo reel">
     <div class="exh-modal__backdrop"></div>
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>

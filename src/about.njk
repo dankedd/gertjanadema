@@ -1,0 +1,102 @@
+---
+permalink: about.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google Consent Mode v2 + Google Tag Manager (keep before any other script) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try { var c = localStorage.getItem('cookieConsent');
+      if (c === 'granted' || c === 'denied') gtag('consent', 'update', { analytics_storage: c });
+    } catch (e) {}
+    dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K6KDLB95"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
+  <title>About the Artist — Gertjan Adema</title>
+  <meta name="description" content="{{ site.about.google_description | esc | safe }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page-light>
+
+  <div class="loader" id="loader"><div class="loader__bar"></div></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="lang-toggle" role="group" aria-label="Language / Taal">
+    <button data-lang-set="nl" type="button" aria-label="Nederlands">NL</button>
+    <span class="lang-toggle__sep" aria-hidden="true">/</span>
+    <button data-lang-set="en" type="button" aria-label="English">EN</button>
+  </div>
+
+  <a href="index.html" class="home-btn" aria-label="Home">← Home</a>
+
+  <button class="nav-btn" id="navBtn" aria-label="Toggle navigation">
+    <span class="nav-btn__line"></span>
+    <span class="nav-btn__line"></span>
+    <span class="nav-btn__line"></span>
+  </button>
+
+{% include "nav.njk" %}
+
+  <main class="page-main">
+    <section class="section section--about" id="about">
+      <div class="section__inner">
+        <div class="about__grid">
+          <div class="about__portrait reveal">
+            <div class="media-fill media-fill--portrait">
+              <img src="assets/images/about/portrait.jpeg" alt="Gertjan Adema" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="about__text">
+            <header class="section__head reveal">
+              <span class="section__num">06</span>
+              <h1 class="section__title">
+                <span class="lng lng--en">About the Artist</span>
+                <span class="lng lng--nl">Over de kunstenaar</span>
+              </h1>
+            </header>
+
+            <p class="about__bio reveal" data-delay="100" style="font-style:italic;">
+              <span class="lng lng--en">{{ site.about.en.quote | esc | safe }}</span>
+              <span class="lng lng--nl">{{ site.about.nl.quote | esc | safe }}</span>
+            </p>
+{%- for p in site.about.paragraphs %}
+            <p class="about__bio reveal" data-delay="{{ 180 + loop.index0 * 80 }}">
+              <span class="lng lng--en">{{ p.en | mdInline | safe }}</span>
+              <span class="lng lng--nl">{{ p.nl | mdInline | safe }}</span>
+            </p>
+{%- endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/consent.js"></script>
+</body>
+</html>

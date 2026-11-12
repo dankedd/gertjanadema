@@ -776,6 +776,14 @@ body.nav-open  .cursor            { background: var(--white); }
   margin-top: 1.4rem;
 }
 
+/* Links inside the bio text (written in the CMS) — same look as the
+   previous hand-written inline style on the e-mail link. */
+.about__bio a {
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+}
+
 /* ============================================================
    FESTIVALS & EXHIBITIONS
 ============================================================ */

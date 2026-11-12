@@ -1,3 +1,6 @@
+---
+permalink: index.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
   <title>Gertjan Adema — Kinetic Light Installations</title>
-  <meta name="description" content="Gertjan Adema — visual artist creating kinetic light installations shown at festivals and exhibitions across Europe." />
+  <meta name="description" content="{{ site.home.google_description | esc | safe }}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,34 +57,13 @@
     <span class="nav-btn__line"></span>
   </button>
 
-  <nav class="nav" id="nav" aria-hidden="true">
-    <div class="nav__bg"></div>
-    <div class="nav__inner">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="index.html" class="nav__link" data-num="↩"><span class="nav__link-text">Home</span></a></li>
-        <li class="nav__item nav__item--install"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
-        <li class="nav__item nav__item--install"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
-        <li class="nav__item nav__item--install"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
-        <li class="nav__item nav__item--install"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
-        <li class="nav__item nav__item--install"><a href="reflections.html" class="nav__link" data-num="05"><span class="nav__link-text">Reflections of Hope</span></a></li>
-        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text"><span class="lng lng--en">About the Artist</span><span class="lng lng--nl">Over de kunstenaar</span></span></a></li>
-        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text"><span class="lng lng--en">Festivals &amp; Exhibitions</span><span class="lng lng--nl">Festivals &amp; exposities</span></span></a></li>
-        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="08"><span class="nav__link-text">Contact</span></a></li>
-      </ul>
-      <div class="nav__footer">
-        <a href="mailto:info@gertjanadema.nl" class="nav__email">info@gertjanadema.nl</a>
-        <button type="button" class="cookie-settings-link" data-cookie-settings><span class="lng lng--en">Cookie settings</span><span class="lng lng--nl">Cookie-instellingen</span></button>
-      </div>
-    </div>
-  </nav>
+{% include "nav.njk" %}
 
   <!-- Installation sidebar (desktop only) -->
   <nav class="install-nav" aria-label="Installations">
-    <a href="connection.html" class="install-nav__link">Connection</a>
-    <a href="marbles.html" class="install-nav__link">Marbles</a>
-    <a href="fibonacci.html" class="install-nav__link">Fibonacci Flow</a>
-    <a href="fragmented.html" class="install-nav__link">Fragmented Appearances</a>
-    <a href="reflections.html" class="install-nav__link">Reflections of Hope</a>
+{%- for w in site.works.list %}
+    <a href="{{ w.url }}" class="install-nav__link">{{ w.en.title | bi(w.nl.title) | safe }}</a>
+{%- endfor %}
   </nav>
 
   <!-- ============================================================
@@ -111,12 +93,12 @@
     <div class="hero__content">
       <h1 class="hero__name" data-text="gertjan adema">gertjan adema</h1>
       <span class="hero__subtitle">
-        <span class="lng lng--en">Kinetic light-art installations</span>
-        <span class="lng lng--nl">Kinetische lichtkunstinstallaties</span>
+        <span class="lng lng--en">{{ site.home.en.subtitle | esc | safe }}</span>
+        <span class="lng lng--nl">{{ site.home.nl.subtitle | esc | safe }}</span>
       </span>
       <span class="hero__motto">
-        <span class="lng lng--en">Experience the magic of light and movement.</span>
-        <span class="lng lng--nl">Ervaar de magie van licht en beweging.</span>
+        <span class="lng lng--en">{{ site.home.en.motto | esc | safe }}</span>
+        <span class="lng lng--nl">{{ site.home.nl.motto | esc | safe }}</span>
       </span>
     </div>
 
@@ -126,31 +108,13 @@
        WORKS INDEX
   ============================================================ -->
   <section class="works-index" aria-label="Installations">
-    <a href="connection.html" class="works-index__item reveal">
-      <span class="works-index__num">01</span>
-      <span class="works-index__title">connection</span>
+{%- for w in site.works.list %}
+    <a href="{{ w.url }}" class="works-index__item reveal"{% if not loop.first %} data-delay="{{ loop.index0 * 60 }}"{% endif %}>
+      <span class="works-index__num">{{ w.num }}</span>
+      <span class="works-index__title">{{ w.en.title | bi(w.nl.title, "lower") | safe }}</span>
       <span class="works-index__arrow" aria-hidden="true">→</span>
     </a>
-    <a href="marbles.html" class="works-index__item reveal" data-delay="60">
-      <span class="works-index__num">02</span>
-      <span class="works-index__title">marbles</span>
-      <span class="works-index__arrow" aria-hidden="true">→</span>
-    </a>
-    <a href="fibonacci.html" class="works-index__item reveal" data-delay="120">
-      <span class="works-index__num">03</span>
-      <span class="works-index__title">fibonacci flow</span>
-      <span class="works-index__arrow" aria-hidden="true">→</span>
-    </a>
-    <a href="fragmented.html" class="works-index__item reveal" data-delay="180">
-      <span class="works-index__num">04</span>
-      <span class="works-index__title">fragmented appearances</span>
-      <span class="works-index__arrow" aria-hidden="true">→</span>
-    </a>
-    <a href="reflections.html" class="works-index__item reveal" data-delay="240">
-      <span class="works-index__num">05</span>
-      <span class="works-index__title">reflections of hope</span>
-      <span class="works-index__arrow" aria-hidden="true">→</span>
-    </a>
+{%- endfor %}
   </section>
 
   <!-- ============================================================

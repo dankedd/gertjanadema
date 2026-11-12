@@ -1,0 +1,300 @@
+# Pages CMS — beheerscherm voor de teksten van gertjanadema.nl
+# Documentatie: https://pagescms.org/docs/configuration/
+#
+# Alleen teksten zijn hier bewerkbaar. Bestandsnamen, URL's en de opbouw
+# van de site liggen vast (aanmaken / hernoemen / verwijderen staat uit).
+
+settings:
+  # Keep keys that are not in the schema when saving (safer for hand-edited files).
+  content:
+    merge: true
+
+media:
+  - name: agenda
+    label: Foto's agenda
+    input: assets/images/agenda
+    output: /assets/images/agenda
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+components:
+  google:
+    label: Omschrijving voor Google
+    description: "Max. ca. 155 tekens, verschijnt in Google-zoekresultaten. Mag in het Engels (geldt voor beide talen)."
+    type: text
+    options:
+      maxlength: 300
+
+  rich:
+    type: rich-text
+    options:
+      format: markdown
+      media: false
+      switcher: false
+
+  workSpecs:
+    label: Gegevens – het lijstje onder de ondertitel
+    description: "Bijvoorbeeld Type, Afmetingen, Mogelijk door. Gebruik de pijltjes om de volgorde te veranderen."
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{label}: {value}"
+    fields:
+      - name: label
+        label: Kopje
+        description: "Bijvoorbeeld: Type"
+        type: string
+      - name: value
+        label: Waarde
+        description: "Bijvoorbeeld: Kinetische knikkerbaan"
+        type: string
+
+content:
+  # ------------------------------------------------------------------ Werken
+  - name: works-nl
+    label: Werken (NL)
+    type: collection
+    path: content/nl/works
+    format: yaml-frontmatter
+    operations: { create: false, rename: false, delete: false }
+    view:
+      fields: [title, subtitle]
+      primary: title
+    fields:
+      - name: title
+        label: Titel – naam van het werk
+        description: "Staat bovenaan de pagina, in het menu en op de homepage. Laat leeg om de Engelse titel te gebruiken."
+        type: string
+      - name: subtitle
+        label: Ondertitel – korte zin onder de titel
+        type: text
+      - name: specs
+        component: workSpecs
+      - name: info_title
+        label: Titel van het info-venster
+        description: "De grote kop in het venster achter de knop 'Meer info'. Druk op Enter voor een nieuwe regel."
+        type: text
+      - name: body
+        component: rich
+        label: Meer info – de tekst in het info-venster
+        description: "Laat je een tekst leeg, dan wordt de Engelse tekst getoond."
+
+  - name: works-en
+    label: Works (EN)
+    type: collection
+    path: content/en/works
+    format: yaml-frontmatter
+    operations: { create: false, rename: false, delete: false }
+    view:
+      fields: [title, subtitle]
+      primary: title
+    fields:
+      - name: title
+        label: Titel – naam van het werk (Engels)
+        description: "Staat bovenaan de pagina, in het menu en op de homepage."
+        type: string
+        required: true
+      - name: subtitle
+        label: Ondertitel – korte zin onder de titel (Engels)
+        type: text
+      - name: specs
+        component: workSpecs
+        label: Gegevens – het lijstje onder de ondertitel (Engels)
+      - name: info_title
+        label: Titel van het info-venster (Engels)
+        description: "De grote kop in het venster achter de knop 'More info'. Druk op Enter voor een nieuwe regel."
+        type: text
+      - name: body
+        component: rich
+        label: More info – de tekst in het info-venster (Engels)
+      - name: google_description
+        component: google
+
+  # ------------------------------------------------------------------ Agenda
+  - name: agenda
+    label: Agenda (festivals & exposities)
+    type: file
+    path: content/exhibitions.yml
+    format: yaml
+    operations: { delete: false }
+    fields:
+      - name: google_description
+        component: google
+      - name: items
+        label: Agenda-items
+        description: "Klik op 'Add an entry' (onderaan) om een festival of expositie toe te voegen. Met het prullenbakje verwijder je een item. De volgorde maakt niet uit: de website sorteert zelf op datum."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{date_start} · {event_name} ({city})"
+        fields:
+          - name: event_name
+            label: Naam – van het festival of de expositie
+            description: "Bijvoorbeeld: Lichtbeeldenroute Zwolle"
+            type: string
+            required: true
+          - name: installation
+            label: Kunstwerk – welk werk staat er?
+            type: select
+            required: true
+            options:
+              values:
+                - { name: connection, label: Connection }
+                - { name: marbles, label: Marbles }
+                - { name: fragmented, label: Fragmented Appearances }
+                - { name: melting, label: Melting }
+          - name: city
+            label: Plaats
+            description: "Bijvoorbeeld: Zwolle"
+            type: string
+            required: true
+          - name: country
+            label: Land (in het Engels)
+            description: "Bijvoorbeeld: Netherlands, Germany, United Kingdom, Belgium. Op de Nederlandse site wordt dit automatisch vertaald."
+            type: string
+            required: true
+          - name: date_start
+            label: Datum van
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: date_end
+            label: Datum tot en met
+            description: "Duurt het maar één dag? Kies dan dezelfde datum als hierboven."
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: latitude
+            label: Breedtegraad (eerste getal)
+            description: "Zoek de plek op in Google Maps, klik er met de rechtermuisknop op en klik op de twee getallen bovenaan (die worden dan gekopieerd). Het eerste getal komt hier, bijv. 52.5168. Mag leeg blijven."
+            type: number
+            options:
+              min: -90
+              max: 90
+              step: any
+          - name: longitude
+            label: Lengtegraad (tweede getal)
+            description: "Het tweede getal uit Google Maps, bijv. 6.0830. Mag leeg blijven."
+            type: number
+            options:
+              min: -180
+              max: 180
+              step: any
+          - name: description_nl
+            label: Beschrijving (NL)
+            description: "Optioneel. Korte tekst in het detailvenster. Leeg? Dan wordt de Engelse tekst getoond."
+            type: text
+          - name: description_en
+            label: Description (EN)
+            description: "Optioneel. Leeg? Dan wordt de Nederlandse tekst getoond."
+            type: text
+          - name: image
+            label: Foto (optioneel)
+            description: "Liggende foto (breder dan hoog), liefst kleiner dan 1 MB. Wordt getoond in het detailvenster als je op het item klikt."
+            type: image
+            options:
+              media: agenda
+              extensions: [jpg, jpeg, png, webp]
+
+  # ------------------------------------------------------- Losse pagina's
+  - name: about
+    label: Over de kunstenaar
+    type: group
+    items:
+      - name: about-nl
+        label: Over de kunstenaar (NL)
+        type: file
+        path: content/nl/about.md
+        format: yaml-frontmatter
+        operations: { delete: false }
+        fields:
+          - name: quote
+            label: Citaat – de schuingedrukte tekst bovenaan
+            type: text
+          - name: body
+            component: rich
+            label: Tekst – elke alinea wordt een los blok op de pagina
+            description: "Gebruik gewone alinea's (een witregel ertussen). Een link maak je met het kettinkje in de werkbalk."
+      - name: about-en
+        label: About the artist (EN)
+        type: file
+        path: content/en/about.md
+        format: yaml-frontmatter
+        operations: { delete: false }
+        fields:
+          - name: quote
+            label: Citaat – de schuingedrukte tekst bovenaan (Engels)
+            type: text
+          - name: body
+            component: rich
+            label: Tekst (Engels)
+            description: "Gebruik gewone alinea's (een witregel ertussen)."
+          - name: google_description
+            component: google
+
+  - name: contact
+    label: Contact
+    type: group
+    items:
+      - name: contact-nl
+        label: Contact (NL)
+        type: file
+        path: content/nl/contact.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: heading
+            label: Kop – de grote tekst op de contactpagina
+            description: "Druk op Enter voor een nieuwe regel."
+            type: text
+      - name: contact-en
+        label: Contact (EN)
+        type: file
+        path: content/en/contact.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: heading
+            label: Kop – de grote tekst op de contactpagina (Engels)
+            description: "Druk op Enter voor een nieuwe regel."
+            type: text
+          - name: google_description
+            component: google
+
+  - name: home
+    label: Homepage
+    type: group
+    items:
+      - name: home-nl
+        label: Homepage (NL)
+        type: file
+        path: content/nl/home.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: subtitle
+            label: Ondertitel – onder de naam in de grote video
+            type: string
+          - name: motto
+            label: Motto – de regel daaronder
+            type: string
+      - name: home-en
+        label: Homepage (EN)
+        type: file
+        path: content/en/home.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: subtitle
+            label: Ondertitel – onder de naam in de grote video (Engels)
+            type: string
+          - name: motto
+            label: Motto – de regel daaronder (Engels)
+            type: string
+          - name: google_description
+            component: google

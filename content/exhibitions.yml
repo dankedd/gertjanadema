@@ -1,0 +1,486 @@
+google_description: Festivals and exhibitions by Gertjan Adema — a living archive of kinetic light installations shown across Europe.
+items:
+  - event_name: Lightpool
+    installation: marbles
+    city: Blackpool
+    country: United Kingdom
+    date_start: "2026-10-21"
+    date_end: "2026-10-31"
+    latitude: 53.8175
+    longitude: -3.0357
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Kronach Leuchtet 2026
+    installation: connection
+    city: Kronach
+    country: Germany
+    date_start: "2026-04-24"
+    date_end: "2026-05-02"
+    latitude: 50.2397
+    longitude: 11.3279
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Lichtbeeldenroute Zwolle
+    installation: connection
+    city: Zwolle
+    country: Netherlands
+    date_start: "2025-12-18"
+    date_end: "2026-01-04"
+    latitude: 52.5168
+    longitude: 6.083
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Deltion School Project
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2025-12-15"
+    date_end: "2025-12-17"
+    latitude: 52.521
+    longitude: 6.092
+    description_nl: ""
+    description_en: Fragmented Appearances presented as part of a school project at Deltion College, Zwolle.
+    image: ""
+  - event_name: Enschede Lights Up
+    installation: marbles
+    city: Enschede
+    country: Netherlands
+    date_start: "2025-12-11"
+    date_end: "2025-12-14"
+    latitude: 52.2215
+    longitude: 6.8937
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Light Up Wakefield
+    installation: marbles
+    city: Wakefield
+    country: United Kingdom
+    date_start: "2025-11-21"
+    date_end: "2025-11-23"
+    latitude: 53.683
+    longitude: -1.4977
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Vonk Festival Utrecht
+    installation: melting
+    city: Utrecht
+    country: Netherlands
+    date_start: "2025-10-07"
+    date_end: "2025-10-25"
+    latitude: 52.0907
+    longitude: 5.1214
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Goldstuecke Gelsenkirchen-Buer
+    installation: marbles
+    city: Gelsenkirchen
+    country: Germany
+    date_start: "2025-10-02"
+    date_end: "2025-10-05"
+    latitude: 51.5177
+    longitude: 7.0857
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Visualia Pula 2025
+    installation: connection
+    city: Pula
+    country: Croatia
+    date_start: "2025-09-18"
+    date_end: "2025-09-20"
+    latitude: 44.8666
+    longitude: 13.8496
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Fjoertoer Terschelling
+    installation: marbles
+    city: Terschelling
+    country: Netherlands
+    date_start: "2025-03-28"
+    date_end: "2025-03-29"
+    latitude: 53.4017
+    longitude: 5.2122
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Zandvoort Light Walk
+    installation: marbles
+    city: Zandvoort
+    country: Netherlands
+    date_start: "2025-02-15"
+    date_end: "2025-02-15"
+    latitude: 52.3717
+    longitude: 4.5328
+    description_nl: ""
+    description_en: Marbles & Fragmented Appearances presented at the Zandvoort Light Walk.
+    image: ""
+  - event_name: Geneva Lux
+    installation: marbles
+    city: Geneva
+    country: Switzerland
+    date_start: "2025-01-13"
+    date_end: "2025-02-02"
+    latitude: 46.2044
+    longitude: 6.1432
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Lichtjeswandeling Engelse Werk Zwolle
+    installation: melting
+    city: Zwolle
+    country: Netherlands
+    date_start: "2024-12-27"
+    date_end: "2024-12-27"
+    latitude: 52.514
+    longitude: 6.076
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Academiehuis Zwolle
+    installation: marbles
+    city: Zwolle
+    country: Netherlands
+    date_start: "2024-12-13"
+    date_end: "2025-01-03"
+    latitude: 52.5178
+    longitude: 6.0845
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Valoilmiö Hämeenlinna
+    installation: fragmented
+    city: Hämeenlinna
+    country: Finland
+    date_start: "2024-11-21"
+    date_end: "2024-11-23"
+    latitude: 60.996
+    longitude: 24.4641
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Wonderlicht Zaandam
+    installation: marbles
+    city: Zaandam
+    country: Netherlands
+    date_start: "2024-10-31"
+    date_end: "2024-11-01"
+    latitude: 52.438
+    longitude: 4.8308
+    description_nl: ""
+    description_en: Marbles & Fragmented Appearances at Wonderlicht Zaandam.
+    image: ""
+  - event_name: Kronach Leuchtet 2024
+    installation: marbles
+    city: Kronach
+    country: Germany
+    date_start: "2024-04-26"
+    date_end: "2024-05-04"
+    latitude: 50.2397
+    longitude: 11.3279
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Makersfestival Zwolle
+    installation: melting
+    city: Zwolle
+    country: Netherlands
+    date_start: "2024-03-16"
+    date_end: "2024-03-16"
+    latitude: 52.5155
+    longitude: 6.08
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Caprera Licht Festival Bloemendaal
+    installation: marbles
+    city: Bloemendaal
+    country: Netherlands
+    date_start: "2024-02-20"
+    date_end: "2024-03-03"
+    latitude: 52.4009
+    longitude: 4.6214
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Canary Wharf Winter Lights London 2024
+    installation: marbles
+    city: London
+    country: United Kingdom
+    date_start: "2024-01-18"
+    date_end: "2024-02-03"
+    latitude: 51.5045
+    longitude: -0.0199
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Jyväskylä City of Light 2023
+    installation: marbles
+    city: Jyväskylä
+    country: Finland
+    date_start: "2023-09-28"
+    date_end: "2023-10-07"
+    latitude: 62.2415
+    longitude: 25.7209
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Maker Faire Hannover
+    installation: marbles
+    city: Hannover
+    country: Germany
+    date_start: "2023-08-19"
+    date_end: "2023-08-20"
+    latitude: 52.3759
+    longitude: 9.732
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Personeelsfeest Gemeente Zwolle
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2023-06-23"
+    date_end: "2023-06-23"
+    latitude: 52.5168
+    longitude: 6.083
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Bright Festival Brussels
+    installation: marbles
+    city: Brussels
+    country: Belgium
+    date_start: "2023-02-16"
+    date_end: "2023-02-19"
+    latitude: 50.8503
+    longitude: 4.3517
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Copenhagen Light Festival
+    installation: fragmented
+    city: Copenhagen
+    country: Denmark
+    date_start: "2023-02-02"
+    date_end: "2023-02-26"
+    latitude: 55.6761
+    longitude: 12.5683
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Academiehuis / Grote Kerk Zwolle
+    installation: marbles
+    city: Zwolle
+    country: Netherlands
+    date_start: "2023-01-20"
+    date_end: "2023-01-22"
+    latitude: 52.5178
+    longitude: 6.0845
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Grand Opening Academiehuis / Grote Kerk Zwolle
+    installation: marbles
+    city: Zwolle
+    country: Netherlands
+    date_start: "2023-01-19"
+    date_end: "2023-01-19"
+    latitude: 52.5178
+    longitude: 6.084
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Winter Lights Canary Wharf London 2023
+    installation: fragmented
+    city: London
+    country: United Kingdom
+    date_start: "2023-01-18"
+    date_end: "2023-01-28"
+    latitude: 51.5045
+    longitude: -0.0199
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Lichtjeswandeling Zwolle
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2022-12-27"
+    date_end: "2022-12-27"
+    latitude: 52.514
+    longitude: 6.076
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: The Hague Highlights
+    installation: fragmented
+    city: The Hague
+    country: Netherlands
+    date_start: "2022-12-14"
+    date_end: "2022-12-18"
+    latitude: 52.0705
+    longitude: 4.3007
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Essen Light Festival
+    installation: marbles
+    city: Essen
+    country: Germany
+    date_start: "2022-09-30"
+    date_end: "2022-10-09"
+    latitude: 51.4556
+    longitude: 7.0116
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Visualia Pula 2022
+    installation: marbles
+    city: Pula
+    country: Croatia
+    date_start: "2022-09-15"
+    date_end: "2022-09-17"
+    latitude: 44.8666
+    longitude: 13.8496
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Fabriek Magnifique
+    installation: fragmented
+    city: Rotterdam
+    country: Netherlands
+    date_start: "2022-07-23"
+    date_end: "2022-07-24"
+    latitude: 51.9225
+    longitude: 4.4792
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: IJsseltheaterfietstocht
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2022-05-28"
+    date_end: "2022-05-28"
+    latitude: 52.5155
+    longitude: 6.082
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Co-Workersday
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2021-12-11"
+    date_end: "2021-12-11"
+    latitude: 52.5168
+    longitude: 6.083
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Proto Zwolle 2021
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2021-06-24"
+    date_end: "2021-07-11"
+    latitude: 52.5168
+    longitude: 6.083
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Berlin Leuchtet
+    installation: fragmented
+    city: Berlin
+    country: Germany
+    date_start: "2020-09-25"
+    date_end: "2020-10-04"
+    latitude: 52.52
+    longitude: 13.405
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: University of Twente
+    installation: fragmented
+    city: Enschede
+    country: Netherlands
+    date_start: "2020-08-31"
+    date_end: "2020-09-15"
+    latitude: 52.2395
+    longitude: 6.8567
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Wie is er Doorgedraaid? — Zwolle
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2020-08-29"
+    date_end: "2020-08-29"
+    latitude: 52.5168
+    longitude: 6.083
+    description_nl: ""
+    description_en: Fragmented Appearances & Humming around and around — Wie is er Doorgedraaid?
+    image: ""
+  - event_name: Luminale 2020 Frankfurt/Offenbach
+    installation: fragmented
+    city: Frankfurt
+    country: Germany
+    date_start: "2020-03-12"
+    date_end: "2020-03-15"
+    latitude: 50.1109
+    longitude: 8.6821
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Orbitfest Groningen — Artist in Focus
+    installation: fragmented
+    city: Groningen
+    country: Netherlands
+    date_start: "2019-12-21"
+    date_end: "2019-12-22"
+    latitude: 53.2194
+    longitude: 6.5665
+    description_nl: ""
+    description_en: Fragmented Appearances & Humming around and around — Orbitfest Groningen, artist in focus.
+    image: ""
+  - event_name: De Tuin der Lusten
+    installation: fragmented
+    city: Zwolle
+    country: Netherlands
+    date_start: "2019-12-12"
+    date_end: "2019-12-14"
+    latitude: 52.5168
+    longitude: 6.083
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Jyväskylä City of Light 2019
+    installation: fragmented
+    city: Jyväskylä
+    country: Finland
+    date_start: "2019-09-26"
+    date_end: "2019-09-28"
+    latitude: 62.2415
+    longitude: 25.7209
+    description_nl: ""
+    description_en: ""
+    image: ""
+  - event_name: Woest & Bijster — Bennekom
+    installation: fragmented
+    city: Bennekom
+    country: Netherlands
+    date_start: "2018-10-20"
+    date_end: "2018-10-28"
+    latitude: 51.9745
+    longitude: 5.6474
+    description_nl: ""
+    description_en: Fragmented Appearances & Humming around and around — opening act for Woest & Bijster, Bennekom.
+    image: ""

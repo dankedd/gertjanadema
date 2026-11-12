@@ -42,6 +42,8 @@
     document.querySelectorAll('[data-aria-label-' + l + ']').forEach(el => {
       el.setAttribute('aria-label', el.getAttribute('data-aria-label-' + l));
     });
+    // Let page scripts update text that cannot use the .lng spans (e.g. <option>).
+    document.dispatchEvent(new CustomEvent('sitelangchange', { detail: l }));
   }
 
   buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langSet)));

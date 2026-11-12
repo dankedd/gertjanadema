@@ -15,501 +15,50 @@ const INSTALLATION = {
   melting:     { label: 'Melting',                color: '#4DD9AC', glow: 'rgba(77,217,172,0.55)'  },
 };
 
-const EVENTS = [
-  // ── 2026 ──────────────────────────────────────────────────
-  {
-    id: 'e44',
-    installation: 'marbles',
-    event_name: 'Lightpool',
-    city: 'Blackpool',
-    country: 'United Kingdom',
-    coordinates: [53.8175, -3.0357],
-    date_start: '2026-10-21',
-    date_end: '2026-10-31',
-    description: null,
-  },
-  {
-    id: 'e01',
-    installation: 'connection',
-    event_name: 'Kronach Leuchtet 2026',
-    city: 'Kronach',
-    country: 'Germany',
-    coordinates: [50.2397, 11.3279],
-    date_start: '2026-04-24',
-    date_end: '2026-05-02',
-    description: null,
-  },
-  // ── 2025 ──────────────────────────────────────────────────
-  {
-    id: 'e02',
-    installation: 'connection',
-    event_name: 'Lichtbeeldenroute Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5168, 6.0830],
-    date_start: '2025-12-18',
-    date_end: '2026-01-04',
-    description: null,
-  },
-  {
-    id: 'e03',
-    installation: 'fragmented',
-    event_name: 'Deltion School Project',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5210, 6.0920],
-    date_start: '2025-12-15',
-    date_end: '2025-12-17',
-    description: 'Fragmented Appearances presented as part of a school project at Deltion College, Zwolle.',
-  },
-  {
-    id: 'e04',
-    installation: 'marbles',
-    event_name: 'Enschede Lights Up',
-    city: 'Enschede',
-    country: 'Netherlands',
-    coordinates: [52.2215, 6.8937],
-    date_start: '2025-12-11',
-    date_end: '2025-12-14',
-    description: null,
-  },
-  {
-    id: 'e05',
-    installation: 'marbles',
-    event_name: 'Light Up Wakefield',
-    city: 'Wakefield',
-    country: 'United Kingdom',
-    coordinates: [53.6830, -1.4977],
-    date_start: '2025-11-21',
-    date_end: '2025-11-23',
-    description: null,
-  },
-  {
-    id: 'e06',
-    installation: 'melting',
-    event_name: 'Vonk Festival Utrecht',
-    city: 'Utrecht',
-    country: 'Netherlands',
-    coordinates: [52.0907, 5.1214],
-    date_start: '2025-10-07',
-    date_end: '2025-10-25',
-    description: null,
-  },
-  {
-    id: 'e07',
-    installation: 'marbles',
-    event_name: 'Goldstuecke Gelsenkirchen-Buer',
-    city: 'Gelsenkirchen',
-    country: 'Germany',
-    coordinates: [51.5177, 7.0857],
-    date_start: '2025-10-02',
-    date_end: '2025-10-05',
-    description: null,
-  },
-  {
-    id: 'e08',
-    installation: 'connection',
-    event_name: 'Visualia Pula 2025',
-    city: 'Pula',
-    country: 'Croatia',
-    coordinates: [44.8666, 13.8496],
-    date_start: '2025-09-18',
-    date_end: '2025-09-20',
-    description: null,
-  },
-  {
-    id: 'e09',
-    installation: 'marbles',
-    event_name: 'Fjoertoer Terschelling',
-    city: 'Terschelling',
-    country: 'Netherlands',
-    coordinates: [53.4017, 5.2122],
-    date_start: '2025-03-28',
-    date_end: '2025-03-29',
-    description: null,
-  },
-  {
-    id: 'e10',
-    installation: 'marbles',
-    event_name: 'Zandvoort Light Walk',
-    city: 'Zandvoort',
-    country: 'Netherlands',
-    coordinates: [52.3717, 4.5328],
-    date_start: '2025-02-15',
-    date_end: '2025-02-15',
-    description: 'Marbles & Fragmented Appearances presented at the Zandvoort Light Walk.',
-  },
-  {
-    id: 'e11',
-    installation: 'marbles',
-    event_name: 'Geneva Lux',
-    city: 'Geneva',
-    country: 'Switzerland',
-    coordinates: [46.2044, 6.1432],
-    date_start: '2025-01-13',
-    date_end: '2025-02-02',
-    description: null,
-  },
-  // ── 2024 ──────────────────────────────────────────────────
-  {
-    id: 'e12',
-    installation: 'melting',
-    event_name: 'Lichtjeswandeling Engelse Werk Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5140, 6.0760],
-    date_start: '2024-12-27',
-    date_end: '2024-12-27',
-    description: null,
-  },
-  {
-    id: 'e13',
-    installation: 'marbles',
-    event_name: 'Academiehuis Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5178, 6.0845],
-    date_start: '2024-12-13',
-    date_end: '2025-01-03',
-    description: null,
-  },
-  {
-    id: 'e14',
-    installation: 'fragmented',
-    event_name: 'Valoilmiö Hämeenlinna',
-    city: 'Hämeenlinna',
-    country: 'Finland',
-    coordinates: [60.9960, 24.4641],
-    date_start: '2024-11-21',
-    date_end: '2024-11-23',
-    description: null,
-  },
-  {
-    id: 'e15',
-    installation: 'marbles',
-    event_name: 'Wonderlicht Zaandam',
-    city: 'Zaandam',
-    country: 'Netherlands',
-    coordinates: [52.4380, 4.8308],
-    date_start: '2024-10-31',
-    date_end: '2024-11-01',
-    description: 'Marbles & Fragmented Appearances at Wonderlicht Zaandam.',
-  },
-  {
-    id: 'e16',
-    installation: 'marbles',
-    event_name: 'Kronach Leuchtet 2024',
-    city: 'Kronach',
-    country: 'Germany',
-    coordinates: [50.2397, 11.3279],
-    date_start: '2024-04-26',
-    date_end: '2024-05-04',
-    description: null,
-  },
-  {
-    id: 'e17',
-    installation: 'melting',
-    event_name: 'Makersfestival Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5155, 6.0800],
-    date_start: '2024-03-16',
-    date_end: '2024-03-16',
-    description: null,
-  },
-  {
-    id: 'e18',
-    installation: 'marbles',
-    event_name: 'Caprera Licht Festival Bloemendaal',
-    city: 'Bloemendaal',
-    country: 'Netherlands',
-    coordinates: [52.4009, 4.6214],
-    date_start: '2024-02-20',
-    date_end: '2024-03-03',
-    description: null,
-  },
-  {
-    id: 'e19',
-    installation: 'marbles',
-    event_name: 'Canary Wharf Winter Lights London 2024',
-    city: 'London',
-    country: 'United Kingdom',
-    coordinates: [51.5045, -0.0199],
-    date_start: '2024-01-18',
-    date_end: '2024-02-03',
-    description: null,
-  },
-  // ── 2023 ──────────────────────────────────────────────────
-  {
-    id: 'e20',
-    installation: 'marbles',
-    event_name: 'Jyväskylä City of Light 2023',
-    city: 'Jyväskylä',
-    country: 'Finland',
-    coordinates: [62.2415, 25.7209],
-    date_start: '2023-09-28',
-    date_end: '2023-10-07',
-    description: null,
-  },
-  {
-    id: 'e21',
-    installation: 'marbles',
-    event_name: 'Maker Faire Hannover',
-    city: 'Hannover',
-    country: 'Germany',
-    coordinates: [52.3759, 9.7320],
-    date_start: '2023-08-19',
-    date_end: '2023-08-20',
-    description: null,
-  },
-  {
-    id: 'e22',
-    installation: 'fragmented',
-    event_name: 'Personeelsfeest Gemeente Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5168, 6.0830],
-    date_start: '2023-06-23',
-    date_end: '2023-06-23',
-    description: null,
-  },
-  {
-    id: 'e23',
-    installation: 'marbles',
-    event_name: 'Bright Festival Brussels',
-    city: 'Brussels',
-    country: 'Belgium',
-    coordinates: [50.8503, 4.3517],
-    date_start: '2023-02-16',
-    date_end: '2023-02-19',
-    description: null,
-  },
-  {
-    id: 'e24',
-    installation: 'fragmented',
-    event_name: 'Copenhagen Light Festival',
-    city: 'Copenhagen',
-    country: 'Denmark',
-    coordinates: [55.6761, 12.5683],
-    date_start: '2023-02-02',
-    date_end: '2023-02-26',
-    description: null,
-  },
-  {
-    id: 'e25',
-    installation: 'marbles',
-    event_name: 'Academiehuis / Grote Kerk Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5178, 6.0845],
-    date_start: '2023-01-20',
-    date_end: '2023-01-22',
-    description: null,
-  },
-  {
-    id: 'e26',
-    installation: 'marbles',
-    event_name: 'Grand Opening Academiehuis / Grote Kerk Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5178, 6.0840],
-    date_start: '2023-01-19',
-    date_end: '2023-01-19',
-    description: null,
-  },
-  {
-    id: 'e27',
-    installation: 'fragmented',
-    event_name: 'Winter Lights Canary Wharf London 2023',
-    city: 'London',
-    country: 'United Kingdom',
-    coordinates: [51.5045, -0.0199],
-    date_start: '2023-01-18',
-    date_end: '2023-01-28',
-    description: null,
-  },
-  // ── 2022 ──────────────────────────────────────────────────
-  {
-    id: 'e28',
-    installation: 'fragmented',
-    event_name: 'Lichtjeswandeling Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5140, 6.0760],
-    date_start: '2022-12-27',
-    date_end: '2022-12-27',
-    description: null,
-  },
-  {
-    id: 'e29',
-    installation: 'fragmented',
-    event_name: 'The Hague Highlights',
-    city: 'The Hague',
-    country: 'Netherlands',
-    coordinates: [52.0705, 4.3007],
-    date_start: '2022-12-14',
-    date_end: '2022-12-18',
-    description: null,
-  },
-  {
-    id: 'e30',
-    installation: 'marbles',
-    event_name: 'Essen Light Festival',
-    city: 'Essen',
-    country: 'Germany',
-    coordinates: [51.4556, 7.0116],
-    date_start: '2022-09-30',
-    date_end: '2022-10-09',
-    description: null,
-  },
-  {
-    id: 'e31',
-    installation: 'marbles',
-    event_name: 'Visualia Pula 2022',
-    city: 'Pula',
-    country: 'Croatia',
-    coordinates: [44.8666, 13.8496],
-    date_start: '2022-09-15',
-    date_end: '2022-09-17',
-    description: null,
-  },
-  {
-    id: 'e32',
-    installation: 'fragmented',
-    event_name: 'Fabriek Magnifique',
-    city: 'Rotterdam',
-    country: 'Netherlands',
-    coordinates: [51.9225, 4.4792],
-    date_start: '2022-07-23',
-    date_end: '2022-07-24',
-    description: null,
-  },
-  {
-    id: 'e33',
-    installation: 'fragmented',
-    event_name: 'IJsseltheaterfietstocht',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5155, 6.0820],
-    date_start: '2022-05-28',
-    date_end: '2022-05-28',
-    description: null,
-  },
-  // ── 2021 ──────────────────────────────────────────────────
-  {
-    id: 'e34',
-    installation: 'fragmented',
-    event_name: 'Co-Workersday',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5168, 6.0830],
-    date_start: '2021-12-11',
-    date_end: '2021-12-11',
-    description: null,
-  },
-  {
-    id: 'e35',
-    installation: 'fragmented',
-    event_name: 'Proto Zwolle 2021',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5168, 6.0830],
-    date_start: '2021-06-24',
-    date_end: '2021-07-11',
-    description: null,
-  },
-  // ── 2020 ──────────────────────────────────────────────────
-  {
-    id: 'e36',
-    installation: 'fragmented',
-    event_name: 'Berlin Leuchtet',
-    city: 'Berlin',
-    country: 'Germany',
-    coordinates: [52.5200, 13.4050],
-    date_start: '2020-09-25',
-    date_end: '2020-10-04',
-    description: null,
-  },
-  {
-    id: 'e37',
-    installation: 'fragmented',
-    event_name: 'University of Twente',
-    city: 'Enschede',
-    country: 'Netherlands',
-    coordinates: [52.2395, 6.8567],
-    date_start: '2020-08-31',
-    date_end: '2020-09-15',
-    description: null,
-  },
-  {
-    id: 'e38',
-    installation: 'fragmented',
-    event_name: 'Wie is er Doorgedraaid? — Zwolle',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5168, 6.0830],
-    date_start: '2020-08-29',
-    date_end: '2020-08-29',
-    description: 'Fragmented Appearances & Humming around and around — Wie is er Doorgedraaid?',
-  },
-  {
-    id: 'e39',
-    installation: 'fragmented',
-    event_name: 'Luminale 2020 Frankfurt/Offenbach',
-    city: 'Frankfurt',
-    country: 'Germany',
-    coordinates: [50.1109, 8.6821],
-    date_start: '2020-03-12',
-    date_end: '2020-03-15',
-    description: null,
-  },
-  // ── 2019 ──────────────────────────────────────────────────
-  {
-    id: 'e40',
-    installation: 'fragmented',
-    event_name: 'Orbitfest Groningen — Artist in Focus',
-    city: 'Groningen',
-    country: 'Netherlands',
-    coordinates: [53.2194, 6.5665],
-    date_start: '2019-12-21',
-    date_end: '2019-12-22',
-    description: 'Fragmented Appearances & Humming around and around — Orbitfest Groningen, artist in focus.',
-  },
-  {
-    id: 'e41',
-    installation: 'fragmented',
-    event_name: 'De Tuin der Lusten',
-    city: 'Zwolle',
-    country: 'Netherlands',
-    coordinates: [52.5168, 6.0830],
-    date_start: '2019-12-12',
-    date_end: '2019-12-14',
-    description: null,
-  },
-  {
-    id: 'e42',
-    installation: 'fragmented',
-    event_name: 'Jyväskylä City of Light 2019',
-    city: 'Jyväskylä',
-    country: 'Finland',
-    coordinates: [62.2415, 25.7209],
-    date_start: '2019-09-26',
-    date_end: '2019-09-28',
-    description: null,
-  },
-  // ── 2018 ──────────────────────────────────────────────────
-  {
-    id: 'e43',
-    installation: 'fragmented',
-    event_name: 'Woest & Bijster — Bennekom',
-    city: 'Bennekom',
-    country: 'Netherlands',
-    coordinates: [51.9745, 5.6474],
-    date_start: '2018-10-20',
-    date_end: '2018-10-28',
-    description: 'Fragmented Appearances & Humming around and around — opening act for Woest & Bijster, Bennekom.',
-  },
-];
+// Agenda items are generated at build time from content/exhibitions.yml
+// (edited in Pages CMS) and embedded in the page as JSON.
+const EVENTS = (function () {
+  try {
+    const el = document.getElementById('exData');
+    const data = el ? JSON.parse(el.textContent) : [];
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    console.warn('Exhibition data could not be read', e);
+    return [];
+  }
+})();
+
+/* ============================================================
+   I18N — fixed labels in EN / NL
+   Text rendered into HTML carries both languages; CSS shows the
+   active one (same .lng mechanism as the rest of the site).
+============================================================ */
+const T = {
+  nowShowing: { en: 'Now showing', nl: 'Nu te zien' },
+  upcoming:   { en: 'Upcoming',    nl: 'Binnenkort' },
+  media:      { en: 'Image / Video', nl: 'Afbeelding / video' },
+};
+
+function escHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// Bilingual inline HTML; collapses to plain text when both are equal.
+function bi(en, nl) {
+  if (nl == null || nl === '' || nl === en) return escHtml(en);
+  return `<span class="lng lng--en">${escHtml(en)}</span><span class="lng lng--nl">${escHtml(nl)}</span>`;
+}
+function t(key) { return bi(T[key].en, T[key].nl); }
+
+function currentLang() {
+  return document.documentElement.getAttribute('data-lang') === 'nl' ? 'nl' : 'en';
+}
+
+function locationHtml(evt) {
+  return bi(`${evt.city}, ${evt.country}`, `${evt.city}, ${evt.country_nl || evt.country}`);
+}
 
 /* ============================================================
    UTILITIES
@@ -522,14 +71,26 @@ function computeStatus(evt) {
   return 'current';
 }
 
-function formatDate(str) {
+const LOCALE = { en: 'en-GB', nl: 'nl-NL' };
+
+function formatDateIn(str, lang) {
   const d = new Date(str);
-  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  return d.toLocaleDateString(LOCALE[lang], { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
-function formatDateShort(str) {
+function formatDateShortIn(str, lang) {
   const d = new Date(str);
-  return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+  return d.toLocaleDateString(LOCALE[lang], { month: 'short', year: 'numeric' });
+}
+
+// Bilingual date range, e.g. "21 Oct 2026 — 31 Oct 2026" / "21 okt 2026 — 31 okt 2026"
+function dateRangeHtml(evt, short) {
+  const one = l => evt.date_start === evt.date_end
+    ? formatDateIn(evt.date_start, l)
+    : short
+      ? `${formatDateShortIn(evt.date_start, l)} — ${formatDateShortIn(evt.date_end, l)}`
+      : `${formatDateIn(evt.date_start, l)} — ${formatDateIn(evt.date_end, l)}`;
+  return bi(one('en'), one('nl'));
 }
 
 function getYear(str) {
@@ -563,7 +124,21 @@ window.addEventListener('load', () => {
   renderTimeline();
   initDetailCard();
   updateFilterCount();
+  localizeSelects();
 });
+
+// <select>/<option> cannot hold the .lng spans, so their text is swapped
+// whenever the visitor switches language (main.js fires "sitelangchange").
+function localizeSelects() {
+  const lang = currentLang();
+  document.querySelectorAll('.ex-select option[data-en]').forEach(opt => {
+    opt.textContent = opt.getAttribute('data-' + lang) || opt.getAttribute('data-en');
+  });
+  document.querySelectorAll('#filterCountry option[data-country-en]').forEach(opt => {
+    opt.textContent = opt.getAttribute('data-country-' + lang) || opt.getAttribute('data-country-en');
+  });
+}
+document.addEventListener('sitelangchange', localizeSelects);
 
 /* ============================================================
    STATUS BADGES (header)
@@ -579,7 +154,7 @@ function buildStatusBadges() {
     container.insertAdjacentHTML('beforeend', `
       <div class="ex-status-badge ex-status-badge--current">
         <div class="ex-status-badge__dot"></div>
-        ${current.length} Now showing
+        ${current.length} ${t('nowShowing')}
       </div>`);
   }
 
@@ -587,7 +162,7 @@ function buildStatusBadges() {
     container.insertAdjacentHTML('beforeend', `
       <div class="ex-status-badge ex-status-badge--upcoming">
         <div class="ex-status-badge__dot"></div>
-        ${upcoming.length} Upcoming
+        ${upcoming.length} ${t('upcoming')}
       </div>`);
   }
 }
@@ -608,11 +183,15 @@ function buildFilters() {
 
   // Populate country dropdown (sorted alpha)
   const countries = [...new Set(EVENTS.map(e => e.country))].sort();
+  const countryNl = {};
+  EVENTS.forEach(e => { countryNl[e.country] = e.country_nl || e.country; });
   const countrySel = document.getElementById('filterCountry');
   countries.forEach(c => {
     const opt = document.createElement('option');
     opt.value = c;
     opt.textContent = c;
+    opt.setAttribute('data-country-en', c);
+    opt.setAttribute('data-country-nl', countryNl[c]);
     countrySel.appendChild(opt);
   });
 
@@ -702,13 +281,16 @@ function initMap() {
     },
   });
 
-  // Add all markers
-  EVENTS.forEach(addMarker);
+  // Add markers (items without valid coordinates only appear in the timeline)
+  const located = EVENTS.filter(e => Array.isArray(e.coordinates));
+  located.forEach(addMarker);
   leafletMap.addLayer(clusterGroup);
 
   // Fit to all event bounds
-  const bounds = L.latLngBounds(EVENTS.map(e => e.coordinates));
-  leafletMap.fitBounds(bounds, { padding: [80, 80], maxZoom: 7 });
+  if (located.length) {
+    const bounds = L.latLngBounds(located.map(e => e.coordinates));
+    leafletMap.fitBounds(bounds, { padding: [80, 80], maxZoom: 7 });
+  }
 
   // Map tooltip element
   const tip   = document.getElementById('exMapTip');
@@ -779,14 +361,10 @@ function showMapTip(evt) {
   document.getElementById('exMapTipTag').textContent  = inst.label;
   document.getElementById('exMapTipTag').style.color  = inst.color;
   document.getElementById('exMapTipName').textContent = evt.event_name;
-  document.getElementById('exMapTipLoc').textContent  = `${evt.city}, ${evt.country}`;
+  document.getElementById('exMapTipLoc').innerHTML    = locationHtml(evt);
 
-  const dateStr = evt.date_start === evt.date_end
-    ? formatDate(evt.date_start)
-    : `${formatDateShort(evt.date_start)} — ${formatDateShort(evt.date_end)}`;
-
-  document.getElementById('exMapTipDate').textContent = dateStr +
-    (status === 'current' ? ' · Now showing' : status === 'upcoming' ? ' · Upcoming' : '');
+  document.getElementById('exMapTipDate').innerHTML = dateRangeHtml(evt, true) +
+    (status === 'current' ? ' · ' + t('nowShowing') : status === 'upcoming' ? ' · ' + t('upcoming') : '');
 
   tip.classList.add('is-visible');
 }
@@ -852,14 +430,12 @@ function buildTimelineItem(evt, side) {
   const inst   = INSTALLATION[evt.installation];
   const status = evt.status;
 
-  const dateStr = evt.date_start === evt.date_end
-    ? formatDate(evt.date_start)
-    : `${formatDate(evt.date_start)} — ${formatDate(evt.date_end)}`;
+  const dateStr = dateRangeHtml(evt, false);
 
   const statusBadge = status === 'current'
-    ? `<div class="ex-tl-event__status-badge">● Now showing</div>`
+    ? `<div class="ex-tl-event__status-badge">● ${t('nowShowing')}</div>`
     : status === 'upcoming'
-    ? `<div class="ex-tl-event__status-badge" style="color:var(--teal)">◌ Upcoming</div>`
+    ? `<div class="ex-tl-event__status-badge" style="color:var(--teal)">◌ ${t('upcoming')}</div>`
     : '';
 
   const el = document.createElement('div');
@@ -882,8 +458,8 @@ function buildTimelineItem(evt, side) {
     </div>
     <div class="ex-tl-event__card">
       <div class="ex-tl-event__tag">${inst.label}</div>
-      <h3 class="ex-tl-event__name">${evt.event_name}</h3>
-      <p class="ex-tl-event__loc">${evt.city}, ${evt.country}</p>
+      <h3 class="ex-tl-event__name">${escHtml(evt.event_name)}</h3>
+      <p class="ex-tl-event__loc">${locationHtml(evt)}</p>
       <p class="ex-tl-event__date">${dateStr}</p>
       ${statusBadge}
     </div>`;
@@ -992,21 +568,25 @@ function openCard(id) {
   const inst   = INSTALLATION[evt.installation];
   const status = evt.status;
 
-  const dateStr = evt.date_start === evt.date_end
-    ? formatDate(evt.date_start)
-    : `${formatDate(evt.date_start)} — ${formatDate(evt.date_end)}`;
+  const dateStr = dateRangeHtml(evt, false);
 
   const statusLabel = status === 'current'
-    ? `<span class="ex-card__status">● Now showing</span>`
+    ? `<span class="ex-card__status">● ${t('nowShowing')}</span>`
     : status === 'upcoming'
-    ? `<span class="ex-card__status" style="color:var(--teal)">◌ Upcoming</span>`
+    ? `<span class="ex-card__status" style="color:var(--teal)">◌ ${t('upcoming')}</span>`
     : '';
 
+  // Optional image (uploaded via the CMS to assets/images/agenda/).
   const mediaHtml = evt.media
     ? (evt.media.includes('youtube') || evt.media.includes('vimeo')
-        ? `<iframe src="${evt.media}" frameborder="0" allowfullscreen loading="lazy" style="width:100%;height:100%;"></iframe>`
-        : `<img src="${evt.media}" alt="${evt.event_name}" loading="lazy" />`)
-    : `<div class="placeholder"><span class="placeholder__label">Image / Video</span><div class="placeholder__icon">+</div></div>`;
+        ? `<iframe src="${escHtml(evt.media)}" frameborder="0" allowfullscreen loading="lazy" style="width:100%;height:100%;"></iframe>`
+        : `<img src="${escHtml(evt.media)}" alt="${escHtml(evt.event_name)}" loading="lazy" />`)
+    : `<div class="placeholder"><span class="placeholder__label">${t('media')}</span><div class="placeholder__icon">+</div></div>`;
+
+  // Description: NL when Dutch is selected; each language falls back to the other.
+  const desc = (evt.description || evt.description_nl)
+    ? `<p class="ex-card__desc">${bi(evt.description || evt.description_nl, evt.description_nl || evt.description)}</p>`
+    : '';
 
   document.getElementById('exCardInner').innerHTML = `
     <div class="ex-card__tag ex-card__tag--${evt.installation}">
@@ -1014,11 +594,11 @@ function openCard(id) {
       ${inst.label}
       ${statusLabel}
     </div>
-    <h2 class="ex-card__title">${evt.event_name}</h2>
-    <p class="ex-card__location">${evt.city}, ${evt.country}</p>
+    <h2 class="ex-card__title">${escHtml(evt.event_name)}</h2>
+    <p class="ex-card__location">${locationHtml(evt)}</p>
     <p class="ex-card__dates">${dateStr}</p>
     <div class="ex-card__media">${mediaHtml}</div>
-    ${evt.description ? `<p class="ex-card__desc">${evt.description}</p>` : ''}
+    ${desc}
   `;
 
   document.getElementById('exCard').classList.add('is-open');

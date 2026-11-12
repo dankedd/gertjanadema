@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site",
+  "redirects": [
+    { "source": "/cv.html", "destination": "/about.html", "statusCode": 301 },
+    { "source": "/cv", "destination": "/about.html", "statusCode": 301 }
+  ]
+}

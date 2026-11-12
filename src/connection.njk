@@ -1,3 +1,7 @@
+---
+permalink: connection.html
+---
+{% set w = site.works.connection %}{% set nxt = site.works.marbles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +30,8 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>(function(){try{var l=localStorage.getItem('siteLang');if(l!=='nl'&&l!=='en')l='en';document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;}catch(e){document.documentElement.setAttribute('data-lang','en');}})();</script>
-  <title>Connection — Gertjan Adema</title>
-  <meta name="description" content="Connection — a kinetic light installation exploring invisible bonds and spatial perception by Gertjan Adema." />
+  <title>{{ w.title | esc | safe }} — Gertjan Adema</title>
+  <meta name="description" content="{{ site.works.connection.google_description | esc | safe }}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,26 +59,7 @@
     <span class="nav-btn__line"></span>
   </button>
 
-  <nav class="nav" id="nav" aria-hidden="true">
-    <div class="nav__bg"></div>
-    <div class="nav__inner">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="index.html" class="nav__link" data-num="↩"><span class="nav__link-text">Home</span></a></li>
-        <li class="nav__item nav__item--install"><a href="connection.html" class="nav__link" data-num="01"><span class="nav__link-text">Connection</span></a></li>
-        <li class="nav__item nav__item--install"><a href="marbles.html" class="nav__link" data-num="02"><span class="nav__link-text">Marbles</span></a></li>
-        <li class="nav__item nav__item--install"><a href="fibonacci.html" class="nav__link" data-num="03"><span class="nav__link-text">Fibonacci Flow</span></a></li>
-        <li class="nav__item nav__item--install"><a href="fragmented.html" class="nav__link" data-num="04"><span class="nav__link-text">Fragmented Appearances</span></a></li>
-        <li class="nav__item nav__item--install"><a href="reflections.html" class="nav__link" data-num="05"><span class="nav__link-text">Reflections of Hope</span></a></li>
-        <li class="nav__item"><a href="about.html" class="nav__link" data-num="06"><span class="nav__link-text"><span class="lng lng--en">About the Artist</span><span class="lng lng--nl">Over de kunstenaar</span></span></a></li>
-        <li class="nav__item"><a href="exhibitions.html" class="nav__link" data-num="07"><span class="nav__link-text"><span class="lng lng--en">Festivals &amp; Exhibitions</span><span class="lng lng--nl">Festivals &amp; exposities</span></span></a></li>
-        <li class="nav__item"><a href="contact.html" class="nav__link" data-num="08"><span class="nav__link-text">Contact</span></a></li>
-      </ul>
-      <div class="nav__footer">
-        <a href="mailto:info@gertjanadema.nl" class="nav__email">info@gertjanadema.nl</a>
-        <button type="button" class="cookie-settings-link" data-cookie-settings><span class="lng lng--en">Cookie settings</span><span class="lng lng--nl">Cookie-instellingen</span></button>
-      </div>
-    </div>
-  </nav>
+{% include "nav.njk" %}
 
   <!-- ============================================================
        EXHIBITION LAYOUT
@@ -87,26 +72,24 @@
 
         <a href="index.html" class="exh-panel__back">← Gertjan Adema</a>
 
-        <span class="exh-panel__num">01 / 05</span>
-        <h1 class="exh-panel__title">Connection</h1>
+        <span class="exh-panel__num">{{ w.num }} / 05</span>
+        <h1 class="exh-panel__title">{% if w.en.title == w.nl.title %}{{ w.en.title | titleBreak | safe }}{% else %}<span class="lng lng--en">{{ w.en.title | titleBreak | safe }}</span><span class="lng lng--nl">{{ w.nl.title | titleBreak | safe }}</span>{% endif %}</h1>
         <p class="exh-panel__subtitle">
-          <span class="lng lng--en">An infinite connection between movement and balance.</span>
-          <span class="lng lng--nl">Een oneindige verbinding tussen beweging en balans.</span>
+          <span class="lng lng--en">{{ w.en.subtitle | esc | safe }}</span>
+          <span class="lng lng--nl">{{ w.nl.subtitle | esc | safe }}</span>
         </p>
 
         <div class="exh-divider"></div>
 
         <dl class="exh-specs lng lng--en">
-          <dt>Type</dt>       <dd>Kinetic marble run</dd>
-          <dt>Dimensions</dt> <dd>650 &times; 350 &times; 300 cm</dd>
-          <dt>Marble</dt>     <dd>Sphere, Ø 30 cm</dd>
-          <dt>Support</dt>    <dd>Subsidieregeling Cultuur — Kunstactiviteit Zwolle</dd>
+{%- for s in w.en.specs %}
+          <dt>{{ s.label | esc | safe }}</dt> <dd>{{ s.value | esc | safe }}</dd>
+{%- endfor %}
         </dl>
         <dl class="exh-specs lng lng--nl">
-          <dt>Type</dt>       <dd>Kinetische knikkerbaan</dd>
-          <dt>Afmetingen</dt> <dd>650 &times; 350 &times; 300 cm</dd>
-          <dt>Knikker</dt>    <dd>Bol, Ø 30 cm</dd>
-          <dt>Mogelijk door</dt> <dd>Subsidieregeling Cultuur — Kunstactiviteit Zwolle</dd>
+{%- for s in w.nl.specs %}
+          <dt>{{ s.label | esc | safe }}</dt> <dd>{{ s.value | esc | safe }}</dd>
+{%- endfor %}
         </dl>
 
         <div class="exh-divider"></div>
@@ -118,8 +101,8 @@
           <button class="exh-btn" data-modal="demo" aria-label="Watch demo / Bekijk demo">
             Demo <span class="exh-btn__arrow">→</span>
           </button>
-          <a href="marbles.html" class="exh-btn exh-btn--next">
-            <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> Marbles <span class="exh-btn__arrow">→</span>
+          <a href="{{ nxt.url }}" class="exh-btn exh-btn--next">
+            <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> {{ nxt.en.title | bi(nxt.nl.title) | safe }} <span class="exh-btn__arrow">→</span>
           </a>
         </div>
 
@@ -205,21 +188,17 @@
     <div class="exh-modal__backdrop"></div>
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>
-      <span class="exh-modal__num">01 — Connection</span>
+      <span class="exh-modal__num">{{ w.num }} — {{ w.en.title | bi(w.nl.title) | safe }}</span>
       <h2 class="exh-modal__title" id="modal-info-title">
-        <span class="lng lng--en">Infinite<br>Connection</span>
-        <span class="lng lng--nl">Oneindige<br>Verbinding</span>
+        <span class="lng lng--en">{{ w.en.info_title | nl2br | safe }}</span>
+        <span class="lng lng--nl">{{ w.nl.info_title | nl2br | safe }}</span>
       </h2>
       <div class="exh-modal__body">
         <div class="lng lng--en">
-          <p>This enormous, moving marble run, shaped like a lemniscate and a Möbius strip, plays with balance and demonstrates how opposites are interconnected.</p>
-          <p>The surface of a Möbius strip is given a single twist, creating a connection between the top and bottom sides. It serves as a symbol of connection and non-duality, illustrating that opposites are interconnected. A lemniscate is known as a symbol of infinity. The installation performs a seemingly impossible twisting and rocking motion to keep the glowing marble on its track, creating a dynamic interplay of geometry, balance, and movement.</p>
-          <p>The endless repetition and the passage of both sides of the Möbius strip through the sphere represent the importance of connection and the acceptance of contradictions. In doing so, the installation calls for seeking connections and countering social and political polarization.</p>
+          {{ w.en.body | md | safe }}
         </div>
         <div class="lng lng--nl">
-          <p>Deze enorme bewegende knikkerbaan in de vorm van een lemniscaat en een möbiusband speelt met balans en laat zien hoe tegenstellingen met elkaar verbonden zijn.</p>
-          <p>Het oppervlak van een möbiusband wordt één slag gedraaid, waardoor er een verbinding tussen boven- en onderkant ontstaat. Het is een symbool voor verbinding en non-dualiteit en geeft weer dat tegenstellingen met elkaar verbonden zijn. Een lemniscaat staat bekend als een teken van oneindigheid. De installatie moet een schijnbaar onmogelijke draai- en schommelbeweging maken om de lichtgevende knikker in de baan te houden. Hierdoor ontstaat een dynamisch samenspel van geometrie, balans en beweging.</p>
-          <p>De eindeloze herhaling en de passage van beide kanten van de möbiusband door de bol vertegenwoordigt het belang van verbinding en acceptatie van tegenstrijdigheden. Zo doet de installatie een oproep om verbindingen te zoeken en maatschappelijke en politieke polarisatie tegen te gaan.</p>
+          {{ w.nl.body | md | safe }}
         </div>
       </div>
     </div>
@@ -229,7 +208,7 @@
        DEMO MODAL
        To enable video: add data-yt="YOUTUBE_ID" to the div below.
   ============================================================ -->
-  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="AUUAZeIIocs" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Connection demo reel">
+  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="AUUAZeIIocs" role="dialog" aria-modal="true" aria-hidden="true" aria-label="{{ w.title | esc | safe }} demo reel">
     <div class="exh-modal__backdrop"></div>
     <div class="exh-modal__panel">
       <button class="exh-modal__close" aria-label="Close">✕</button>
