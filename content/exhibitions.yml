@@ -375,3 +375,9 @@ items:
     country: Austria
     date_start: 2026-08-27
     date_end: 2026-08-30
+  - event_name: Goldschlägernacht
+    installation: connection
+    city: Schwabach
+    country: Germany
+    date_start: 2026-08-08
+    date_end: 2026-08-08
