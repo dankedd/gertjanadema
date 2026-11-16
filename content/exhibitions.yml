@@ -369,3 +369,9 @@ items:
     country: Finland
     date_start: 2026-09-25
     date_end: 2026-10-03
+  - event_name: Blockheide Leuchtet
+    installation: connection
+    city: Gmünd
+    country: Austria
+    date_start: 2026-08-27
+    date_end: 2026-08-30
