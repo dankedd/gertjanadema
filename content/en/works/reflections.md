@@ -23,7 +23,6 @@ The mirror shards for the mosaic simply need to be carefully glued into place. T
 ### You can join the co-creation:
 
 - Humanist Association – return day Active Hope: October 25th, November 15th and November 22nd, 9:00 AM – 1:00 PM, including lunch. Register and more information: [https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/](https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/)
-- Climate week: November 8th  13:00PM - 16.00PM uur, Focus, Zerboltstraat 63 Zwolle, Walk-in & participation is free.
-
-- Vredesweek Zwolle (Week of Peace Zwolle): September 19th, 11:00 - 17:00, Burg. Drijbersingel 25, Walk ins at Saeed
+- Climate week: November 8th  1:00PM - 4.00PM, Focus, Zerboltstraat 63 Zwolle, Walk-in & participation is free. [https://klimaatburgemeesterzwolle.nl/klimaatweek-2026/](https://klimaatburgemeesterzwolle.nl/klimaatweek-2026/)
+- Vredesweek Zwolle (Week of Peace Zwolle): September 19th, 11:00AM - 5:00PM, Burg. Drijbersingel 25, Walk ins at Saeed
 
