@@ -17,6 +17,13 @@ media:
     categories: [image]
     extensions: [jpg, jpeg, png, webp]
     rename: safe
+  - name: works
+    label: Foto's werken
+    input: assets/uploads/works
+    output: /assets/uploads/works
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
 
 components:
   google:
@@ -111,6 +118,202 @@ content:
         label: More info – de tekst in het info-venster (Engels)
       - name: google_description
         component: google
+
+  # ------------------------------------------------------- Foto's & video
+  - name: work-photos
+    label: Foto's & video per werk
+    type: group
+    items:
+      - name: photos-connection
+        label: Connection
+        type: file
+        path: content/works/connection.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: photos
+            label: Foto's
+            description: "De eerste foto is de hoofdfoto. Sleep (aan het puntjes-icoon) om de volgorde te veranderen. De foto's worden in een vast vlak bijgesneden: alleen het midden blijft zichtbaar. Liggende foto's met het onderwerp in het midden werken dus het best. Grote foto's worden automatisch verkleind."
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{index}. {alt_nl}"
+            fields:
+              - name: image
+                label: Foto
+                description: "JPG, PNG of WebP. Telefoonfoto's mogen gewoon, ook groot."
+                type: image
+                required: true
+                options:
+                  media: works
+                  path: assets/uploads/works/connection
+                  extensions: [jpg, jpeg, png, webp]
+              - name: alt_nl
+                label: Alt-tekst NL – korte beschrijving van wat er op de foto staat
+                description: "Voor blinden en slechtzienden en voor Google. Bijvoorbeeld: Marbles — Wakefield in de schemering"
+                type: string
+              - name: alt_en
+                label: Alt-tekst EN
+                description: "Dezelfde beschrijving in het Engels."
+                type: string
+          - name: youtube
+            label: YouTube-video demo
+            description: "Optioneel. Plak hier de hele link van de YouTube-video (bijv. https://www.youtube.com/watch?v=… of https://youtu.be/…). Leeg laten = geen Demo-knop op de pagina."
+            type: string
+      - name: photos-marbles
+        label: Marbles
+        type: file
+        path: content/works/marbles.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: photos
+            label: Foto's
+            description: "De eerste foto is de hoofdfoto. Sleep (aan het puntjes-icoon) om de volgorde te veranderen. De foto's worden in een vast vlak bijgesneden: alleen het midden blijft zichtbaar. Liggende foto's met het onderwerp in het midden werken dus het best. Grote foto's worden automatisch verkleind."
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{index}. {alt_nl}"
+            fields:
+              - name: image
+                label: Foto
+                description: "JPG, PNG of WebP. Telefoonfoto's mogen gewoon, ook groot."
+                type: image
+                required: true
+                options:
+                  media: works
+                  path: assets/uploads/works/marbles
+                  extensions: [jpg, jpeg, png, webp]
+              - name: alt_nl
+                label: Alt-tekst NL – korte beschrijving van wat er op de foto staat
+                description: "Voor blinden en slechtzienden en voor Google. Bijvoorbeeld: Marbles — Wakefield in de schemering"
+                type: string
+              - name: alt_en
+                label: Alt-tekst EN
+                description: "Dezelfde beschrijving in het Engels."
+                type: string
+          - name: youtube
+            label: YouTube-video demo
+            description: "Optioneel. Plak hier de hele link van de YouTube-video (bijv. https://www.youtube.com/watch?v=… of https://youtu.be/…). Leeg laten = geen Demo-knop op de pagina."
+            type: string
+      - name: photos-fibonacci
+        label: Fibonacci Flow
+        type: file
+        path: content/works/fibonacci.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: photos
+            label: Foto's
+            description: "De eerste foto is de hoofdfoto. Sleep (aan het puntjes-icoon) om de volgorde te veranderen. De foto's worden in een vast vlak bijgesneden: alleen het midden blijft zichtbaar. Liggende foto's met het onderwerp in het midden werken dus het best. Grote foto's worden automatisch verkleind."
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{index}. {alt_nl}"
+            fields:
+              - name: image
+                label: Foto
+                description: "JPG, PNG of WebP. Telefoonfoto's mogen gewoon, ook groot."
+                type: image
+                required: true
+                options:
+                  media: works
+                  path: assets/uploads/works/fibonacci
+                  extensions: [jpg, jpeg, png, webp]
+              - name: alt_nl
+                label: Alt-tekst NL – korte beschrijving van wat er op de foto staat
+                description: "Voor blinden en slechtzienden en voor Google. Bijvoorbeeld: Marbles — Wakefield in de schemering"
+                type: string
+              - name: alt_en
+                label: Alt-tekst EN
+                description: "Dezelfde beschrijving in het Engels."
+                type: string
+          - name: youtube
+            label: YouTube-video demo
+            description: "Optioneel. Plak hier de hele link van de YouTube-video (bijv. https://www.youtube.com/watch?v=… of https://youtu.be/…). Leeg laten = geen Demo-knop op de pagina."
+            type: string
+      - name: photos-fragmented
+        label: Fragmented Appearances
+        type: file
+        path: content/works/fragmented.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: photos
+            label: Foto's
+            description: "De eerste foto is de hoofdfoto. Sleep (aan het puntjes-icoon) om de volgorde te veranderen. De foto's worden in een vast vlak bijgesneden: alleen het midden blijft zichtbaar. Liggende foto's met het onderwerp in het midden werken dus het best. Grote foto's worden automatisch verkleind."
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{index}. {alt_nl}"
+            fields:
+              - name: image
+                label: Foto
+                description: "JPG, PNG of WebP. Telefoonfoto's mogen gewoon, ook groot."
+                type: image
+                required: true
+                options:
+                  media: works
+                  path: assets/uploads/works/fragmented
+                  extensions: [jpg, jpeg, png, webp]
+              - name: alt_nl
+                label: Alt-tekst NL – korte beschrijving van wat er op de foto staat
+                description: "Voor blinden en slechtzienden en voor Google. Bijvoorbeeld: Marbles — Wakefield in de schemering"
+                type: string
+              - name: alt_en
+                label: Alt-tekst EN
+                description: "Dezelfde beschrijving in het Engels."
+                type: string
+          - name: youtube
+            label: YouTube-video demo
+            description: "Optioneel. Plak hier de hele link van de YouTube-video (bijv. https://www.youtube.com/watch?v=… of https://youtu.be/…). Leeg laten = geen Demo-knop op de pagina."
+            type: string
+      - name: photos-reflections
+        label: Reflections of Hope
+        type: file
+        path: content/works/reflections.yml
+        format: yaml
+        operations: { delete: false }
+        fields:
+          - name: photos
+            label: Foto's
+            description: "De eerste foto is de hoofdfoto. Sleep (aan het puntjes-icoon) om de volgorde te veranderen. De foto's worden in een vast vlak bijgesneden: alleen het midden blijft zichtbaar. Liggende foto's met het onderwerp in het midden werken dus het best. Grote foto's worden automatisch verkleind."
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{index}. {alt_nl}"
+            fields:
+              - name: image
+                label: Foto
+                description: "JPG, PNG of WebP. Telefoonfoto's mogen gewoon, ook groot."
+                type: image
+                required: true
+                options:
+                  media: works
+                  path: assets/uploads/works/reflections
+                  extensions: [jpg, jpeg, png, webp]
+              - name: alt_nl
+                label: Alt-tekst NL – korte beschrijving van wat er op de foto staat
+                description: "Voor blinden en slechtzienden en voor Google. Bijvoorbeeld: Marbles — Wakefield in de schemering"
+                type: string
+              - name: alt_en
+                label: Alt-tekst EN
+                description: "Dezelfde beschrijving in het Engels."
+                type: string
+          - name: youtube
+            label: YouTube-video demo
+            description: "Optioneel. Plak hier de hele link van de YouTube-video (bijv. https://www.youtube.com/watch?v=… of https://youtu.be/…). Leeg laten = geen Demo-knop op de pagina."
+            type: string
 
   # ------------------------------------------------------------------ Agenda
   - name: agenda

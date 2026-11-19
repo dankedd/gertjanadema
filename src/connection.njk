@@ -98,9 +98,11 @@ permalink: connection.html
           <button class="exh-btn" data-modal="info" aria-label="More info / Meer info">
             <span><span class="lng lng--en">More Info</span><span class="lng lng--nl">Meer info</span></span> <span class="exh-btn__arrow">→</span>
           </button>
+{%- if w.youtube_id %}
           <button class="exh-btn" data-modal="demo" aria-label="Watch demo / Bekijk demo">
             Demo <span class="exh-btn__arrow">→</span>
           </button>
+{%- endif %}
           <a href="{{ nxt.url }}" class="exh-btn exh-btn--next">
             <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> {{ nxt.en.title | bi(nxt.nl.title) | safe }} <span class="exh-btn__arrow">→</span>
           </a>
@@ -113,64 +115,8 @@ permalink: connection.html
     <main class="exh-gallery">
       <div class="carousel" id="carousel-connection" data-carousel>
         <div class="carousel__track">
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-01.jpeg" alt="Connection — magenta light trails with glowing blue node" loading="eager" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-02.jpeg" alt="Connection — blue neon track at dusk in a park" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="assets/images/connection/connection-11-1000.webp 1000w, assets/images/connection/connection-11-2000.webp 2000w"
-                      sizes="(max-width: 768px) 100vw, 70vw" />
-              <img src="assets/images/connection/connection-11-1000.jpg"
-                   srcset="assets/images/connection/connection-11-1000.jpg 1000w, assets/images/connection/connection-11-2000.jpg 2000w"
-                   sizes="(max-width: 768px) 100vw, 70vw"
-                   width="2000" height="1500" loading="lazy"
-                   alt="Connection — glowing yellow Möbius marble run at dusk in an illuminated park, with visitors"
-                   data-alt-en="Connection — glowing yellow Möbius marble run at dusk in an illuminated park, with visitors"
-                   data-alt-nl="Connection — geel oplichtende möbius-knikkerbaan in de schemering in een verlicht park, met bezoekers" />
-            </picture>
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-03.jpeg" alt="Connection — red neon track in a town square at night with crowd" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="assets/images/connection/connection-12-1000.webp 1000w, assets/images/connection/connection-12-2000.webp 2000w"
-                      sizes="(max-width: 768px) 100vw, 70vw" />
-              <img src="assets/images/connection/connection-12-1000.jpg"
-                   srcset="assets/images/connection/connection-12-1000.jpg 1000w, assets/images/connection/connection-12-2000.jpg 2000w"
-                   sizes="(max-width: 768px) 100vw, 70vw"
-                   width="2000" height="1500" loading="lazy"
-                   alt="Connection — glowing magenta Möbius marble run at night in a park, with visitors gathered around"
-                   data-alt-en="Connection — glowing magenta Möbius marble run at night in a park, with visitors gathered around"
-                   data-alt-nl="Connection — magenta oplichtende möbius-knikkerbaan bij nacht in een park, met bezoekers eromheen" />
-            </picture>
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-04.jpeg" alt="Connection — daylight view of the steel frame during assembly" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-05.jpeg" alt="Connection — the artist building the installation frame" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-06.jpeg" alt="Connection — red and green light trails with glowing orange node" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-07.jpeg" alt="Connection — the artist beside the installation with a glowing pink node" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-08.jpeg" alt="Connection — blue and purple light trails with glowing green node" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-09.jpeg" alt="Connection — light trails mirrored in water with glowing green node" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/connection/connection-10.jpeg" alt="Connection — close-up of purple neon track at night with glowing orange node" loading="lazy" />
-          </div>
+{%- set imgSizes = "(max-width: 768px) 100vw, 70vw" %}
+{%- include "gallery.njk" %}
         </div>
         <div class="carousel__counter" aria-live="polite"></div>
         <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
@@ -204,25 +150,7 @@ permalink: connection.html
     </div>
   </div>
 
-  <!-- ============================================================
-       DEMO MODAL
-       To enable video: add data-yt="YOUTUBE_ID" to the div below.
-  ============================================================ -->
-  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="AUUAZeIIocs" role="dialog" aria-modal="true" aria-hidden="true" aria-label="{{ w.title | esc | safe }} demo reel">
-    <div class="exh-modal__backdrop"></div>
-    <div class="exh-modal__panel">
-      <button class="exh-modal__close" aria-label="Close">✕</button>
-      <div class="exh-modal__video-wrap">
-        <div class="exh-modal__video-placeholder">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8"/>
-            <polygon points="10,8 17,12 10,16" fill="currentColor"/>
-          </svg>
-          <span>Demo reel coming soon</span>
-        </div>
-      </div>
-    </div>
-  </div>
+{% include "demo-modal.njk" %}
 
   <script src="js/main.js"></script>
   <script src="js/consent.js"></script>

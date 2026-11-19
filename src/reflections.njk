@@ -101,6 +101,11 @@ permalink: reflections.html
           <button class="exh-btn" data-modal="process" aria-label="Creation process / Maakproces">
             <span><span class="lng lng--en">Creation process</span><span class="lng lng--nl">Maakproces</span></span> <span class="exh-btn__arrow">→</span>
           </button>
+{%- if w.youtube_id %}
+          <button class="exh-btn" data-modal="demo" aria-label="Watch demo / Bekijk demo">
+            Demo <span class="exh-btn__arrow">→</span>
+          </button>
+{%- endif %}
           <a href="{{ nxt.url }}" class="exh-btn exh-btn--next">
             <span><span class="lng lng--en">Back to start —</span><span class="lng lng--nl">Terug naar begin —</span></span> {{ nxt.en.title | bi(nxt.nl.title) | safe }} <span class="exh-btn__arrow">→</span>
           </a>
@@ -113,20 +118,8 @@ permalink: reflections.html
     <main class="exh-gallery">
       <div class="carousel" id="carousel-reflections" data-carousel>
         <div class="carousel__track">
-          <div class="carousel__slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="assets/reflections-of-hope/reflections-of-hope-1-1000.webp 1000w, assets/reflections-of-hope/reflections-of-hope-1-2000.webp 2000w"
-                      sizes="(max-width: 768px) 100vw, 70vw" />
-              <img src="assets/reflections-of-hope/reflections-of-hope-1-1000.jpg"
-                   srcset="assets/reflections-of-hope/reflections-of-hope-1-1000.jpg 1000w, assets/reflections-of-hope/reflections-of-hope-1-2000.jpg 2000w"
-                   sizes="(max-width: 768px) 100vw, 70vw"
-                   width="2000" height="2667" loading="eager" fetchpriority="high"
-                   alt="Hands gluing mirror shards onto a spinning top of Reflections of Hope during the co-creation"
-                   data-alt-en="Hands gluing mirror shards onto a spinning top of Reflections of Hope during the co-creation"
-                   data-alt-nl="Handen plakken spiegelscherven op een bromtol van Reflections of Hope tijdens de co-creatie" />
-            </picture>
-          </div>
+{%- set imgSizes = "(max-width: 768px) 100vw, 70vw" %}
+{%- include "gallery.njk" %}
         </div>
         <div class="carousel__counter" aria-live="polite"></div>
         <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
@@ -176,6 +169,7 @@ permalink: reflections.html
     </div>
   </div>
 
+{% include "demo-modal.njk" %}
   <script src="js/main.js"></script>
   <script src="js/consent.js"></script>
   <script src="js/install.js"></script>

@@ -19,6 +19,7 @@ Links zie je nu een menu met:
 |---|---|
 | **Werken (NL)** | De Nederlandse teksten van de vijf kunstwerken |
 | **Works (EN)** | De Engelse teksten van de vijf kunstwerken |
+| **Foto's & video per werk** | De foto's en de YouTube-video bij elk kunstwerk |
 | **Agenda (festivals & exposities)** | Alle festivals en exposities |
 | **Over de kunstenaar** | De pagina over jou (NL en EN) |
 | **Contact** | De kop op de contactpagina (NL en EN) |
@@ -51,7 +52,48 @@ De website heeft een Nederlandse en een Engelse versie. Die pas je **apart** aan
 
 ---
 
-## 3. Een festival of expositie toevoegen
+## 3. Foto's en video bij een kunstwerk
+
+De foto's zijn hetzelfde in het Nederlands en het Engels. Je regelt ze op één plek.
+
+1. Klik links op **Foto's & video per werk** en kies het kunstwerk, bijvoorbeeld **Marbles**.
+2. Je ziet de lijst met foto's. Klik op een foto om hem open te klappen.
+
+**Een foto toevoegen**
+1. Scroll naar beneden en klik op **Add an entry**.
+2. Klik bij **Foto** op het vak. Er opent een venster met de foto's van dit werk; klik daar op **Upload** en kies de foto op je computer of telefoon. Selecteer de foto en bevestig.
+3. Vul de **alt-teksten** in (zie hieronder).
+4. Klik rechtsboven op **Save**.
+
+**Een foto verwijderen**
+Klap de foto open, klik op het prullenbakje en daarna op **Save**.
+
+**De volgorde veranderen**
+Pak een foto vast aan het **puntjes-icoon** links en sleep hem naar een andere plek. Klik daarna op **Save**.
+
+**De hoofdfoto**
+De **eerste** foto in de lijst is de hoofdfoto. Die zien bezoekers als eerste. Wil je een andere hoofdfoto? Sleep die foto dan naar boven.
+
+**Alt-tekst**
+Bij elke foto staat een korte beschrijving van wat erop te zien is, in het Nederlands en in het Engels. Bezoekers zien die tekst niet, maar blinde en slechtziende bezoekers en Google lezen hem wel. Bijvoorbeeld: *Marbles — Wakefield in de schemering*.
+
+**Welke foto's werken het best?**
+- Foto's worden in een vast vlak **bijgesneden**: alleen het midden blijft zichtbaar.
+- Gebruik daarom het liefst **liggende** foto's, breder dan hoog, met het **kunstwerk in het midden**.
+- Grote foto's mogen gewoon, ook rechtstreeks van je telefoon. De website **verkleint ze automatisch**.
+- Gebruik JPG, PNG of WebP. Foto's die op de telefoon rechtop staan, komen ook rechtop op de site.
+
+**YouTube-video (de Demo-knop)**
+Onder de foto's staat het vakje **YouTube-video demo**. Zo vul je het in:
+1. Open de video op YouTube.
+2. Klik op **Delen** en dan op **Kopiëren**.
+3. Plak de link in het vakje en klik op **Save**.
+
+Laat je het vakje leeg, dan staat er geen Demo-knop op de pagina.
+
+---
+
+## 4. Een festival of expositie toevoegen
 
 1. Klik links op **Agenda (festivals & exposities)**.
 2. Scroll helemaal naar beneden en klik op **Add an entry** (item toevoegen).
@@ -76,7 +118,7 @@ Een item **verwijderen**: klap het item open en klik op het prullenbakje. Klik d
 
 ---
 
-## 4. Opslaan en hoe lang het duurt
+## 5. Opslaan en hoe lang het duurt
 
 - Klik altijd op **Save** rechtsboven. Pas dan is je wijziging bewaard.
 - Daarna wordt de website automatisch opnieuw gemaakt. **Na ongeveer 2 tot 5 minuten** staat je wijziging op **www.gertjanadema.nl**.
@@ -84,10 +126,9 @@ Een item **verwijderen**: klap het item open en klik op het prullenbakje. Klik d
 
 ---
 
-## 5. Als er iets misgaat
+## 6. Als er iets misgaat
 
 - **Je ziet je wijziging na 10 minuten nog steeds niet**, of de pagina ziet er vreemd uit: neem contact op. De vorige versie van de site blijft online staan tot het probleem is opgelost.
 - **Je hebt per ongeluk iets weggehaald**: geen paniek. Elke opgeslagen versie wordt bewaard en kan worden teruggezet. Neem contact op en vertel wat je hebt veranderd en wanneer, ongeveer.
 - **Je kunt niet inloggen**: controleer of de inlogmail in je spam terecht is gekomen. Lukt het niet, neem dan contact op.
 
-**Contact bij problemen:** [naam en telefoonnummer / e-mailadres invullen]

@@ -1,0 +1,14 @@
+{#- Work photos from content/works/<work>.yml. The first photo is the main
+    photo: it loads immediately; the others load lazily. -#}
+{%- for p in w.photos %}
+          <div class="carousel__slide">
+            <picture>
+              <source type="image/webp" srcset="{{ p.webpSrcset }}" sizes="{{ imgSizes }}" />
+              <img src="{{ p.src }}" srcset="{{ p.jpegSrcset }}" sizes="{{ imgSizes }}"
+                   width="{{ p.width }}" height="{{ p.height }}" loading="{{ 'eager' if loop.first else 'lazy' }}"{% if loop.first %} fetchpriority="high"{% endif %} decoding="async"
+                   alt="{{ p.alt_en | esc | safe }}"
+                   data-alt-en="{{ p.alt_en | esc | safe }}"
+                   data-alt-nl="{{ p.alt_nl | esc | safe }}" />
+            </picture>
+          </div>
+{%- endfor %}

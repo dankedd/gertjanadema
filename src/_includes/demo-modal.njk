@@ -1,0 +1,20 @@
+{%- if w.youtube_id %}
+  <!-- ============================================================
+       DEMO MODAL — YouTube video from content/works/<work>.yml
+  ============================================================ -->
+  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="{{ w.youtube_id }}" role="dialog" aria-modal="true" aria-hidden="true" aria-label="{{ w.title | esc | safe }} demo reel">
+    <div class="exh-modal__backdrop"></div>
+    <div class="exh-modal__panel">
+      <button class="exh-modal__close" aria-label="Close">✕</button>
+      <div class="exh-modal__video-wrap">
+        <div class="exh-modal__video-placeholder">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8"/>
+            <polygon points="10,8 17,12 10,16" fill="currentColor"/>
+          </svg>
+          <span>Demo reel coming soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif %}

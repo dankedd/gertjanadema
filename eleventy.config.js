@@ -20,8 +20,10 @@ const esc = s => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export default function (eleventyConfig) {
-  // Static files, copied as-is. Large "*-original.*" masters are never published.
-  const notOriginal = { filter: p => !/-original\./i.test(p) };
+  // Static files, copied as-is. Large "*-original.*" masters and the photo
+  // uploads in assets/uploads (only build input, see src/_data/site.js) are
+  // never published.
+  const notOriginal = { filter: p => !/-original\./i.test(p) && !/(^|[\\/])uploads([\\/]|$)/.test(p) };
   eleventyConfig.addPassthroughCopy({ 'css': 'css' });
   eleventyConfig.addPassthroughCopy({ 'js': 'js' });
   eleventyConfig.addPassthroughCopy({ 'assets': 'assets' }, notOriginal);

@@ -1,11 +1,254 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "npm ci",
+  "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "_site",
   "redirects": [
-    { "source": "/cv.html", "destination": "/about.html", "statusCode": 301 },
-    { "source": "/cv", "destination": "/about.html", "statusCode": 301 }
+    {
+      "source": "/cv.html",
+      "destination": "/about.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/cv",
+      "destination": "/about.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-01.jpeg",
+      "destination": "/img/works/connection-01-BA55j_kBpH-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-02.jpeg",
+      "destination": "/img/works/connection-02-lFegNgmDnZ-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-03.jpeg",
+      "destination": "/img/works/connection-03-HPm1VCQ0CS-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-04.jpeg",
+      "destination": "/img/works/connection-04-FMCRP7goLP-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-05.jpeg",
+      "destination": "/img/works/connection-05-X-ddq0PI3P-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-06.jpeg",
+      "destination": "/img/works/connection-06-IZcwCWUbzR-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-07.jpeg",
+      "destination": "/img/works/connection-07-LJDHoImUQu-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-08.jpeg",
+      "destination": "/img/works/connection-08-g_aSbmoNI5-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-09.jpeg",
+      "destination": "/img/works/connection-09-XdYJYvRseu-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-10.jpeg",
+      "destination": "/img/works/connection-10-ICnIBT7gZO-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-11-1000.jpg",
+      "destination": "/img/works/connection-11-oLOh1DKEAI-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-11-1000.webp",
+      "destination": "/img/works/connection-11-oLOh1DKEAI-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-11-2000.jpg",
+      "destination": "/img/works/connection-11-oLOh1DKEAI-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-11-2000.webp",
+      "destination": "/img/works/connection-11-oLOh1DKEAI-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-12-1000.jpg",
+      "destination": "/img/works/connection-12-4CyJdC-UhD-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-12-1000.webp",
+      "destination": "/img/works/connection-12-4CyJdC-UhD-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-12-2000.jpg",
+      "destination": "/img/works/connection-12-4CyJdC-UhD-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/connection/connection-12-2000.webp",
+      "destination": "/img/works/connection-12-4CyJdC-UhD-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fibonacci/fibonacci-1.jpg",
+      "destination": "/img/works/fibonacci-1-I3-WwykW8x-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fibonacci/fibonacci-2.jpeg",
+      "destination": "/img/works/fibonacci-2--WUOT4RlA7-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fibonacci/fibonacci-3.jpg",
+      "destination": "/img/works/fibonacci-3-1RutKdOiIj-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fibonacci/fibonacci-4.jpg",
+      "destination": "/img/works/fibonacci-4-X3_DZCP99z-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fibonacci/fibonacci-5.jpg",
+      "destination": "/img/works/fibonacci-5-peHPhG7wKy-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fibonacci/fibonacci-6.jpg",
+      "destination": "/img/works/fibonacci-6-DFl2nXqECX-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-1.jpg",
+      "destination": "/img/works/fragmented-1-rvc96ZSw79-1440.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-2.jpg",
+      "destination": "/img/works/fragmented-2-K9djcxa2xs-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-3.jpg",
+      "destination": "/img/works/fragmented-3-URyV28JIt_-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-4.jpg",
+      "destination": "/img/works/fragmented-4-V_UKq3WqBU-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-5.jpg",
+      "destination": "/img/works/fragmented-5-6Ob1qOcDNW-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-6.jpg",
+      "destination": "/img/works/fragmented-6-x_rPqVwMcx-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-7.jpg",
+      "destination": "/img/works/fragmented-7-6Ob1qOcDNW-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/fragmented/fragmented-8.jpg",
+      "destination": "/img/works/fragmented-8-URyV28JIt_-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-1.jpeg",
+      "destination": "/img/works/marbles-1-JqcyNmSoOB-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-10.jpg",
+      "destination": "/img/works/marbles-10-TVXf9jx9M6-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-11.jpg",
+      "destination": "/img/works/marbles-11-67SPpC9c_X-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-2.jpg",
+      "destination": "/img/works/marbles-2-ICBG5wQy0_-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-3.jpg",
+      "destination": "/img/works/marbles-3-UD8Cgudx4I-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-4.jpg",
+      "destination": "/img/works/marbles-4-7m72uywRFY-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-5.jpeg",
+      "destination": "/img/works/marbles-5-exWcOhNipA-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-6.jpg",
+      "destination": "/img/works/marbles-6-Q6DgGMrxd7-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-7.jpg",
+      "destination": "/img/works/marbles-7-Wlz__BT0_P-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-8.jpeg",
+      "destination": "/img/works/marbles-8-7q5jmesXG0-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/images/marbles/marbles-9.jpeg",
+      "destination": "/img/works/marbles-9-yvsscypOdi-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/reflections-of-hope/reflections-of-hope-1-1000.jpg",
+      "destination": "/img/works/reflections-of-hope-1-0T1LwT8CD1-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/reflections-of-hope/reflections-of-hope-1-1000.webp",
+      "destination": "/img/works/reflections-of-hope-1-0T1LwT8CD1-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/reflections-of-hope/reflections-of-hope-1-2000.jpg",
+      "destination": "/img/works/reflections-of-hope-1-0T1LwT8CD1-1600.jpeg",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/reflections-of-hope/reflections-of-hope-1-2000.webp",
+      "destination": "/img/works/reflections-of-hope-1-0T1LwT8CD1-1600.jpeg",
+      "statusCode": 301
+    }
   ]
 }

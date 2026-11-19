@@ -98,9 +98,11 @@ permalink: fragmented.html
           <button class="exh-btn" data-modal="info" aria-label="More info / Meer info">
             <span><span class="lng lng--en">More Info</span><span class="lng lng--nl">Meer info</span></span> <span class="exh-btn__arrow">→</span>
           </button>
+{%- if w.youtube_id %}
           <button class="exh-btn" data-modal="demo" aria-label="Watch demo / Bekijk demo">
             Demo <span class="exh-btn__arrow">→</span>
           </button>
+{%- endif %}
           <a href="{{ nxt.url }}" class="exh-btn exh-btn--next">
             <span><span class="lng lng--en">Next —</span><span class="lng lng--nl">Volgende —</span></span> {{ nxt.en.title | bi(nxt.nl.title) | safe }} <span class="exh-btn__arrow">→</span>
           </a>
@@ -113,30 +115,8 @@ permalink: fragmented.html
     <main class="exh-gallery">
       <div class="carousel" id="carousel-fragmented" data-carousel>
         <div class="carousel__track">
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-1.jpg" alt="Fragmented Appearances — spinning mirror-mosaic sculpture scattering red and gold light across a darkened room" loading="eager" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-2.jpg" alt="Fragmented Appearances — mirror-mosaic sculpture on a pole in a sunlit park" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-3.jpg" alt="Fragmented Appearances — sculpture under a graffiti bridge tunnel by the water, projecting pink light at night" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-4.jpg" alt="Fragmented Appearances — spinning sculpture casting violet fragments of light across a wall" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-5.jpg" alt="Fragmented Appearances — sculpture backlit by the sun in an autumn park, light bursting through the mirror tiles" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-6.jpg" alt="Fragmented Appearances — illuminated sculpture glowing in a city square at night as a visitor walks past" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-7.jpg" alt="Fragmented Appearances — close-up of the broken-mirror mosaic tiles and metal rim of the sculpture" loading="lazy" />
-          </div>
-          <div class="carousel__slide">
-            <img src="assets/images/fragmented/fragmented-8.jpg" alt="Fragmented Appearances — sculpture mirrored in the still water of a pond surrounded by autumn trees" loading="lazy" />
-          </div>
+{%- set imgSizes = "(max-width: 768px) 100vw, 70vw" %}
+{%- include "gallery.njk" %}
         </div>
         <div class="carousel__counter" aria-live="polite"></div>
         <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">&#8249;</button>
@@ -170,25 +150,7 @@ permalink: fragmented.html
     </div>
   </div>
 
-  <!-- ============================================================
-       DEMO MODAL
-       To enable video: add data-yt="YOUTUBE_ID" to the div below.
-  ============================================================ -->
-  <div class="exh-modal exh-modal--video" id="modal-demo" data-yt="3RCoANmY6oQ" role="dialog" aria-modal="true" aria-hidden="true" aria-label="{{ w.title | esc | safe }} demo reel">
-    <div class="exh-modal__backdrop"></div>
-    <div class="exh-modal__panel">
-      <button class="exh-modal__close" aria-label="Close">✕</button>
-      <div class="exh-modal__video-wrap">
-        <div class="exh-modal__video-placeholder">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.8"/>
-            <polygon points="10,8 17,12 10,16" fill="currentColor"/>
-          </svg>
-          <span>Demo reel coming soon</span>
-        </div>
-      </div>
-    </div>
-  </div>
+{% include "demo-modal.njk" %}
 
   <script src="js/main.js"></script>
   <script src="js/consent.js"></script>
