@@ -7,7 +7,8 @@ specs:
 info_title: |-
   Take part in the
   co-creation
-google_description: Reflections of Hope — a labyrinth for reflection to walk through, by Gertjan Adema.
+google_description: Reflections of Hope — a labyrinth for reflection to walk
+  through, by Gertjan Adema.
 ---
 'Reflections of Hope' is a labyrinth formed by two spirals that you can walk through. The two spirals are defined by a series of slowly spinning, mirror-mosaic-covered spinning tops. As the tops rotate and light hits the mirror mosaics, a sea of moving reflections is created.
 
@@ -21,4 +22,7 @@ The mirror shards for the mosaic simply need to be carefully glued into place. T
 
 ### You can join the co-creation:
 
-- Humanist Association – return day Active Hope: November 15th and November 22nd, 9:00 AM – 1:00 PM, including lunch. Register and more information: <https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/>
+- Humanist Association – return day Active Hope: October 25th, November 15th and November 22nd, 9:00 AM – 1:00 PM, including lunch. Register and more information: [https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/](https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/)
+- Climate week: November 8th  1:00PM - 4.00PM, Focus, Zerboltstraat 63 Zwolle, Walk-in & participation is free. [https://klimaatburgemeesterzwolle.nl/klimaatweek-2026/](https://klimaatburgemeesterzwolle.nl/klimaatweek-2026/)
+- Vredesweek Zwolle (Week of Peace Zwolle): September 19th, 11:00AM - 5:00PM, Burg. Drijbersingel 25, Walk ins at Saeed
+

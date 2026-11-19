@@ -20,4 +20,7 @@ De spiegelscherven voor het mozaïek hoeven alleen netjes geplakt te worden. Het
 
 ### Je kunt meedoen met de co-creatie:
 
-- Humanistisch Verbond – terugkomdag Actieve Hoop: 15 en 22 november, 09:00 – 13:00 uur, inclusief lunch. Aanmelden en meer informatie: <https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/>
+- Humanistisch Verbond – terugkomdag Actieve Hoop: 25 oktober, 15 en 22 november, 09:00 – 13:00 uur, inclusief lunch. Aanmelden en meer informatie: [https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/](https://www.humanistischverbond.nl/samen-hoop-nieuw-leven-inblazen/)
+- Klimaatweek: 8 november 13:00 - 16.00 uur, Focus, Zerboltstraat 63 Zwolle, vrije inloop, gratis toegang. [https://klimaatburgemeesterzwolle.nl/klimaatweek-2026/](https://klimaatburgemeesterzwolle.nl/klimaatweek-2026/)
+- Vredesweek Zwolle: 18 september 11:00 - 17:00 uur, Burg. Drijbersingel 25, - vrije inloop, gratis toegang bij Saeed.
+
